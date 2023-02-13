@@ -11,17 +11,24 @@
 <-- Bookings -->
 
 - /bookings
+- /bookings/newBooking
 - /booking/:bookingId
+- /booking/edit/:bookingId
+
 
 <-- Rooms -->
 
 - /rooms
-- /roomd/:roomId
+- /rooms/newRoom
+- /room/:roomId
+- /room/edit/:roomId
 
 <-- Users -->
 
 - /users
+- /users/newUsers
 - /user/:userId
+- user/edit/:userId
 
 <-- Contac -->
 
