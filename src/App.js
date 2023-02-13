@@ -16,6 +16,8 @@ import Users from './views/Users/Users';
 import NewUser from './views/Users/NewUser';
 import UserDetails from './views/Users/UserDetails';
 import EditUser from './views/Users/EditUser';
+import Contacts from './views/Contacts/Contacts';
+import ContactDetails from './views/Contacts/ContactDetails';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
           <Route path='/users/newUser' element={<NewUser />} />
           <Route path='/user/:userId' element={<UserDetails />} />
           <Route path='/user/edit/:userId' element={<EditUser />} />
+          <Route path='/contacts' element={<Contacts />} />
+          <Route path='/contact/:contactId' element={<ContactDetails />} />
 
 
 
