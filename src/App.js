@@ -12,6 +12,10 @@ import Rooms from './views/Rooms/Rooms';
 import NewRoom from './views/Rooms/NewRoom';
 import RoomDetails from './views/Rooms/RoomDetails';
 import EditRoom from './views/Rooms/EditRoom';
+import Users from './views/Users/Users';
+import NewUser from './views/Users/NewUser';
+import UserDetails from './views/Users/UserDetails';
+import EditUser from './views/Users/EditUser';
 
 
 function App() {
@@ -30,6 +34,10 @@ function App() {
           <Route path='rooms/newroom' element={<NewRoom />} />
           <Route path='/room/:roomId' element={<RoomDetails />} />
           <Route path='/room/edit/:roomId' element={<EditRoom />} />
+          <Route path='/users' element={<Users />} />
+          <Route path='/users/newUser' element={<NewUser />} />
+          <Route path='/user/:userId' element={<UserDetails />} />
+          <Route path='/user/edit/:userId' element={<EditUser />} />
 
 
 

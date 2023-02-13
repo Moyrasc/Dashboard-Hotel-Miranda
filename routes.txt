@@ -26,7 +26,7 @@
 <-- Users -->
 
 - /users
-- /users/newUsers
+- /users/newUser
 - /user/:userId
 - user/edit/:userId
 
