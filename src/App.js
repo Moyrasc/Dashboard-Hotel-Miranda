@@ -1,6 +1,5 @@
 
 import { Route, Routes } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import DashBoard from './views/DashBoard/DashBoard';
 import Login from './views/Login/Login';
@@ -18,35 +17,38 @@ import UserDetails from './views/Users/UserDetails';
 import EditUser from './views/Users/EditUser';
 import Contacts from './views/Contacts/Contacts';
 import ContactDetails from './views/Contacts/ContactDetails';
+import ProtectedRoute from './components/ProtectedRoute';
+
 
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/' element={<DashBoard />} />
+          <Route path='/bookings' element={<Bookings />}>
+            <Route path='newbooking' element={<NewBooking />} />
+            <Route path=':bookingId' element={<BookingDetails />} />
+            <Route path='edit/:bookingId' element={<EditBooking />} />
+          </Route>
+          <Route path='/rooms' element={<Rooms />}>
+            <Route path='newroom' element={<NewRoom />} />
+            <Route path=':roomId' element={<RoomDetails />} />
+            <Route path='edit/:roomId' element={<EditRoom />} />
+          </Route>
+          <Route path='/users' element={<Users />}>
+            <Route path='newUser' element={<NewUser />} />
+            <Route path=':userId' element={<UserDetails />} />
+            <Route path='edit/:userId' element={<EditUser />} />
+          </Route>
+          <Route path='/contacts' element={<Contacts />}>
+            <Route path=':contactId' element={<ContactDetails />} />
+          </Route>
+        </Route>
 
-          <Route path='/login' element={<Login />} />
-          <Route path='/dashboard' element={<DashBoard />} />
-          <Route path='/bookings' element={<Bookings />} />
-          <Route path='/bookings/newbooking' element={<NewBooking />} />
-          <Route path='/booking/:bookingId' element={<BookingDetails />} />
-          <Route path='/booking/edit/:bookingId' element={<EditBooking />} />
-          <Route path='/rooms' element={<Rooms />} />
-          <Route path='rooms/newroom' element={<NewRoom />} />
-          <Route path='/room/:roomId' element={<RoomDetails />} />
-          <Route path='/room/edit/:roomId' element={<EditRoom />} />
-          <Route path='/users' element={<Users />} />
-          <Route path='/users/newUser' element={<NewUser />} />
-          <Route path='/user/:userId' element={<UserDetails />} />
-          <Route path='/user/edit/:userId' element={<EditUser />} />
-          <Route path='/contacts' element={<Contacts />} />
-          <Route path='/contact/:contactId' element={<ContactDetails />} />
-
-
-
-        </Routes>
-      </BrowserRouter>
+      </Routes>
     </>
   );
 }
