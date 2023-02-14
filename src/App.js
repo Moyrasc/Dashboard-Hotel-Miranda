@@ -18,6 +18,7 @@ import EditUser from './views/Users/EditUser';
 import Contacts from './views/Contacts/Contacts';
 import ContactDetails from './views/Contacts/ContactDetails';
 import ProtectedRoute from './components/ProtectedRoute';
+import Profile from './views/Profile/Profile';
 
 
 
@@ -46,6 +47,7 @@ function App() {
             <Route path='contacts' element={<Contacts />}>
               <Route path=':contactId' element={<ContactDetails />} />
             </Route>
+            <Route path='profile' element={<Profile />} />
           </Route>
         </Route>
 

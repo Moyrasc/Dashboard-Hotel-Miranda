@@ -35,3 +35,7 @@
 - /contacts
 - /contact/:contactId
 
+<-- Profile -->
+-/profile
+
+
