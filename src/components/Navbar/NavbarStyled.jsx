@@ -4,9 +4,14 @@ const NavbarContainer = styled.div`
     background: #FFFFFF;
     box-shadow: 13px 3px 40px #00000005;
     height: 100vh;
-    width: 20vw;
+    /* width: 20vw; */
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 4;
+    grid-column-end: 2;
     & .logo_container{
         display: flex;
+        padding: 1rem 0 3rem 0;
         & h2,p{
             margin:0;
         }
@@ -25,6 +30,7 @@ const NavList = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     &  a {
+        padding-bottom: 0.7rem;
         color: #799283;
         display: flex;
         align-items: center;

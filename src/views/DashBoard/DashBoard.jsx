@@ -10,7 +10,6 @@ const DashBoard = () => {
 
     return(
         <>
-        {/* <h1>Vista DashBoard</h1> */}
         <Header/>
         <Navbar/>
         <main>

@@ -23,6 +23,8 @@ import RoomsList from './views/Rooms/RoomsList';
 import BookingsList from './views/Bookings/BookingsList';
 import ContactsList from './views/Contacts/ContactsList';
 import UsersList from './views/Users/UsersList';
+import Layout from './components/LayoutStyled';
+
 
 
 
@@ -30,37 +32,39 @@ import UsersList from './views/Users/UsersList';
 function App() {
   return (
     <>
-      <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route element={<ProtectedRoute />}>
-          <Route path='/' element={<DashBoard />} >
-            <Route path='bookings' element={<Bookings />}>
-              <Route path='list' element={<BookingsList />} />
-              <Route path='newbooking' element={<NewBooking />} />
-              <Route path=':bookingId' element={<BookingDetails />} />
-              <Route path='edit/:bookingId' element={<EditBooking />} />
+      <Layout>
+        <Routes>
+          <Route path='/login' element={<Login />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path='/' element={<DashBoard />} >
+              <Route path='bookings' element={<Bookings />}>
+                <Route path='list' element={<BookingsList />} />
+                <Route path='newbooking' element={<NewBooking />} />
+                <Route path=':bookingId' element={<BookingDetails />} />
+                <Route path='edit/:bookingId' element={<EditBooking />} />
+              </Route>
+              <Route path='rooms' element={<Rooms />}>
+                <Route path='list' element={<RoomsList />} />
+                <Route path='newroom' element={<NewRoom />} />
+                <Route path=':roomId' element={<RoomDetails />} />
+                <Route path='edit/:roomId' element={<EditRoom />} />
+              </Route>
+              <Route path='users' element={<Users />}>
+                <Route path='list' element={<UsersList />} />
+                <Route path='newUser' element={<NewUser />} />
+                <Route path=':userId' element={<UserDetails />} />
+                <Route path='edit/:userId' element={<EditUser />} />
+              </Route>
+              <Route path='contacts' element={<Contacts />}>
+                <Route path='list' element={<ContactsList />} />
+                <Route path=':contactId' element={<ContactDetails />} />
+              </Route>
+              <Route path='profile' element={<Profile />} />
             </Route>
-            <Route path='rooms' element={<Rooms />}>
-              <Route path='list' element={<RoomsList />} />
-              <Route path='newroom' element={<NewRoom />} />
-              <Route path=':roomId' element={<RoomDetails />} />
-              <Route path='edit/:roomId' element={<EditRoom />} />
-            </Route>
-            <Route path='users' element={<Users />}>
-              <Route path='list' element={<UsersList />} />
-              <Route path='newUser' element={<NewUser />} />
-              <Route path=':userId' element={<UserDetails />} />
-              <Route path='edit/:userId' element={<EditUser />} />
-            </Route>
-            <Route path='contacts' element={<Contacts />}>
-              <Route path='list' element={<ContactsList />} />
-              <Route path=':contactId' element={<ContactDetails />} />
-            </Route>
-            <Route path='profile' element={<Profile />} />
           </Route>
-        </Route>
 
-      </Routes>
+        </Routes>
+      </Layout>
     </>
   );
 }

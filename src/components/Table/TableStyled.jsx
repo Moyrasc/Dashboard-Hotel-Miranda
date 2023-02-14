@@ -3,15 +3,11 @@ import styled from "styled-components";
 const TableContainer = styled.table`
   overflow-x: none;
   border-collapse: collapse;
- 
+  background:#FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 20px;
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
   & thead{
     padding-top: 20px;
     & th {
-      
       font-size: 1.125rem;
       overflow: hidden;
       white-space: nowrap;

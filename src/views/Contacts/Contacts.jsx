@@ -1,14 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router";
 
-const Contacts = () =>{
+const Contacts = () => {
+  return <Outlet />;
+};
 
-    return (
-        <>
-        <h1>Desde Contacts</h1>
-        <Outlet/>
-        </>
-    )
-}
-
-export default Contacts
+export default Contacts;

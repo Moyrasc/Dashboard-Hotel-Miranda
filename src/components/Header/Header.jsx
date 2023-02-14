@@ -2,7 +2,6 @@ import React from "react";
 import {
   HeaderTitle,
   HeaderContainer,
-  IconContainer,
   Icon,
 } from "./HeaderStyled";
 import { AiOutlineHeart, AiOutlineBell, AiOutlineMail } from "react-icons/ai";
@@ -14,14 +13,12 @@ const Header = () => {
       <HeaderTitle>
         <h1> Dashboard</h1>
       </HeaderTitle>
-      <IconContainer>
         <Icon>
           <AiOutlineHeart className="icon" />
           <AiOutlineBell className="icon" />
           <AiOutlineMail className="icon" />
           <MdOutlineMessage className="icon" />
         </Icon>
-      </IconContainer>
     </HeaderContainer>
   );
 };
