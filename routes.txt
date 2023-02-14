@@ -11,6 +11,7 @@
 <-- Bookings -->
 
 - /bookings
+- /bookings/bookingsList
 - /bookings/newBooking
 - /booking/:bookingId
 - /booking/edit/:bookingId
@@ -27,6 +28,7 @@
 <-- Users -->
 
 - /users
+- /users/usersList
 - /users/newUser
 - /user/:userId
 - user/edit/:userId
@@ -34,6 +36,7 @@
 <-- Contac -->
 
 - /contacts
+- /contacts/contactsList
 - /contact/:contactId
 
 <-- Profile -->

@@ -20,6 +20,9 @@ import ContactDetails from './views/Contacts/ContactDetails';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './views/Profile/Profile';
 import RoomsList from './views/Rooms/RoomsList';
+import BookingsList from './views/Bookings/BookingsList';
+import ContactsList from './views/Contacts/ContactsList';
+import UsersList from './views/Users/UsersList';
 
 
 
@@ -31,6 +34,7 @@ function App() {
         <Route element={<ProtectedRoute />}>
           <Route path='/' element={<DashBoard />} >
             <Route path='bookings' element={<Bookings />}>
+              <Route path='list' element={<BookingsList />} />
               <Route path='newbooking' element={<NewBooking />} />
               <Route path=':bookingId' element={<BookingDetails />} />
               <Route path='edit/:bookingId' element={<EditBooking />} />
@@ -42,11 +46,13 @@ function App() {
               <Route path='edit/:roomId' element={<EditRoom />} />
             </Route>
             <Route path='users' element={<Users />}>
+              <Route path='list' element={<UsersList />} />
               <Route path='newUser' element={<NewUser />} />
               <Route path=':userId' element={<UserDetails />} />
               <Route path='edit/:userId' element={<EditUser />} />
             </Route>
             <Route path='contacts' element={<Contacts />}>
+              <Route path='list' element={<ContactsList />} />
               <Route path=':contactId' element={<ContactDetails />} />
             </Route>
             <Route path='profile' element={<Profile />} />

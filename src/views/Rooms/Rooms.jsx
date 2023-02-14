@@ -7,6 +7,7 @@ const Rooms = () =>{
         <>
         <h1>Desde Rooms</h1>
         <Outlet/>
+        
 
         </>
     )
