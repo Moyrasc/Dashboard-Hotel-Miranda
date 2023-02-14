@@ -1,7 +1,9 @@
 import React from "react";
+import { TableContainer } from "./TableStyled";
 
 const Table = ({ children, labels }) => {
   return (
+    <TableContainer>
     <table>
       <thead>
         <tr>
@@ -12,6 +14,7 @@ const Table = ({ children, labels }) => {
       </thead>
       {children}
     </table>
+    </TableContainer>
   );
 };
 

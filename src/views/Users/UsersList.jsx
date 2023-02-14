@@ -11,7 +11,7 @@ const UsersList = () => {
             return (
               <tr key={user.id}>
                 <td>
-                  {user.avatar} {user.first_name} {user.last_name}
+                  <img src={user.avatar} alt=""/> {user.first_name}
                 </td>
                 <td>{user.description}</td>
                 <td>{user.phone}</td>

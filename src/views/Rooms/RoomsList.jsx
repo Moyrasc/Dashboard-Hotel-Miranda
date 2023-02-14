@@ -18,7 +18,7 @@ const RoomsList = () => {
         {rooms.map((room) => {
           return (
             <tr key={room.id}>
-              <td>{room.photo[1]} Deluxe A-91234</td>
+              <td> <img src={room.photo[1]} alt=""/> Deluxe A-91234</td>
               <td>{room.typeRoom}</td>
               <td>{room.roomFloor}</td>
               <td>{room.amenities}</td>

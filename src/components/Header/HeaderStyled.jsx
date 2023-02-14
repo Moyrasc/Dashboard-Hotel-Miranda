@@ -33,6 +33,7 @@ const Icon = styled.div`
         color: #135846;
         width: 25px;
         height: 25px;
+        padding: 0 0.4rem;
     }
     `;
 
