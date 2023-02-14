@@ -19,6 +19,7 @@ import Contacts from './views/Contacts/Contacts';
 import ContactDetails from './views/Contacts/ContactDetails';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './views/Profile/Profile';
+import RoomsList from './views/Rooms/RoomsList';
 
 
 
@@ -35,6 +36,7 @@ function App() {
               <Route path='edit/:bookingId' element={<EditBooking />} />
             </Route>
             <Route path='rooms' element={<Rooms />}>
+              <Route path='list' element={<RoomsList />} />
               <Route path='newroom' element={<NewRoom />} />
               <Route path=':roomId' element={<RoomDetails />} />
               <Route path='edit/:roomId' element={<EditRoom />} />

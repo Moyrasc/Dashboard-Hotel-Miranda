@@ -19,6 +19,7 @@
 <-- Rooms -->
 
 - /rooms
+- /rooms/roomList
 - /rooms/newRoom
 - /room/:roomId
 - /room/edit/:roomId
