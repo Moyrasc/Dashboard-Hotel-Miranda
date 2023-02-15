@@ -17,7 +17,7 @@ const Navbar = () => {
           </div>
           <div className="logo_container_title">
             <h2>travl</h2>
-            <p>Hotel Admin Dashboard</p>
+            <p>Hotel Miranda</p>
           </div>
         </div>
         <NavList>
@@ -55,7 +55,7 @@ const Navbar = () => {
           </NavLink>
         </UserContainer>
         <TextContainer>
-          <p className="footer"><strong>Travl Hotel Admin Dashboard</strong></p>
+          <p className="footer"><strong>Travl Hotel Miranda</strong></p>
           <p className="footer-subtitle">&copy;2023 All Rights Reserved</p>
           <p><small>Made with ♥ by Noe Sola</small></p>
         </TextContainer>

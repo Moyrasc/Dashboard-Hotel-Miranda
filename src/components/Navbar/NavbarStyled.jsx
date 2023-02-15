@@ -52,19 +52,22 @@ const TextContainer = styled.div`
     padding: 0 1rem 0 1rem;
     & p {
         margin: 0 0 0 0.8rem;
+        text-align: center;
     }
     & small {
         color: #799283;
+       
     }
     & .footer{
         padding-top: 0.5rem;
         font-size: 15px;
-        text-align: center;
+       
         }
     & .footer-subtitle{
         color: #799283;
         font-size: 14px;
         padding-bottom: 2rem;
+        
         }    
 `
 const UserContainer = styled.div`
@@ -73,7 +76,7 @@ const UserContainer = styled.div`
     border-radius: 18px;
     position: relative;
     margin: 30px 15% 40px 15%;
-    padding: 40px 20px 20px 20px;
+    padding: 40px 30px 20px 20px;
     & p {
         margin: 0;
         text-align: center;
@@ -110,7 +113,24 @@ const ImgContainer = styled.div`
         border-radius: 50%;
     }
 `
+const ArrowButton = styled.button`
+    position: absolute;
+    right: -50px;
+    top: 45px;
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
 
+    &:focus{
+        outline: none;
+    }
+
+    .arrow{
+        width: 25px;
+        height: 25px;
+    }
+`;
 
 
 export{
@@ -119,4 +139,5 @@ export{
     TextContainer,
     UserContainer,
     ImgContainer,
+    ArrowButton
 }

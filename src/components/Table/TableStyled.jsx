@@ -5,7 +5,7 @@ const TableContainer = styled.table`
   border-collapse: collapse;
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #222222;
-  width: 1200px;
+  width: 900px;
   margin-top: 3rem 1rem 0 1rem;
   & thead {
     padding-top: 20px;
@@ -13,11 +13,16 @@ const TableContainer = styled.table`
       font-size: 1.125rem;
       overflow: hidden;
       white-space: nowrap;
+      
+    }
+    & td{
+      font-weight: 600;
     }
   }
   & tbody {
     & tr {
       text-align: left;
+      
     }
   }
 
@@ -25,10 +30,12 @@ const TableContainer = styled.table`
   td {
     padding: 20px 15px;
     text-align: left;
+    border-bottom: 1px solid #0000001A;
   }
   & td {
     font-size: 1rem;
     & img {
+      border-radius: 10px;
       width: 60px;
       height: 60px;
       margin-right: 23px;

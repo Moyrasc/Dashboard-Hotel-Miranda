@@ -4,52 +4,63 @@ import {
   HeaderContainer,
   Icon,
 } from "./HeaderStyled";
-import {  AiOutlineBell, AiOutlineMail } from "react-icons/ai";
-import {FiLogOut} from 'react-icons/fi'
-import { useLocation } from "react-router";
+import { AiOutlineBell, AiOutlineMail } from "react-icons/ai";
+import { FiLogOut } from 'react-icons/fi'
+import { useLocation, useNavigate } from "react-router";
+import { useUser } from "../../Context/userContext";
 
 
 const Header = () => {
 
   let location = useLocation()
   const [title, setTitle] = useState("")
+  const [, setUser] = useUser()
+  const navigate = useNavigate()
+  useEffect(() => {
+    switch (location.pathname) {
 
-  useEffect(()=>{
-    switch(location.pathname){
-      
       case "/":
         setTitle("Dashboard");
         break
       case "/bookings/list":
         setTitle("Bookings");
-                break;
-            case "/rooms/list":
-                setTitle("Rooms");
-                break;
-            case "/contacts/list":
-                setTitle("Contacts");
-                break;
-            case "/users/list":
-                setTitle("Users");
-                break;
-            default:
-              setTitle("")  
+        break;
+      case "/rooms/list":
+        setTitle("Rooms");
+        break;
+      case "/contacts/list":
+        setTitle("Contacts");
+        break;
+      case "/users/list":
+        setTitle("Users");
+        break;
+      case "/profile":
+        setTitle("Profile");
+        break;
+      default:
+        setTitle("")
 
     }
-  },[location])
-  
+  }, [location])
+
+  const handleLogOut = (e) => {
+    e.preventDefault()
+    setUser({ email: "", password: "" })
+    navigate('/login')
+
+  }
   return (
     <HeaderContainer>
       <HeaderTitle>
         <h1> {title}</h1>
       </HeaderTitle>
-        <Icon>
-          
-          <AiOutlineBell className="icon" />
-          <AiOutlineMail className="icon" />
-          <FiLogOut className="icon"/>
-          
-        </Icon>
+      <Icon>
+
+        <AiOutlineBell className="icon" />
+        <AiOutlineMail className="icon" />
+        <FiLogOut className="icon" onClick={handleLogOut} />
+
+      </Icon>
     </HeaderContainer>
   );
 };

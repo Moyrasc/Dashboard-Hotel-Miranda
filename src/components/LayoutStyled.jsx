@@ -5,8 +5,8 @@ const Layout = styled.div`
     width: 100vw; 
     grid-template-rows: 4rem auto 45px;
     grid-template-columns: 16rem auto;
-    gap: 30px;
-    height: 100%;
+    /* gap: 30px;  */
+    height: 100%; 
 
 
 `;
