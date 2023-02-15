@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from '../../assets/icons/logo2.png'
-import { NavbarContainer, NavList, TextContainer } from "./NavbarStyled";
+import photoProfile from '../../assets/icons/fotoPerfil.jpeg'
+import { ImgContainer, NavbarContainer, NavList, TextContainer, UserContainer } from "./NavbarStyled";
 import { TbLayoutDashboard } from "react-icons/tb";
 import { GiHouseKeys } from "react-icons/gi";
 import { BsCalendarCheck } from "react-icons/bs";
@@ -20,32 +21,39 @@ const Navbar = () => {
           </div>
         </div>
         <NavList>
-          <Link to={"/"}>
+          <NavLink to={"/"}>
             
             <TbLayoutDashboard />
             Dashboard
             
-          </Link>
-          <Link to={"rooms/list"}>
+          </NavLink>
+          <NavLink to={"rooms/list"}>
             
             <GiHouseKeys />
             Rooms
-          </Link>
-          <Link to={"bookings/list"}>
+          </NavLink>
+          <NavLink to={"bookings/list"}>
             
             <BsCalendarCheck />
             Booking
-          </Link>
-          <Link to={"contacts/list"}> <BiCommentDetail/>Contact</Link>
-          <Link to={"users/list"}>
+          </NavLink>
+          <NavLink to={"contacts/list"}> <BiCommentDetail/>Contact</NavLink>
+          <NavLink to={"users/list"}>
             <BiUser />
             Users
-          </Link>
-          <Link to={"profile"}>
-            <button>Edit profile</button>
-          </Link>
+          </NavLink>
           
         </NavList>
+        <UserContainer>
+          <ImgContainer>
+            <img src={photoProfile} alt="img profile"/>
+          </ImgContainer>
+          <p><strong>Noe Sola</strong></p>
+          <p><small>noemisolac@gmail.com</small></p>
+          <NavLink to={"profile"}>
+            <button>Edit profile</button>
+          </NavLink>
+        </UserContainer>
         <TextContainer>
           <p className="footer"><strong>Travl Hotel Admin Dashboard</strong></p>
           <p className="footer-subtitle">&copy;2023 All Rights Reserved</p>
