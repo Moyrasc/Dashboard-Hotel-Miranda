@@ -13,16 +13,14 @@ const TableContainer = styled.table`
       font-size: 1.125rem;
       overflow: hidden;
       white-space: nowrap;
-      
     }
-    & td{
+    & td {
       font-weight: 600;
     }
   }
   & tbody {
     & tr {
       text-align: left;
-      
     }
   }
 
@@ -30,7 +28,7 @@ const TableContainer = styled.table`
   td {
     padding: 20px 15px;
     text-align: left;
-    border-bottom: 1px solid #0000001A;
+    border-bottom: 1px solid #0000001a;
   }
   & td {
     font-size: 1rem;
@@ -44,25 +42,41 @@ const TableContainer = styled.table`
 `;
 
 const FilterTable = styled.div`
-    display: flex;
-    height: 50px;
-    margin-bottom: 50px;
+  display: flex;
+  height: 50px;
+  margin: 40px 0px;
 `;
 
 const FilterButton = styled.button`
-    font-family: var(--font-poppins);
-    color: #6E6E6E;
-    font-weight: 500;
-    padding: 12px 30px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #D4D4D4;
+  font-family: var(--font-poppins);
+  color: #6e6e6e;
+  font-weight: 500;
+  padding: 12px 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d4d4d4;
 
-    &:focus{
-        color: #135846;
-        border-bottom: 2px solid #135846;
-        outline: none;
-    }
+  &:focus {
+    color: #135846;
+    border-bottom: 2px solid #135846;
+    outline: none;
+  }
 `;
 
-export { TableContainer,FilterButton,FilterTable};
+const ButtonTable = styled.button`
+  background-color: #135846;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 200px;
+  padding: 1rem 2rem;
+`;
+
+const ButtonContainer = styled.div`
+display: flex;
+width: 85%;
+justify-content: end;
+
+`
+export { TableContainer, FilterButton, FilterTable, ButtonTable, ButtonContainer };

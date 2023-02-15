@@ -1,9 +1,18 @@
 import React from "react";
 import Table from "../../components/Table/Table";
+import { ButtonContainer, ButtonTable, FilterTable } from "../../components/Table/TableStyled";
 import rooms from "../../Data/rooms.json";
 
 const RoomsList = () => {
   return (
+    <div>
+      
+      <FilterTable>
+        <ButtonContainer>
+        <ButtonTable> + New Room</ButtonTable>
+        </ButtonContainer>
+      </FilterTable>
+      
     <Table
       labels={[
         "Room Name",
@@ -29,6 +38,7 @@ const RoomsList = () => {
         })}
       </tbody>
     </Table>
+    </div>
   );
 };
 

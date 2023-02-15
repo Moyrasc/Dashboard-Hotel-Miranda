@@ -28,27 +28,16 @@ const BookingsList = () => {
       >
         <tbody>
           {bookings.map(
-            (
-              {
-                guest,
-                orderDate,
-                checkin,
-                checkout,
-                specialRequest,
-                typeRoom,
-                state,
-              },
-              i
-            ) => {
+            (booking,i) => {
               return (
                 <tr key={i}>
-                  <td>{guest}</td>
-                  <td>{orderDate}</td>
-                  <td>{checkin}</td>
-                  <td>{checkout}</td>
-                  <td>{specialRequest}</td>
-                  <td>{typeRoom}</td>
-                  <td>{state}</td>
+                  <td>{booking.guest}</td>
+                  <td>{booking.orderDate}</td>
+                  <td>{booking.checkin}</td>
+                  <td>{booking.checkout}</td>
+                  <td>{booking.specialRequest}</td>
+                  <td>{booking.typeRoom}</td>
+                  <td>{booking.state}</td>
                 </tr>
               );
             }
