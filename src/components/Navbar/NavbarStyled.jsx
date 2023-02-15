@@ -11,7 +11,7 @@ const NavbarContainer = styled.div`
     grid-column-end: 2;
     & .logo_container{
         display: flex;
-        padding: 1.5rem 0 3rem 0;
+        padding: 1.5rem 0 3rem 0.8rem;
         & h2,p{
             margin:0;
             font-size: 16px;
@@ -49,9 +49,9 @@ const NavList = styled.div`
 const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 0 1.2rem;
+    padding: 0 1rem 0 1rem;
     & p {
-        margin: 0;
+        margin: 0 0 0 0.8rem;
     }
     & small {
         color: #799283;

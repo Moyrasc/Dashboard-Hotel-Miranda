@@ -4,8 +4,9 @@ import {
   HeaderContainer,
   Icon,
 } from "./HeaderStyled";
-import { AiOutlineHeart, AiOutlineBell, AiOutlineMail } from "react-icons/ai";
-import { MdOutlineMessage } from "react-icons/md";
+import {  AiOutlineBell, AiOutlineMail } from "react-icons/ai";
+import {FiLogOut} from 'react-icons/fi'
+
 
 const Header = () => {
   return (
@@ -14,10 +15,11 @@ const Header = () => {
         <h1> Dashboard</h1>
       </HeaderTitle>
         <Icon>
-          <AiOutlineHeart className="icon" />
+          
           <AiOutlineBell className="icon" />
           <AiOutlineMail className="icon" />
-          <MdOutlineMessage className="icon" />
+          <FiLogOut className="icon"/>
+          
         </Icon>
     </HeaderContainer>
   );
