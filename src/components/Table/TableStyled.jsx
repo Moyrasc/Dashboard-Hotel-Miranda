@@ -50,7 +50,7 @@ const StyledTable = styled.table`
         font-family: 'Poppins', sans-serif;;
         font-size: 14px;
         text-align: left;
-        padding: 10px 15px;
+        padding: 10px 10px;
         width: 50px;
     }
     th {
