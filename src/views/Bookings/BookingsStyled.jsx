@@ -47,9 +47,6 @@ flex-direction: column;
 }
 `;
 
-const PGuestId = styled.p`
-color:#799283
-`;
 
 
 
@@ -59,5 +56,4 @@ export {
     CheckIn,
     Notes,
     Guest,
-    PGuestId
 }
