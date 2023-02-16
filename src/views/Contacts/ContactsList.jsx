@@ -3,22 +3,24 @@ import Table from "../../components/Table/Table";
 import contacts from "../../Data/contacts.json";
 
 const ContactsList = () => {
+  const cols = [
+
+    { property: 'id', label: 'Order ID' },
+    { property: 'date', label: 'Date' },
+    { property: 'customer', label: 'Customer' },
+    { property: 'comment', label: 'Comment' },
+    {
+      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (actionPublish,actionArchived) => <div>
+        <button>{actionPublish}</button>
+        <button>{actionArchived}</button>
+      </div>
+    },
+  ];
   return (
-    <Table labels={["Order ID", "Date", "Customer", "Comment", "Action"]}>
-      <tbody>
-        {contacts.map((contact, i) => {
-          return (
-            <tr key={i}>
-              <td>{contact.id}</td>
-              <td>{contact.date}</td>
-              <td>{contact.customer}</td>
-              <td>{contact.Comment}</td>
-              <td><button>Publish</button> <button>Archive</button></td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+
+    <div>
+      <Table data={contacts} cols={cols} />
+    </div>
   );
 };
 

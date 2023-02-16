@@ -5,7 +5,28 @@ import { FilterButton, FilterTable } from "../../components/Table/TableStyled";
 
 
 const BookingsList = () => {
+  const cols = [
+    { property: ['photo'], label: 'Room', display: (src) => (<img src={src} alt="guest" />) },
+    {
+      property: ['guest', 'id'], label: 'Guest', display: (id, guest) => (
+        <div>
+          <p>{guest}</p>
+          <p>{id}</p>
+        </div>)
+    },
+    { property: 'orderDate', label: 'Order Date' },
+    { property: 'checkin', label: 'Check In' },
+    { property: 'checkout', label: 'Check Out' },
+    {
+      property: 'specialRequest', label: 'Special Request', display: (specialRequest) => (
+        <div><button> View Notes {specialRequest}</button></div>)
+      
+    },
+    { property: 'typeRoom', label: 'Room Type' },
+    { property: 'state', label: 'Status' },
+  ];
   return (
+
     <div>
       <div>
       <FilterTable>
@@ -15,35 +36,7 @@ const BookingsList = () => {
         <FilterButton >In Progress</FilterButton>
       </FilterTable>
       </div>
-      <Table
-        labels={[
-          "Guest",
-          "Order Date",
-          "Check In",
-          "Check Out",
-          "Special Request",
-          "Room Type",
-          "Status",
-        ]}
-      >
-        <tbody>
-          {bookings.map(
-            (booking,i) => {
-              return (
-                <tr key={i}>
-                  <td>{booking.guest}</td>
-                  <td>{booking.orderDate}</td>
-                  <td>{booking.checkin}</td>
-                  <td>{booking.checkout}</td>
-                  <td>{booking.specialRequest}</td>
-                  <td>{booking.typeRoom}</td>
-                  <td>{booking.state}</td>
-                </tr>
-              );
-            }
-          )}
-        </tbody>
-      </Table>
+      <Table data={bookings} cols={cols} />
     </div>
   );
 };

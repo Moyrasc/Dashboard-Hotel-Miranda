@@ -1,43 +1,27 @@
 import React from "react";
 import Table from "../../components/Table/Table";
-import { ButtonContainer, ButtonTable, FilterTable } from "../../components/Table/TableStyled";
 import rooms from "../../Data/rooms.json";
 
 const RoomsList = () => {
+  const cols = [
+    { property: ['photo'], label: 'Room', display: (src) => (<img src={src} alt="room" />) },
+    {
+      property: ['name', 'id'], label: 'Room Name', display: (id, name) => (
+        <div>
+          <p>{name}</p>
+          <p>{id}</p>
+        </div>)
+    },
+    { property: 'typeRoom', label: 'Bed Type' },
+    { property: 'roomFloor', label: 'Room Floor' },
+    { property: 'amenities', label: 'Facilities' },
+    { property: 'price', label: 'Rate' },
+    { property: 'status', label: 'Status' },
+  ];
   return (
+
     <div>
-      
-      <FilterTable>
-        <ButtonContainer>
-        <ButtonTable> + New Room</ButtonTable>
-        </ButtonContainer>
-      </FilterTable>
-      
-    <Table
-      labels={[
-        "Room Name",
-        "Bed Type",
-        "Room Floor",
-        "Facilities",
-        "Rate",
-        "Status",
-      ]}
-    >
-      <tbody>
-        {rooms.map((room) => {
-          return (
-            <tr key={room.id}>
-              <td> <img src={room.photo[1]} alt=""/> Deluxe A-91234</td>
-              <td>{room.typeRoom}</td>
-              <td>{room.roomFloor}</td>
-              <td>{room.amenities}</td>
-              <td>{room.price}</td>
-              <td>{room.status ? "Available" : "Booked"}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </Table>
+      <Table data={rooms} cols={cols} />
     </div>
   );
 };
