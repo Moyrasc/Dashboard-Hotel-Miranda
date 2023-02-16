@@ -1,50 +1,9 @@
 import styled from "styled-components";
 
-// const TableContainer = styled.table`
-//   overflow-x: none;
-//   border-collapse: collapse;
-//   background: #ffffff 0% 0% no-repeat padding-box;
-//   border: 1px solid #222222;
-//   width: 900px;
-//   margin-top: 3rem 1rem 0 1rem;
-//   & thead {
-//     padding-top: 20px;
-//     & th {
-//       font-size: 1.125rem;
-//       overflow: hidden;
-//       white-space: nowrap;
-//     }
-//     & td {
-//       font-weight: 600;
-//     }
-//   }
-//   & tbody {
-//     & tr {
-//       text-align: left;
-//     }
-//   }
-
-//   & th,
-//   td {
-//     padding: 20px 15px;
-//     text-align: left;
-//     border-bottom: 1px solid #0000001a;
-//   }
-//   & td {
-//     font-size: 1rem;
-//     & img {
-//       border-radius: 10px;
-//       width: 60px;
-//       height: 60px;
-//       margin-right: 23px;
-//     }
-//   }
-// `;
-
 const FilterTable = styled.div`
   display: flex;
   height: 50px;
-  margin: 40px 0px;
+  margin: 30px 0px;
 `;
 
 const FilterButton = styled.button`
@@ -81,23 +40,24 @@ const FilterButton = styled.button`
 // `
 const StyledTable = styled.table`
     border-collapse: collapse;
-    width: 90%;
+    width: 95%;
     background-color: #ffffff;
+    border-radius: 20px;
     
-    td, th {
+    td {
+      border-bottom: 1px solid #EBEBEB;
+        color: #393939;
+        font-family: 'Poppins', sans-serif;;
+        font-size: 14px;
+        text-align: left;
+        padding: 10px 15px;
+        width: 50px;
+    }
+    th {
         text-align: left;
         border-bottom: 1px solid #cccccc;
-        padding: 2px;
-        div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            & > div {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                gap: 3px;
-            }
+        padding: 20px 15px; 
+        
         }
         img {
           border-radius: 5px;
@@ -105,7 +65,7 @@ const StyledTable = styled.table`
             width: 60px;
             height: 60px; 
         }
-    }
+    
 `;
 // export { TableContainer, FilterButton, FilterTable, ButtonTable, ButtonContainer };
 export {StyledTable,FilterButton,FilterTable}
