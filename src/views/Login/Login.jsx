@@ -4,7 +4,6 @@ import logo from '../../assets/icons/logo2.png'
 import { useUser } from "../../Context/userContext";
 import { useNavigate } from "react-router";
 
-
 const User = {
     email : "admin@admin.com",
     password: "12345"
@@ -22,19 +21,15 @@ const handleSubmit = (e) =>{
     if(email !== User.email){
         setError('email no válido')
         return
-    
     }
     if(password !== User.password){
         setError('Password no válido')
         return
-
     }
     setError('')
     setUser({email, password})
     navigate('/')
-
     }
-
     return (
         
             <LoginContainer>
@@ -63,7 +58,6 @@ const handleSubmit = (e) =>{
                     </form>
                 </LoginCard>
             </LoginContainer>
-       
     );
 };
 

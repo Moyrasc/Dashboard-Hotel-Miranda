@@ -6,8 +6,9 @@ const Layout = styled.div`
   grid-template-rows: 4rem auto;
   grid-template-columns: 16rem auto;
   height: 100%;
-`;
 
+
+`;
 const MainContainer = styled.div`
  /*Barra lateral oculta*/
   grid-row-start: 2;
@@ -27,5 +28,6 @@ const MainContainerOn = styled.div`
 export {
     Layout,
     MainContainer,
-    MainContainerOn
-} ;
+    MainContainerOn,
+
+};
