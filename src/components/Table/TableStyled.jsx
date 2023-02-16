@@ -82,10 +82,11 @@ const FilterButton = styled.button`
 const StyledTable = styled.table`
     border-collapse: collapse;
     width: 90%;
+    background-color: #ffffff;
     
     td, th {
         text-align: left;
-        border: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
         padding: 2px;
         div {
             display: flex;
@@ -99,6 +100,7 @@ const StyledTable = styled.table`
             }
         }
         img {
+          border-radius: 5px;
             object-fit: cover;
             width: 60px;
             height: 60px; 

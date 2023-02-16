@@ -4,7 +4,7 @@ const NavbarContainer = styled.div`
     background: #FFFFFF;
     box-shadow: 13px 3px 40px #00000005;
     height: 100%;
-    /* width: 20vw; */
+   /* display: none; */
     grid-row-start: 1;
     grid-column-start: 1;
     grid-row-end: 4;

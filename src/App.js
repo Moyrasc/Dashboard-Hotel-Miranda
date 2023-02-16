@@ -23,7 +23,7 @@ import RoomsList from './views/Rooms/RoomsList';
 import BookingsList from './views/Bookings/BookingsList';
 import ContactsList from './views/Contacts/ContactsList';
 import UsersList from './views/Users/UsersList';
-import Layout from './components/LayoutStyled';
+import { Layout } from './components/LayoutStyled';
 
 
 
