@@ -27,18 +27,18 @@ const Navbar = () => {
             Dashboard
             
           </NavLink>
-          <NavLink to={"rooms/list"}>
+          <NavLink to={"rooms"}>
             
             <GiHouseKeys />
             Rooms
           </NavLink>
-          <NavLink to={"bookings/list"}>
+          <NavLink to={"bookings"}>
             
             <BsCalendarCheck />
             Booking
           </NavLink>
-          <NavLink to={"contacts/list"}> <BiCommentDetail/>Contact</NavLink>
-          <NavLink to={"users/list"}>
+          <NavLink to={"contacts"}> <BiCommentDetail/>Contact</NavLink>
+          <NavLink to={"users"}>
             <BiUser />
             Users
           </NavLink>
