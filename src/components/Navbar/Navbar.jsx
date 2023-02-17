@@ -27,18 +27,18 @@ const Navbar = () => {
             Dashboard
             
           </NavLink>
-          <NavLink to={"rooms"}>
+          <NavLink to={"Rooms"}>
             
             <GiHouseKeys />
             Rooms
           </NavLink>
-          <NavLink to={"bookings"}>
+          <NavLink to={"Bookings"}>
             
             <BsCalendarCheck />
             Booking
           </NavLink>
-          <NavLink to={"contacts"}> <BiCommentDetail/>Contact</NavLink>
-          <NavLink to={"users"}>
+          <NavLink to={"Contacts"}> <BiCommentDetail/>Contact</NavLink>
+          <NavLink to={"Users"}>
             <BiUser />
             Users
           </NavLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
           </ImgContainer>
           <p><strong>Noe Sola</strong></p>
           <p><small>noemisolac@gmail.com</small></p>
-          <NavLink to={"profile"}>
+          <NavLink to={"Profile"}>
             <button>Edit profile</button>
           </NavLink>
         </UserContainer>

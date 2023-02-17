@@ -21,7 +21,7 @@ const Rooms = () => {
         { property: 'status', label: 'Status' },
     ];
     const HandleNewRoom = () => {
-        navigate("/rooms/newroom")
+        navigate("/Rooms/newroom")
     }
     return (
 

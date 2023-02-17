@@ -28,25 +28,25 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route element={<ProtectedRoute />}>
           <Route path='/*' element={<DashBoard />} />
-          <Route path='/bookings' element={<Bookings />} />
+          <Route path='/Bookings' element={<Bookings />} />
           <Route path='/bookings/newbooking' element={<NewBooking />} />
           <Route path='/bookings/:bookingId' element={<BookingDetails />} />
           <Route path='/bookings/edit/:bookingId' element={<EditBooking />} />
 
-          <Route path='/rooms' element={<Rooms />} />
+          <Route path='/Rooms' element={<Rooms />} />
           <Route path='/rooms/newroom' element={<NewRoom />} />
           <Route path='/rooms/:roomId' element={<RoomDetails />} />
           <Route path='/rooms/edit/:roomId' element={<EditRoom />} />
 
-          <Route path='/users' element={<Users />} />
+          <Route path='/Users' element={<Users />} />
           <Route path='/users/newUser' element={<NewUser />} />
           <Route path='/users/:userId' element={<UserDetails />} />
           <Route path='/users/edit/:userId' element={<EditUser />} />
 
-          <Route path='/contacts' element={<Contacts />} />
+          <Route path='/Contacts' element={<Contacts />} />
           <Route path='/contacts/:contactId' element={<ContactDetails />} />
 
-          <Route path='profile' element={<Profile />} />
+          <Route path='Profile' element={<Profile />} />
 
         </Route>
       </Routes>

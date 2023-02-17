@@ -26,7 +26,7 @@ const Users = () => {
         },
     ];
     const HandleNewEmployee = () => {
-        navigate("/users/newUser")
+        navigate("/Users/newUser")
     }
     return (
         <div>
