@@ -2,8 +2,9 @@ import React from "react";
 import Table from "../../components/Table/Table";
 import users from "../../Data/user.json";
 import {IoIosArrowDown} from 'react-icons/io'
+import {MdLocalPhone} from 'react-icons/md'
 import { FilterButton, FilterTable, ButtonContainer, ButtonTable, ButtonOrder } from "../../components/Table/TableStyled";
-import { ActiveEmployeed, InactiveEmployeed } from "./UsersStyled";
+import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
 import { useNavigate } from "react-router";
 
 const Users = () => {
@@ -18,7 +19,8 @@ const Users = () => {
                 </>)
         },
         { property: 'description', label: 'Job Desk' },
-        { property: 'phone', label: 'Contact' },
+        { property: ['phone'], label: 'Contact', display: (phone)=> (<p><IconPhone>
+            <MdLocalPhone className="phone"/></IconPhone>{phone}</p>) },
         {
             property: ['status'], label: 'Status', display: (status) =>
                 status === 'active' ? <ActiveEmployeed>{status}</ActiveEmployeed> :
@@ -26,7 +28,7 @@ const Users = () => {
         },
     ];
     const HandleNewEmployee = () => {
-        navigate("/users/newUser")
+        navigate("/Users/newUser")
     }
     return (
         <div>

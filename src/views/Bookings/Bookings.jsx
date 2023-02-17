@@ -3,7 +3,7 @@ import React from "react";
 import Table from "../../components/Table/Table";
 import bookings from "../../Data/bookings.json";
 import { FilterButton, FilterTable } from "../../components/Table/TableStyled";
-import { Guest, Notes } from "./BookingsStyled";
+import { CheckIn, CheckOut, Guest, Notes, Progress } from "./BookingsStyled";
 
 const Bookings = () => {
     const cols = [
@@ -25,7 +25,10 @@ const Bookings = () => {
 
         },
         { property: 'typeRoom', label: 'Room Type' },
-        { property: 'state', label: 'Status' },
+        { property: ['state'], label: 'Status' , display:(state) =>
+        state === 'check in' ? <CheckIn>{state}</CheckIn> :
+        state === 'check out' ? <CheckOut>{state}</CheckOut> :
+            <Progress>{state}</Progress>},
     ];
     return (
 
