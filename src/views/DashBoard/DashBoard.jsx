@@ -1,7 +1,8 @@
 import React from "react";
 import { DashboardContainer, IconsDashboard, KpiContainer, KpiNumbers, KpiParagraph } from "./DashboardStyled";
 import { MdOutlineBed } from 'react-icons/md'
-
+import {BsBoxArrowRight,BsBoxArrowLeft} from 'react-icons/bs'
+import {FaRegCalendarCheck} from 'react-icons/fa'
 const DashBoard = () => {
 
     return (
@@ -20,7 +21,7 @@ const DashBoard = () => {
             <KpiContainer>
                 <div className="iconBed">
                 <IconsDashboard>
-                    <MdOutlineBed />
+                    <FaRegCalendarCheck />
                 </IconsDashboard>
                 </div>
                 <div>
@@ -31,7 +32,7 @@ const DashBoard = () => {
             <KpiContainer>
                 <div className="iconBed">
                 <IconsDashboard>
-                    <MdOutlineBed />
+                    <BsBoxArrowRight />
                 </IconsDashboard>
                 </div>
                 <div>
@@ -42,7 +43,7 @@ const DashBoard = () => {
             <KpiContainer>
                 <div className="iconBed">
                 <IconsDashboard>
-                    <MdOutlineBed />
+                    <BsBoxArrowLeft />
                 </IconsDashboard>
                 </div>
                 <div>

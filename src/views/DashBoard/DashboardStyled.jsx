@@ -6,8 +6,8 @@ display: flex;
 const IconsDashboard = styled.div`
 background-color: #FFEDEC;
 color: #E23428;
-width:65px;
-height: 65px;
+width:50px;
+height: 50px;
 border-radius: 8px;
 display: flex;
 justify-content: center;
