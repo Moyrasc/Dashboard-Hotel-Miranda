@@ -1,0 +1,45 @@
+** Public **
+
+- /login
+
+** Protected **
+
+<-- Dashboard -->
+
+- /dashboard
+
+<-- Bookings -->
+
+- /bookings
+- /bookings/bookingsList
+- /bookings/newBooking
+- /booking/:bookingId
+- /booking/edit/:bookingId
+
+
+<-- Rooms -->
+
+- /rooms
+- /rooms/roomList
+- /rooms/newRoom
+- /room/:roomId
+- /room/edit/:roomId
+
+<-- Users -->
+
+- /users
+- /users/usersList
+- /users/newUser
+- /user/:userId
+- user/edit/:userId
+
+<-- Contac -->
+
+- /contacts
+- /contacts/contactsList
+- /contact/:contactId
+
+<-- Profile -->
+-/profile
+
+

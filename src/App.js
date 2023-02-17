@@ -1,24 +1,66 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router';
 import './App.css';
+import DashBoard from './views/DashBoard/DashBoard';
+import Login from './views/Login/Login';
+import BookingDetails from './views/Bookings/BookingDetails';
+import Bookings from './views/Bookings/Bookings';
+import EditBooking from './views/Bookings/EditBooking';
+import NewBooking from './views/Bookings/NewBooking';
+import Rooms from './views/Rooms/Rooms';
+import NewRoom from './views/Rooms/NewRoom';
+import RoomDetails from './views/Rooms/RoomDetails';
+import EditRoom from './views/Rooms/EditRoom';
+import Users from './views/Users/Users';
+import NewUser from './views/Users/NewUser';
+import UserDetails from './views/Users/UserDetails';
+import EditUser from './views/Users/EditUser';
+import Contacts from './views/Contacts/Contacts';
+import ContactDetails from './views/Contacts/ContactDetails';
+import ProtectedRoute from './components/ProtectedRoute';
+import Profile from './views/Profile/Profile';
+import RoomsList from './views/Rooms/RoomsList';
+import BookingsList from './views/Bookings/BookingsList';
+import ContactsList from './views/Contacts/ContactsList';
+import UsersList from './views/Users/UsersList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path='/' element={<DashBoard />} >
+            <Route path='bookings' element={<Bookings />}>
+              <Route path='list' element={<BookingsList />} />
+              <Route path='newbooking' element={<NewBooking />} />
+              <Route path=':bookingId' element={<BookingDetails />} />
+              <Route path='edit/:bookingId' element={<EditBooking />} />
+            </Route>
+            <Route path='rooms' element={<Rooms />}>
+              <Route path='list' element={<RoomsList />} />
+              <Route path='newroom' element={<NewRoom />} />
+              <Route path=':roomId' element={<RoomDetails />} />
+              <Route path='edit/:roomId' element={<EditRoom />} />
+            </Route>
+            <Route path='users' element={<Users />}>
+              <Route path='list' element={<UsersList />} />
+              <Route path='newUser' element={<NewUser />} />
+              <Route path=':userId' element={<UserDetails />} />
+              <Route path='edit/:userId' element={<EditUser />} />
+            </Route>
+            <Route path='contacts' element={<Contacts />}>
+              <Route path='list' element={<ContactsList />} />
+              <Route path=':contactId' element={<ContactDetails />} />
+            </Route>
+            <Route path='profile' element={<Profile />} />
+          </Route>
+        </Route>
+
+      </Routes>
+
+    </>
   );
 }
 
