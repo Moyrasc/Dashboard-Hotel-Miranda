@@ -46,7 +46,7 @@ const Header = () => {
 
   const handleLogOut = (e) => {
     e.preventDefault()
-    setUser({ email: "", password: "" })
+    setUser({ email: ""})
     navigate('/login')
 
   }
