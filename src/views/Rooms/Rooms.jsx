@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import Table from "../../components/Table/Table";
-import { ButtonContainer, ButtonTable, FilterTable } from "../../components/Table/TableStyled";
+import { ButtonContainer, ButtonTable, FilterTable, FilterButton } from "../../components/Table/TableStyled";
 import rooms from "../../Data/rooms.json";
 const Rooms = () => {
     const navigate = useNavigate()
@@ -20,13 +20,16 @@ const Rooms = () => {
         { property: 'price', label: 'Rate' },
         { property: 'status', label: 'Status' },
     ];
-    const HandleNewRoom = () =>{
+    const HandleNewRoom = () => {
         navigate("/rooms/newroom")
     }
     return (
 
         <div>
             <FilterTable>
+                <FilterButton >All Rooms</FilterButton>
+                <FilterButton>Active Employee</FilterButton>
+                <FilterButton>Inactive Employee</FilterButton>
                 <ButtonContainer>
                     <ButtonTable onClick={HandleNewRoom}> + New Room</ButtonTable>
                 </ButtonContainer>

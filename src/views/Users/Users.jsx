@@ -1,10 +1,13 @@
 import React from "react";
 import Table from "../../components/Table/Table";
 import users from "../../Data/user.json";
-import { FilterButton, FilterTable } from "../../components/Table/TableStyled";
+import {IoIosArrowDown} from 'react-icons/io'
+import { FilterButton, FilterTable, ButtonContainer, ButtonTable, ButtonOrder } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, InactiveEmployeed } from "./UsersStyled";
+import { useNavigate } from "react-router";
 
 const Users = () => {
+    const navigate = useNavigate()
     const cols = [
         { property: ['avatar'], label: 'User', display: (src) => (<img src={src} alt="room" />) },
         {
@@ -22,6 +25,9 @@ const Users = () => {
                     <InactiveEmployeed>{status}</InactiveEmployeed>
         },
     ];
+    const HandleNewEmployee = () => {
+        navigate("/users/newUser")
+    }
     return (
         <div>
             <div>
@@ -29,6 +35,10 @@ const Users = () => {
                     <FilterButton >All Employee</FilterButton>
                     <FilterButton>Active Employee</FilterButton>
                     <FilterButton>Inactive Employee</FilterButton>
+                    <ButtonContainer>
+                        <ButtonTable onClick={HandleNewEmployee}> + New Employee </ButtonTable>
+                        <ButtonOrder>Newest <IoIosArrowDown/></ButtonOrder>
+                    </ButtonContainer>
                 </FilterTable>
             </div>
             <Table data={users} cols={cols} />
