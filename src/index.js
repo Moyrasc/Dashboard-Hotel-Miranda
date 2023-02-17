@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <UserProvider>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename='/Dashboard-Hotel-Miranda'>
         <App />
       </BrowserRouter>
     </UserProvider >
