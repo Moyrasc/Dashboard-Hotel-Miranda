@@ -23,16 +23,16 @@ const Header = () => {
       case "/":
         setTitle("Dashboard");
         break
-      case "/bookings/list":
+      case "/bookings":
         setTitle("Bookings");
         break;
-      case "/rooms/list":
+      case "/rooms":
         setTitle("Rooms");
         break;
-      case "/contacts/list":
+      case "/contacts":
         setTitle("Contacts");
         break;
-      case "/users/list":
+      case "/users":
         setTitle("Users");
         break;
       case "/profile":
@@ -46,7 +46,7 @@ const Header = () => {
 
   const handleLogOut = (e) => {
     e.preventDefault()
-    setUser({ email: "", password: "" })
+    setUser({ email: ""})
     navigate('/login')
 
   }

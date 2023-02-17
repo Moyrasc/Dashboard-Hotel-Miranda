@@ -8,7 +8,7 @@ export const useUser = () => {
 };
 
 export const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE)) || { email: "", password: "" });
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE)) || { email: "" });
 
     useEffect(() => {
         localStorage.setItem( KEY_LOCALSTORAGE, JSON.stringify(user))

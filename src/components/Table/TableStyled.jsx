@@ -22,22 +22,23 @@ const FilterButton = styled.button`
   }
 `;
 
-// const ButtonTable = styled.button`
-//   background-color: #135846;
-//   color: #ffffff;
-//   border: none;
-//   border-radius: 8px;
-//   font-weight: 600;
-//   max-width: 200px;
-//   padding: 1rem 2rem;
-// `;
+const ButtonTable = styled.button`
+  background-color: #135846;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 200px;
+  padding: 0rem 2rem;
+  cursor: pointer;
+`;
 
-// const ButtonContainer = styled.div`
-// display: flex;
-// width: 85%;
-// justify-content: end;
+const ButtonContainer = styled.div`
+display: flex;
+width: 90%;
+justify-content: end;
 
-// `
+`
 const StyledTable = styled.table`
     border-collapse: collapse;
     width: 95%;
@@ -68,4 +69,9 @@ const StyledTable = styled.table`
     
 `;
 // export { TableContainer, FilterButton, FilterTable, ButtonTable, ButtonContainer };
-export {StyledTable,FilterButton,FilterTable}
+export {StyledTable,
+  FilterButton,
+  FilterTable,
+  ButtonTable,
+  ButtonContainer
+}
