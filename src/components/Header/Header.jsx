@@ -3,6 +3,8 @@ import {
   HeaderTitle,
   HeaderContainer,
   Icon,
+  IconContainer,
+
 } from "./HeaderStyled";
 import { AiOutlineBell, AiOutlineMail } from "react-icons/ai";
 import { FiLogOut } from 'react-icons/fi'
@@ -31,11 +33,19 @@ const Header = () => {
         <RiArrowLeftRightFill className="arrow" />
         <NavigateDashboard />
       </HeaderTitle>
-      <Icon>
-        <AiOutlineBell className="icon" />
-        <AiOutlineMail className="icon" />
-        <FiLogOut className="icon logout" onClick={handleLogOut} />
-      </Icon>
+      <IconContainer>
+        <Icon>
+          <AiOutlineBell className="icon" />
+          <span>5</span>
+        </Icon>
+        <Icon>
+          <AiOutlineMail className="icon" />
+          <span>76</span>
+        </Icon>
+        <Icon>
+          <FiLogOut className="icon logout" onClick={handleLogOut} />
+        </Icon>
+      </IconContainer>
     </HeaderContainer>
   );
 };
