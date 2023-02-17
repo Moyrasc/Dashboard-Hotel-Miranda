@@ -7,7 +7,6 @@ const HeaderContainer = styled.div`
     grid-row-end: 2;
     grid-column-end: 3;
     background-color: #FFFFFF;
-    box-shadow: 0px 3px 10px #00000005;
     height: 90px;
 `
 const HeaderContainerOn = styled.div`
@@ -17,7 +16,7 @@ const HeaderContainerOn = styled.div`
     grid-row-end: 2;
     grid-column-end: 3;
     background-color: #FFFFFF;
-    box-shadow: 0px 3px 10px #00000005;
+    /* box-shadow: 0px 3px 10px #00000005; */
     height: 90px;
 `
 const HeaderTitle = styled.div`
@@ -54,7 +53,10 @@ const Icon = styled.div`
         color: #135846;
         width: 25px;
         height: 25px;
-        padding: 0 0.4rem;
+        padding: 0.5rem 1rem 0 0;
+    }
+    .logout{
+        padding-left: 2.5rem;
     }
     `;
 

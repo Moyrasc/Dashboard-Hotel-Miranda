@@ -62,7 +62,7 @@ const Header = () => {
 
         <AiOutlineBell className="icon" />
         <AiOutlineMail className="icon" />
-        <FiLogOut className="icon" onClick={handleLogOut} />
+        <FiLogOut className="icon logout" onClick={handleLogOut} />
 
       </Icon>
     </HeaderContainer>

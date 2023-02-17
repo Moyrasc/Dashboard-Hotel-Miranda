@@ -43,15 +43,15 @@ const StyledTable = styled.table`
     width: 95%;
     background-color: #ffffff;
     border-radius: 20px;
-    
     td {
       border-bottom: 1px solid #EBEBEB;
         color: #393939;
         font-family: 'Poppins', sans-serif;;
         font-size: 14px;
         text-align: left;
-        padding: 10px 10px;
+        padding: 10px 15px;
         width: 50px;
+        
     }
     th {
         text-align: left;

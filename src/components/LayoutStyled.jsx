@@ -19,7 +19,7 @@ const MainContainer = styled.div`
 `;
 const MainContainerOn = styled.div`
   padding-left: 3rem;
-  /* padding-top: 0.5rem; */
+  padding-top: 1.5rem;
   /*Barra lateral visible*/
   grid-row-start: 2;
   grid-column-start: 2;
