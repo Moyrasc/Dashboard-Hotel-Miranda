@@ -3,6 +3,8 @@ import { LoginContainer,LoginCard, InputContainer, Input, Button, ButtonContaine
 import logo from '../../assets/icons/logo2.png'
 import { useUser } from "../../Context/userContext";
 import { useNavigate } from "react-router";
+import { ErrorMsg } from "../../components/Error/ErrorStyled";
+import Error from "../../components/Error/Error";
 
 const User = {
     email : "admin@admin.com",
@@ -12,18 +14,18 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ ,setUser] = useUser()
-    const [error, setError] = useState('')
+    const [error, setError] = useState(false)
     const navigate = useNavigate()
 
 
 const handleSubmit = (e) =>{
     e.preventDefault()
     if(email !== User.email){
-        setError('email no válido')
+        setError(true)
         return
     }
     if(password !== User.password){
-        setError('Password no válido')
+        setError(true)
         return
     }
     setError('')
@@ -50,7 +52,7 @@ const handleSubmit = (e) =>{
                         <label>Password</label>
                             <Input type="password" className='input-pass' value={password} onChange={(e)=> setPassword(e.target.value)}></Input>       
                         </InputContainer>
-                        {error && <p>{error}</p>}
+                        {error && <Error><ErrorMsg>Invalid data</ErrorMsg></Error>}
                         <ButtonContainer>
                             <Button>Login</Button>
                         </ButtonContainer>
