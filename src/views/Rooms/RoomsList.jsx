@@ -1,5 +1,6 @@
 import React from "react";
 import Table from "../../components/Table/Table";
+import { ButtonContainer, ButtonTable, FilterTable } from "../../components/Table/TableStyled";
 import rooms from "../../Data/rooms.json";
 
 const RoomsList = () => {
@@ -21,6 +22,11 @@ const RoomsList = () => {
   return (
 
     <div>
+      <FilterTable>
+        <ButtonContainer>
+        <ButtonTable> + New Room</ButtonTable>
+        </ButtonContainer>
+      </FilterTable>
       <Table data={rooms} cols={cols} />
     </div>
   );
