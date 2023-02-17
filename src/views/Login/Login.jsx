@@ -44,11 +44,11 @@ const handleSubmit = (e) =>{
                     <form onSubmit={handleSubmit}>
                         <InputContainer>
                         <label>E-mail</label>
-                            <Input type="text" className='input-user' value={email} onChange={(e)=> setEmail(e.target.value)}></Input>    
+                            <Input type="text" className='input-user' placeholder="admin@admin.com" value={email} onChange={(e)=> setEmail(e.target.value)}></Input>    
                         </InputContainer>
                         <InputContainer>
                         <label>Password</label>
-                            <Input type="password" className='input-pass' value={password} onChange={(e)=> setPassword(e.target.value)}></Input>       
+                            <Input type="password" className='input-pass' placeholder="12345" value={password} onChange={(e)=> setPassword(e.target.value)}></Input>       
                         </InputContainer>
                         {error && <p>{error}</p>}
                         <ButtonContainer>
