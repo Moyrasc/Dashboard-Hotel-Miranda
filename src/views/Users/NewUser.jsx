@@ -8,7 +8,7 @@ const NewUser = () => {
         <UserContainer>
             <FormContainer>
                 <InputContainer>
-                <form enctype="multipart/formdata/" name="upload-image">
+                <form encType="multipart/formdata/" name="upload-image">
                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="avatar"/>
                 </form>
                 
@@ -16,9 +16,9 @@ const NewUser = () => {
                 <Input type="text" />
                 <label>Job Position</label>
                 <SelectUser name="Job Desk">
-                    <option value="Manager">Manager</option>
-                    <option value="Reception" selected>Reception</option>
-                    <option value="RoomService">Room Service</option>
+                    <option defaultValue="Manager">Manager</option>
+                    <option defaultValue="Reception">Reception</option>
+                    <option defaultValue="RoomService">Room Service</option>
                 </SelectUser>
                 <label>Email</label>
                 <Input type="email"/>
@@ -29,7 +29,7 @@ const NewUser = () => {
                 <label>Start Date</label>
                 <Input type="date"/>
                 <label>Job Description</label>
-                <textarea name="textarea" rows="5" cols="30">Write job description here...</textarea>
+                <textarea name="textarea" rows="5" cols="30" placeholder="Write job description here..."/>
                 </InputContainer>
                 <div className="btn-save">
                     <button>Save User</button>

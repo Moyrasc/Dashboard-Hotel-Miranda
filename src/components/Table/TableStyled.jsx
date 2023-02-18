@@ -34,7 +34,7 @@ const ButtonTable = styled.button`
   padding: 0rem 1rem;
   cursor: pointer;
 `;
-const ButtonOrder = styled.button`
+const SelectOrder = styled.button`
 background-color: #FFFFFF;
 border: 1px solid #135846;
 color: #135846;
@@ -94,5 +94,5 @@ export {StyledTable,
   FilterTable,
   ButtonTable,
   ButtonContainer,
-  ButtonOrder
+  SelectOrder
 }

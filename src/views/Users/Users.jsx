@@ -3,7 +3,7 @@ import Table from "../../components/Table/Table";
 import users from "../../Data/user.json";
 import {IoIosArrowDown} from 'react-icons/io'
 import {MdLocalPhone} from 'react-icons/md'
-import { FilterButton, FilterTable, ButtonContainer, ButtonTable, ButtonOrder } from "../../components/Table/TableStyled";
+import { FilterButton, FilterTable, ButtonContainer, ButtonTable, SelectOrder } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
 import { useNavigate } from "react-router";
 
@@ -39,7 +39,7 @@ const Users = () => {
                     <FilterButton>Inactive Employee</FilterButton>
                     <ButtonContainer>
                         <ButtonTable onClick={HandleNewEmployee}> + New Employee </ButtonTable>
-                        <ButtonOrder>Newest <IoIosArrowDown/></ButtonOrder>
+                        <SelectOrder>Newest <IoIosArrowDown/></SelectOrder>
                     </ButtonContainer>
                 </FilterTable>
             </div>
