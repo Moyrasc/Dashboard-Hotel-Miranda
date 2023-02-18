@@ -54,7 +54,7 @@ justify-content: end;
 `
 const StyledTable = styled.table`
     border-collapse: collapse;
-    width: 95%;
+    width: 96%;
     background-color: #ffffff;
     border-radius: 20px;
     td {
@@ -78,6 +78,13 @@ const StyledTable = styled.table`
             object-fit: cover;
             width: 60px;
             height: 60px; 
+        }
+        tbody{
+          tr:hover{
+          background: #F8F8F8;
+          transform: scale(1.03);
+          transition: all 400ms ease;
+        }
         }
     
 `;
