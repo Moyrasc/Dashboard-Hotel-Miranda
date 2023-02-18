@@ -23,7 +23,12 @@ const BookedRoom = styled.button`
     border: none;
     width: 110px;
 `;
+const Dto = styled.p`
+color: red;
+font-weight: bold;
+`
 export{
     AvalaibleRoom,
-    BookedRoom
+    BookedRoom,
+    Dto
 }

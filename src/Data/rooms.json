@@ -14,17 +14,13 @@
         ],
         "number": 1,
         "offers": true,
-        "price": 27703,
-        "discount": 84,
+        "price": 500,
+        "discount": 60,
         "cancellation": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-        "amenities": [
-            "Minibar",
-            "Tv",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities":  "Mini-bar, TV, Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -42,17 +38,13 @@
         ],
         "number": 2,
         "offers": true,
-        "price": 68334,
-        "discount": 3,
+        "price": 683,
+        "discount": 60,
         "cancellation": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-        "amenities": [
-            "Mascotas",
-            "Bañera",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Mascotas, Bañera, AC",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -70,19 +62,13 @@
         ],
         "number": 3,
         "offers": false,
-        "price": 76134,
-        "discount": 28,
+        "price": 761,
+        "discount": 40,
         "cancellation": "In congue. Etiam justo. Etiam pretium iaculis justo.",
-        "amenities": [
-            "Tv",
-            "Mascotas",
-            "Balcón",
-            "Minibar",
-            "AC"
-        ],
-        "status": [
+        "amenities": "TV, Mascotas, Balcón, Mini-Bar, AC",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -100,19 +86,13 @@
         ],
         "number": 4,
         "offers": true,
-        "price": 68930,
+        "price": 689,
         "discount": 56,
         "cancellation": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-        "amenities": [
-            "Vistas al mar",
-            "Minibar",
-            "Mascotas",
-            "AC",
-            "Tv"
-        ],
-        "status": [
+        "amenities": "Vistas al mar, Minibar, Mascotas, AC, TV",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -130,16 +110,13 @@
         ],
         "number": 5,
         "offers": true,
-        "price": 28234,
-        "discount": 85,
+        "price": 282,
+        "discount": 20,
         "cancellation": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-        "amenities": [
-            "Tv",
-            "AC"
-        ],
-        "status": [
+        "amenities":  "Tv, AC",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -157,17 +134,13 @@
         ],
         "number": 6,
         "offers": false,
-        "price": 34674,
+        "price": 346,
         "discount": 35,
         "cancellation": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-        "amenities": [
-            "Minibar",
-            "Balcón",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Mini-bar, Balcón, AC",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -185,17 +158,13 @@
         ],
         "number": 7,
         "offers": true,
-        "price": 66569,
-        "discount": 34,
+        "price": 665,
+        "discount": 40,
         "cancellation": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-        "amenities": [
-            "Balcón",
-            "Minibar",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Mini-bar, Balcón, AC",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -213,21 +182,13 @@
         ],
         "number": 8,
         "offers": true,
-        "price": 75047,
-        "discount": 77,
+        "price": 750,
+        "discount": 30,
         "cancellation": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-        "amenities": [
-            "Mascotas",
-            "Balcón",
-            "Tv",
-            "Minibar",
-            "Bañera",
-            "AC",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, TV, Mini-bar, Bañera, AC ,Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -245,18 +206,13 @@
         ],
         "number": 9,
         "offers": true,
-        "price": 58292,
-        "discount": 52,
+        "price": 582,
+        "discount": 50,
         "cancellation": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-        "amenities": [
-            "Balcón",
-            "AC",
-            "Bañera",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, Bañera, AC, Vistas al mar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -274,17 +230,13 @@
         ],
         "number": 10,
         "offers": true,
-        "price": 2715,
-        "discount": 6,
+        "price": 271,
+        "discount": 20,
         "cancellation": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-        "amenities": [
-            "Mascotas",
-            "Balcón",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, TV, Mini-bar, Bañera, AC ,Vistas al mar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -302,19 +254,13 @@
         ],
         "number": 11,
         "offers": false,
-        "price": 76116,
-        "discount": 89,
+        "price": 761,
+        "discount": 40,
         "cancellation": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-        "amenities": [
-            "Mascotas",
-            "Balcón",
-            "Bañera",
-            "AC",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, Bañera, AC ,Vistas al mar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -332,18 +278,13 @@
         ],
         "number": 12,
         "offers": true,
-        "price": 7989,
-        "discount": 13,
+        "price": 798,
+        "discount": 30,
         "cancellation": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "amenities": [
-            "AC",
-            "Mascotas",
-            "Bañera",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -361,21 +302,13 @@
         ],
         "number": 13,
         "offers": true,
-        "price": 68309,
-        "discount": 59,
+        "price": 683,
+        "discount": 50,
         "cancellation": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-        "amenities": [
-            "Mascotas",
-            "AC",
-            "Balcón",
-            "Minibar",
-            "Vistas al mar",
-            "Tv",
-            "Bañera"
-        ],
-        "status": [
+        "amenities": "Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -393,21 +326,13 @@
         ],
         "number": 14,
         "offers": true,
-        "price": 96078,
-        "discount": 56,
+        "price": 960,
+        "discount": 60,
         "cancellation": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-        "amenities": [
-            "Minibar",
-            "Bañera",
-            "AC",
-            "Mascotas",
-            "Vistas al mar",
-            "Balcón",
-            "Tv"
-        ],
-        "status": [
+        "amenities": "Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -425,20 +350,13 @@
         ],
         "number": 15,
         "offers": false,
-        "price": 52371,
-        "discount": 85,
+        "price": 523,
+        "discount": 45,
         "cancellation": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-        "amenities": [
-            "Mascotas",
-            "Tv",
-            "Balcón",
-            "AC",
-            "Vistas al mar",
-            "Bañera"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, Bañera, AC ,Vistas al mar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -456,20 +374,13 @@
         ],
         "number": 16,
         "offers": false,
-        "price": 58954,
-        "discount": 10,
+        "price": 589,
+        "discount": 40,
         "cancellation": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-        "amenities": [
-            "Balcón",
-            "Minibar",
-            "Tv",
-            "Mascotas",
-            "Bañera",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -487,17 +398,13 @@
         ],
         "number": 17,
         "offers": true,
-        "price": 86214,
-        "discount": 81,
+        "price": 862,
+        "discount": 60,
         "cancellation": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-        "amenities": [
-            "Tv",
-            "Balcón",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Mini-bar, AC, TV",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -515,20 +422,13 @@
         ],
         "number": 18,
         "offers": true,
-        "price": 62165,
-        "discount": 100,
+        "price": 621,
+        "discount": 30,
         "cancellation": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-        "amenities": [
-            "Minibar",
-            "Bañera",
-            "Balcón",
-            "Vistas al mar",
-            "AC",
-            "Mascotas"
-        ],
-        "status": [
+        "amenities": "Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -546,17 +446,13 @@
         ],
         "number": 19,
         "offers": false,
-        "price": 75372,
-        "discount": 29,
+        "price": 753,
+        "discount": 50,
         "cancellation": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-        "amenities": [
-            "Balcón",
-            "Tv",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities":"Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -574,20 +470,13 @@
         ],
         "number": 20,
         "offers": true,
-        "price": 41819,
-        "discount": 3,
+        "price": 418,
+        "discount": 20,
         "cancellation": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-        "amenities": [
-            "Tv",
-            "AC",
-            "Mascotas",
-            "Bañera",
-            "Balcón",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "TV, AC, Mascotas, Bañera, Balcón, Mini-bar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -605,16 +494,13 @@
         ],
         "number": 21,
         "offers": true,
-        "price": 28467,
-        "discount": 21,
+        "price": 284,
+        "discount": 20,
         "cancellation": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-        "amenities": [
-            "Vistas al mar",
-            "Bañera"
-        ],
-        "status": [
+        "amenities": "Vistas al mar, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -632,19 +518,14 @@
         ],
         "number": 22,
         "offers": false,
-        "price": 44682,
-        "discount": 71,
+        "price": 446,
+        "discount": 40,
         "cancellation": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-        "amenities": [
-            "Balcón",
-            "AC",
-            "Bañera",
-            "Mascotas",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "Balcón, AC, Bañera, Mascotas, Mini-bar"
+        ,
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -662,21 +543,13 @@
         ],
         "number": 23,
         "offers": false,
-        "price": 99826,
-        "discount": 72,
+        "price": 998,
+        "discount": 50,
         "cancellation": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-        "amenities": [
-            "Vistas al mar",
-            "Bañera",
-            "Tv",
-            "AC",
-            "Balcón",
-            "Minibar",
-            "Mascotas"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, TV, Mini-bar, Bañera, AC ,Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -694,19 +567,13 @@
         ],
         "number": 24,
         "offers": true,
-        "price": 70975,
-        "discount": 63,
+        "price": 709,
+        "discount": 60,
         "cancellation": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-        "amenities": [
-            "Minibar",
-            "Mascotas",
-            "Balcón",
-            "Vistas al mar",
-            "Bañera"
-        ],
-        "status": [
+        "amenities":" Mascotas, AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -724,17 +591,13 @@
         ],
         "number": 25,
         "offers": false,
-        "price": 99422,
-        "discount": 9,
+        "price": 994,
+        "discount": 60,
         "cancellation": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-        "amenities": [
-            "Mascotas",
-            "Bañera",
-            "AC"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -752,16 +615,13 @@
         ],
         "number": 26,
         "offers": true,
-        "price": 71941,
-        "discount": 88,
+        "price": 719,
+        "discount": 40,
         "cancellation": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-        "amenities": [
-            "Balcón",
-            "Bañera"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -779,19 +639,13 @@
         ],
         "number": 27,
         "offers": false,
-        "price": 43255,
-        "discount": 93,
+        "price": 432,
+        "discount": 30,
         "cancellation": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-        "amenities": [
-            "Balcón",
-            "Bañera",
-            "AC",
-            "Mascotas",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "TV, AC, Mascotas, Bañera, Balcón, Mini-bar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -809,17 +663,13 @@
         ],
         "number": 28,
         "offers": true,
-        "price": 18663,
-        "discount": 70,
+        "price": 186,
+        "discount": 10,
         "cancellation": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-        "amenities": [
-            "Tv",
-            "Minibar",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities": "Mascotas, Balcón, Bañera, AC ,Vistas al mar, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -837,17 +687,13 @@
         ],
         "number": 29,
         "offers": false,
-        "price": 88715,
-        "discount": 62,
+        "price": 887,
+        "discount": 60,
         "cancellation": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-        "amenities": [
-            "AC",
-            "Tv",
-            "Bañera"
-        ],
-        "status": [
+        "amenities": "AC, TV, Bañera",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -865,18 +711,13 @@
         ],
         "number": 30,
         "offers": false,
-        "price": 96204,
-        "discount": 30,
+        "price": 962,
+        "discount": 60,
         "cancellation": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-        "amenities": [
-            "Tv",
-            "Minibar",
-            "Bañera",
-            "AC"
-        ],
-        "status": [
+        "amenities": "AC, TV, Bañera, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -894,18 +735,13 @@
         ],
         "number": 31,
         "offers": false,
-        "price": 94018,
-        "discount": 23,
+        "price": 940,
+        "discount": 60,
         "cancellation": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-        "amenities": [
-            "Mascotas",
-            "AC",
-            "Bañera",
-            "Tv"
-        ],
-        "status": [
+        "amenities": "TV, Balcón, Bañera, AC",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -923,18 +759,13 @@
         ],
         "number": 32,
         "offers": false,
-        "price": 47231,
-        "discount": 24,
+        "price": 472,
+        "discount": 25,
         "cancellation": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-        "amenities": [
-            "Balcón",
-            "Tv",
-            "Mascotas",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -952,21 +783,13 @@
         ],
         "number": 33,
         "offers": false,
-        "price": 21693,
-        "discount": 29,
+        "price": 216,
+        "discount": 25,
         "cancellation": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-        "amenities": [
-            "Vistas al mar",
-            "AC",
-            "Bañera",
-            "Tv",
-            "Mascotas",
-            "Balcón",
-            "Minibar"
-        ],
-        "status": [
+        "amenities":"Mini-bar,  AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -984,21 +807,13 @@
         ],
         "number": 34,
         "offers": false,
-        "price": 13060,
-        "discount": 62,
+        "price": 130,
+        "discount": 10,
         "cancellation": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-        "amenities": [
-            "Minibar",
-            "Balcón",
-            "Vistas al mar",
-            "Mascotas",
-            "Bañera",
-            "AC",
-            "Tv"
-        ],
-        "status": [
+        "amenities": "Mini-bar,  AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -1016,19 +831,13 @@
         ],
         "number": 35,
         "offers": false,
-        "price": 7051,
-        "discount": 86,
+        "price": 700,
+        "discount": 60,
         "cancellation": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-        "amenities": [
-            "AC",
-            "Bañera",
-            "Mascotas",
-            "Minibar",
-            "Balcón"
-        ],
-        "status": [
+        "amenities": "Mini-bar,  AC, Balcón, Mini-bar, Vistas al mar, TV, Bañera",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -1046,20 +855,13 @@
         ],
         "number": 36,
         "offers": false,
-        "price": 42893,
-        "discount": 8,
+        "price": 428,
+        "discount": 10,
         "cancellation": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-        "amenities": [
-            "AC",
-            "Bañera",
-            "Mascotas",
-            "Minibar",
-            "Tv",
-            "Vistas al mar"
-        ],
-        "status": [
+        "amenities": "Vistas al mar, AC, Balcón, Mini-bar, TV, Bañera, Mini-bar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -1077,20 +879,13 @@
         ],
         "number": 37,
         "offers": false,
-        "price": 19573,
-        "discount": 17,
+        "price": 195,
+        "discount": 10,
         "cancellation": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-        "amenities": [
-            "AC",
-            "Bañera",
-            "Mascotas",
-            "Vistas al mar",
-            "Balcón",
-            "Minibar"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar, AC, Mini-bar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-2"
     },
     {
@@ -1108,21 +903,13 @@
         ],
         "number": 38,
         "offers": true,
-        "price": 55631,
-        "discount": 21,
+        "price": 556,
+        "discount": 20,
         "cancellation": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-        "amenities": [
-            "AC",
-            "Balcón",
-            "Bañera",
-            "Mascotas",
-            "Vistas al mar",
-            "Minibar",
-            "Tv"
-        ],
-        "status": [
+        "amenities": "Balcón, Bañera, Vistas al mar, AC, Mini-bar",
+        "status": 
             "Avalaible"
-        ],
+        ,
         "roomFloor": "floor A-1"
     },
     {
@@ -1131,25 +918,23 @@
         "typeRoom": "Double Bed",
         "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "photo": [
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/229283897.jpg?k=4539b8c016bdf8a3d14b6563843233c7742011430944e6d255d5d8587d232c44&o=",
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377636.jpg?               k=0a5dcba1ca80f14d250bd7056f2236f11430a3adb664cb7f87ced4ab735c9696&o=",
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377622.jpg?k=5bae0ab3d9fe3e50892c7ec31140c40066f095db85d8588025a030be0b11b20c&o=",
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377618.jpg?k=e2e6a7e0e3577d8c3890f498058e15f25aebf6fe5208b9255b1737d35e93b5f0&o=",
             "https://cf.bstatic.com/xdata/images/hotel/max1024x768/229343198.jpg?k=cc637e425da0c34516dc5df046b1027713408c890d6f4f11d170a55e85733e64&o=",
-            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377631.jpg?k=cb951e8713a673f5c44756ff2ddbabe32827399e145681b1ea6d0db9ab95dc9d&o=",
-            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/229283897.jpg?k=4539b8c016bdf8a3d14b6563843233c7742011430944e6d255d5d8587d232c44&o="
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377631.jpg?k=cb951e8713a673f5c44756ff2ddbabe32827399e145681b1ea6d0db9ab95dc9d&o="
+            
         ],
         "number": 39,
         "offers": true,
-        "price": 67816,
-        "discount": 48,
+        "price": 678,
+        "discount": 50,
         "cancellation": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-        "amenities": [
-            "Vistas al mar",
-            "Balcón"
-        ],
-        "status": [
+        "amenities": "Vistar al mar, Balcón, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-3"
     },
     {
@@ -1167,16 +952,13 @@
         ],
         "number": 40,
         "offers": false,
-        "price": 71471,
-        "discount": 88,
+        "price": 714,
+        "discount": 60,
         "cancellation": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-        "amenities": [
-            "Mascotas",
-            "AC"
-        ],
-        "status": [
+        "amenities": "TV, AC, Mascotas, Bañera, Balcón, Mini-bar",
+        "status": 
             "Booked"
-        ],
+        ,
         "roomFloor": "floor A-2"
     }
 ]

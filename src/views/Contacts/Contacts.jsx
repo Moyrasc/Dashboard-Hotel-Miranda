@@ -14,9 +14,9 @@ const Contacts = () => {
     { property: 'customer', label: 'Customer' },
     { property: 'comment', label: 'Comment' },
     {
-      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (actionPublish,actionArchived) => <ActionContainer>
-        <Public>{actionPublish}</Public>
-        <Archive>{actionArchived}</Archive>
+      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (row) => <ActionContainer>
+        <Public>{row.actionPublish}</Public>
+        <Archive>{row.actionArchived}</Archive>
       </ActionContainer>
     },
   ];
