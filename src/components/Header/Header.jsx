@@ -36,11 +36,11 @@ const Header = () => {
       <IconContainer>
         <Icon>
           <AiOutlineBell className="icon" />
-          <span>5</span>
+          <span>3</span>
         </Icon>
         <Icon>
           <AiOutlineMail className="icon" />
-          <span>76</span>
+          <span>7</span>
         </Icon>
         <Icon>
           <FiLogOut className="icon logout" onClick={handleLogOut} />

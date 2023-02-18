@@ -3,7 +3,7 @@ import React from "react";
 import Table from "../../components/Table/Table";
 import contacts from "../../Data/contacts.json";
 import { ActionContainer, Archive, Public } from "./ContactsStyled";
-import { FilterButton, FilterTable, ButtonContainer, ButtonOrder } from "../../components/Table/TableStyled";
+import { FilterButton, FilterTable, ButtonContainer, SelectOrder } from "../../components/Table/TableStyled";
 import {IoIosArrowDown} from 'react-icons/io'
 
 const Contacts = () => {
@@ -14,9 +14,9 @@ const Contacts = () => {
     { property: 'customer', label: 'Customer' },
     { property: 'comment', label: 'Comment' },
     {
-      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (actionPublish,actionArchived) => <ActionContainer>
-        <Public>{actionPublish}</Public>
-        <Archive>{actionArchived}</Archive>
+      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (row) => <ActionContainer>
+        <Public>{row.actionPublish}</Public>
+        <Archive>{row.actionArchived}</Archive>
       </ActionContainer>
     },
   ];
@@ -28,7 +28,7 @@ const Contacts = () => {
                     <FilterButton>Published</FilterButton>
                     <FilterButton>Archived</FilterButton>
                     <ButtonContainer>
-                        <ButtonOrder>Newest <span><IoIosArrowDown/></span></ButtonOrder>
+                        <SelectOrder>Newest <span><IoIosArrowDown/></span></SelectOrder>
                     </ButtonContainer>
                 </FilterTable>
       <Table data={contacts} cols={cols} />

@@ -3,28 +3,28 @@ import Table from "../../components/Table/Table";
 import users from "../../Data/user.json";
 import {IoIosArrowDown} from 'react-icons/io'
 import {MdLocalPhone} from 'react-icons/md'
-import { FilterButton, FilterTable, ButtonContainer, ButtonTable, ButtonOrder } from "../../components/Table/TableStyled";
+import { FilterButton, FilterTable, ButtonContainer, ButtonTable, SelectOrder } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
 import { useNavigate } from "react-router";
 
 const Users = () => {
     const navigate = useNavigate()
     const cols = [
-        { property: ['avatar'], label: 'User', display: (src) => (<img src={src} alt="room" />) },
+        { property: ['avatar'], label: 'User', display: (row) => (<img src={row.avatar} alt="room" />) },
         {
-            property: ['first_name', 'id'], label: ' Full Name', display: (id, first_name) => (
+            property: ['first_name', 'id'], label: ' Full Name', display: (row) => (
                 <>
-                    <p>{id}</p>
-                    <p>{first_name}</p>
+                    <p>{row.id}</p>
+                    <p>{row.first_name}</p>
                 </>)
         },
         { property: 'description', label: 'Job Desk' },
-        { property: ['phone'], label: 'Contact', display: (phone)=> (<p><IconPhone>
-            <MdLocalPhone className="phone"/></IconPhone>{phone}</p>) },
+        { property: ['phone'], label: 'Contact', display: (row)=> (<p><IconPhone>
+            <MdLocalPhone className="phone"/></IconPhone>{row.phone}</p>) },
         {
-            property: ['status'], label: 'Status', display: (status) =>
-                status === 'active' ? <ActiveEmployeed>{status}</ActiveEmployeed> :
-                    <InactiveEmployeed>{status}</InactiveEmployeed>
+            property: ['status'], label: 'Status', display: (row) =>
+                row.status === 'active' ? <ActiveEmployeed>{row.status}</ActiveEmployeed> :
+                    <InactiveEmployeed>{row.status}</InactiveEmployeed>
         },
     ];
     const HandleNewEmployee = () => {
@@ -39,7 +39,7 @@ const Users = () => {
                     <FilterButton>Inactive Employee</FilterButton>
                     <ButtonContainer>
                         <ButtonTable onClick={HandleNewEmployee}> + New Employee </ButtonTable>
-                        <ButtonOrder>Newest <IoIosArrowDown/></ButtonOrder>
+                        <SelectOrder>Newest <IoIosArrowDown/></SelectOrder>
                     </ButtonContainer>
                 </FilterTable>
             </div>

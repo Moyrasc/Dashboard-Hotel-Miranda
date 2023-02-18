@@ -18,7 +18,7 @@ const MainContainer = styled.div`
   background-color: #F8F8F8;
 `;
 const MainContainerOn = styled.div`
-  padding-left: 3rem;
+  padding-left: 1rem;
   /*Barra lateral visible*/
   grid-row-start: 2;
   grid-column-start: 2;

@@ -34,7 +34,7 @@ const ButtonTable = styled.button`
   padding: 0rem 1rem;
   cursor: pointer;
 `;
-const ButtonOrder = styled.button`
+const SelectOrder = styled.button`
 background-color: #FFFFFF;
 border: 1px solid #135846;
 color: #135846;
@@ -54,7 +54,7 @@ justify-content: end;
 `
 const StyledTable = styled.table`
     border-collapse: collapse;
-    width: 95%;
+    width: 96%;
     background-color: #ffffff;
     border-radius: 20px;
     td {
@@ -79,6 +79,13 @@ const StyledTable = styled.table`
             width: 60px;
             height: 60px; 
         }
+        tbody{
+          tr:hover{
+          background: #F8F8F8;
+          transform: scale(1.03);
+          transition: all 400ms ease;
+        }
+        }
     
 `;
 
@@ -87,5 +94,5 @@ export {StyledTable,
   FilterTable,
   ButtonTable,
   ButtonContainer,
-  ButtonOrder
+  SelectOrder
 }
