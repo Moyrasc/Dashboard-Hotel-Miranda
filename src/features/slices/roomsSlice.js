@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import delay from './delay.js'
+import delay from '../delay'
 import rooms from '../../Data/rooms.json'
 
 export const fetchAllRooms = createAsyncThunk(
@@ -56,7 +56,7 @@ export const roomsSlice = createSlice({
             })
             .addCase(fetchAllRooms.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.rooms = action.payload
             })
             .addCase(fetchAllRooms.rejected, (state) => {
                 state.status = 'error'
@@ -66,7 +66,7 @@ export const roomsSlice = createSlice({
             })
             .addCase(fetchRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.room = action.payload
             })
             .addCase(fetchRoom.rejected, (state) => {
                 state.status = 'error'
@@ -76,7 +76,7 @@ export const roomsSlice = createSlice({
             })
             .addCase(newRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.room = action.payload
             })
             .addCase(newRoom.rejected, (state) => {
                 state.status = 'error'
@@ -86,7 +86,7 @@ export const roomsSlice = createSlice({
             })
             .addCase(editRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.room = action.payload
             })
             .addCase(editRoom.rejected, (state) => {
                 state.status = 'error'
@@ -96,7 +96,7 @@ export const roomsSlice = createSlice({
             })
             .addCase(deleteRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.room = action.payload
             })
             .addCase(deleteRoom.rejected, (state) => {
                 state.status = 'error'

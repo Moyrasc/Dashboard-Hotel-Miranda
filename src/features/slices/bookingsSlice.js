@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import delay from './delay.js'
+import delay from '../delay'
 import bookings from '../../Data/bookings.json'
 
 export const fetchAllBookings = createAsyncThunk(
@@ -56,7 +56,7 @@ export const bookingsSlice = createSlice({
             })
             .addCase(fetchAllBookings.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.bookings = action.payload
             })
             .addCase(fetchAllBookings.rejected, (state) => {
                 state.status = 'error'
@@ -66,7 +66,7 @@ export const bookingsSlice = createSlice({
             })
             .addCase(fetchBooking.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.booking = action.payload
             })
             .addCase(fetchBooking.rejected, (state) => {
                 state.status = 'error'
@@ -76,7 +76,7 @@ export const bookingsSlice = createSlice({
             })
             .addCase(newBooking.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.booking = action.payload
             })
             .addCase(newBooking.rejected, (state) => {
                 state.status = 'error'
@@ -86,7 +86,7 @@ export const bookingsSlice = createSlice({
             })
             .addCase(editBooking.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.booking = action.payload
             })
             .addCase(editBooking.rejected, (state) => {
                 state.status = 'error'
@@ -96,14 +96,14 @@ export const bookingsSlice = createSlice({
             })
             .addCase(deleteBooking.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.booking = action.payload
             })
             .addCase(deleteBooking.rejected, (state) => {
                 state.status = 'error'
             })
     }
 })
-export const selectAlltBooking = (state) => state.bookings.bookings;
+export const selectAllBooking = (state) => state.bookings.bookings;
 export const selectBooking = (state) => state.bookings.booking;
 
 export default bookingsSlice.reducer

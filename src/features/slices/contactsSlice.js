@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import delay from './delay.js'
+import delay from '../delay'
 import contacts from '../../Data/contacts.json'
 
 export const fetchAllContacts = createAsyncThunk(
@@ -56,7 +56,7 @@ export const contactsSlice = createSlice({
             })
             .addCase(fetchAllContacts.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.contacts = action.payload
             })
             .addCase(fetchAllContacts.rejected, (state) => {
                 state.status = 'error'
@@ -66,7 +66,7 @@ export const contactsSlice = createSlice({
             })
             .addCase(fetchContact.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.contact = action.payload
             })
             .addCase(fetchContact.rejected, (state) => {
                 state.status = 'error'
@@ -76,7 +76,7 @@ export const contactsSlice = createSlice({
             })
             .addCase(newContact.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.contact = action.payload
             })
             .addCase(newContact.rejected, (state) => {
                 state.status = 'error'
@@ -86,7 +86,7 @@ export const contactsSlice = createSlice({
             })
             .addCase(editContact.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.contact = action.payload
             })
             .addCase(editContact.rejected, (state) => {
                 state.status = 'error'
@@ -96,7 +96,7 @@ export const contactsSlice = createSlice({
             })
             .addCase(deleteContact.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.contact = action.payload
             })
             .addCase(deleteContact.rejected, (state) => {
                 state.status = 'error'

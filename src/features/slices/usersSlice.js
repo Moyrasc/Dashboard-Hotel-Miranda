@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import delay from './delay.js'
+import delay from '../delay'
 import users from '../../Data/users.json'
 
 export const fetchAllUsers = createAsyncThunk(
@@ -56,7 +56,7 @@ export const usersSlice = createSlice({
             })
             .addCase(fetchAllUsers.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.users = action.payload
             })
             .addCase(fetchAllUsers.rejected, (state) => {
                 state.status = 'error'
@@ -66,7 +66,7 @@ export const usersSlice = createSlice({
             })
             .addCase(fetchUser.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.user = action.payload
             })
             .addCase(fetchUser.rejected, (state) => {
                 state.status = 'error'
@@ -76,7 +76,7 @@ export const usersSlice = createSlice({
             })
             .addCase(newUser.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.user = action.payload
             })
             .addCase(newUser.rejected, (state) => {
                 state.status = 'error'
@@ -86,7 +86,7 @@ export const usersSlice = createSlice({
             })
             .addCase(editUser.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.user = action.payload
             })
             .addCase(editUser.rejected, (state) => {
                 state.status = 'error'
@@ -96,7 +96,7 @@ export const usersSlice = createSlice({
             })
             .addCase(deleteUser.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.results = action.payload
+                state.user = action.payload
             })
             .addCase(deleteUser.rejected, (state) => {
                 state.status = 'error'
