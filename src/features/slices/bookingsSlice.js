@@ -98,7 +98,7 @@ export const bookingsSlice = createSlice({
                 state.status = 'fulfilled'
                 state.results = action.payload
             })
-            .addCase(deleteBooking, (state) => {
+            .addCase(deleteBooking.rejected, (state) => {
                 state.status = 'error'
             })
     }
