@@ -15,12 +15,12 @@ import { RiArrowLeftRightFill } from 'react-icons/ri'
 
 const Header = () => {
   const location = useLocation()
-  const [, setUser] = useUser()
+  const {dispatch} = useUser()
   const navigate = useNavigate()
 
   const handleLogOut = (e) => {
     e.preventDefault()
-    setUser({ email: "" })
+    dispatch({type:'logout'})
     navigate('/login')
   }
   const NavigateDashboard = () => {

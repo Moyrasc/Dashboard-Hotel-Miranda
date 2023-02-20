@@ -23,7 +23,7 @@ const BookedRoom = styled.button`
     border: none;
     width: 110px;
 `;
-const Dto = styled.p`
+const Dto = styled.span`
 color: red;
 font-weight: bold;
 `
