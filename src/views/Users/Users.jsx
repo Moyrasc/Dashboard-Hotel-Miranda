@@ -1,6 +1,6 @@
 import React from "react";
 import Table from "../../components/Table/Table";
-import users from "../../Data/user.json";
+import users from "../../Data/users.json";
 import {IoIosArrowDown} from 'react-icons/io'
 import {MdLocalPhone} from 'react-icons/md'
 import { FilterButton, FilterTable, ButtonContainer, ButtonTable, SelectOrder } from "../../components/Table/TableStyled";

@@ -32,7 +32,7 @@ export const editRoom = createAsyncThunk(
     }
 )
 export const deleteRoom = createAsyncThunk(
-    "room/deleteBooking",
+    "room/deleteRoom",
     async (id) => {
         const delRoom = rooms.find((element) => element.id === id)
         const room = await delay(delRoom)
