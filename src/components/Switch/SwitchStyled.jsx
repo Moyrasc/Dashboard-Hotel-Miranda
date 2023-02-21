@@ -4,6 +4,7 @@ const SwitchContainer = styled.div`
   & ul {
     display:flex;
     list-style: none;
+    margin-top: 0px;
     & li {
       padding: 13px 26px;
       font-size: 1rem;
