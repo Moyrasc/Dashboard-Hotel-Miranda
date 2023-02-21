@@ -1,26 +1,71 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Table from "../../components/Table/Table";
-import users from "../../Data/users.json";
-import {IoIosArrowDown} from 'react-icons/io'
-import {MdLocalPhone} from 'react-icons/md'
-import { FilterButton, FilterTable, ButtonContainer, ButtonTable, SelectOrder } from "../../components/Table/TableStyled";
+import Switch from "../../components/Switch/Switch";
+import { MdLocalPhone } from 'react-icons/md'
+import { FilterTable, ButtonContainer } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllUsers, selectAlltUsers } from "../../features/slices/usersSlice";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
+import { SelectUser } from "../Users/UsersStyled";
+import { BtnBooking } from "../Bookings/BookingsStyled";
+import { Link } from "react-router-dom";
 
 const Users = () => {
+    
+    const users = useSelector(selectAlltUsers)
+    const dispatch = useDispatch()
+    const [usersState, setUsersState] = useState([])
+    const [orderBy, setOrderBy] = useState('id')
+    const [searchTerm, setSearchTerm] = useState('')
+    const [filter, setFilter] = useState('')
     const navigate = useNavigate()
+    useEffect(() => {
+        dispatch(fetchAllUsers())
+    }, [dispatch])
+    const filterUsers = useMemo(() => {
+        if (filter === '') return usersState
+        const filteredsUsers = usersState.filter(user => user.status === filter)
+        return filteredsUsers
+    }, [filter, usersState])
+    useEffect(() => {
+        const orderFilterUsers = users.filter(user => user.name.toLowerCase().includes(searchTerm.toLowerCase()))
+        orderFilterUsers.sort((a, b) => {
+            if (a[orderBy] > b[orderBy]) {
+                return 1;
+            } else if (a[orderBy] < b[orderBy]) {
+                return -1;
+            }
+            return 0;
+        })
+        setUsersState(orderFilterUsers)
+    }, [users, orderBy, searchTerm])
+
+    const handleFilter = (filter) => {
+        setFilter(filter)
+    }
+    const handleOrder = (value) => {
+        setOrderBy(value)
+    }
+    const handleSearchTerm = (value) => {
+        setSearchTerm(value)
+    }
     const cols = [
-        { property: ['avatar'], label: 'User', display: (row) => (<img src={row.avatar} alt="room" />) },
+        { property: ['avatar'], label: 'User', display: (row) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
         {
-            property: ['first_name', 'id'], label: ' Full Name', display: (row) => (
+            property: ['name', 'id'], label: ' Full Name', display: (row) => (
                 <>
                     <p>{row.id}</p>
-                    <p>{row.first_name}</p>
+                    <p>{row.name}</p>
                 </>)
         },
         { property: 'description', label: 'Job Desk' },
-        { property: ['phone'], label: 'Contact', display: (row)=> (<p><IconPhone>
-            <MdLocalPhone className="phone"/></IconPhone>{row.phone}</p>) },
+        {
+            property: ['phone'], label: 'Contact', display: (row) => (<p><IconPhone>
+                <MdLocalPhone className="phone" /></IconPhone>{row.phone}</p>)
+        },
         {
             property: ['status'], label: 'Status', display: (row) =>
                 row.status === 'active' ? <ActiveEmployeed>{row.status}</ActiveEmployeed> :
@@ -34,16 +79,24 @@ const Users = () => {
         <div>
             <div>
                 <FilterTable>
-                    <FilterButton >All Employee</FilterButton>
-                    <FilterButton>Active Employee</FilterButton>
-                    <FilterButton>Inactive Employee</FilterButton>
+                    <Switch items={[{ label: 'All Employeed', value: '' }, { label: 'Active Employee', value: 'active' },
+                    { label: 'Inactive Employee', value: 'inactive' }]} handleSwitcher={handleFilter} />
                     <ButtonContainer>
-                        <ButtonTable onClick={HandleNewEmployee}> + New Employee </ButtonTable>
-                        <SelectOrder>Newest <IoIosArrowDown/></SelectOrder>
+                        <SearchBarContainer>
+                            <SearchBar onChange={handleSearchTerm} />
+                        </SearchBarContainer>
+
+                        <SelectUser defaultValue={orderBy} onChange={e => handleOrder(e.target.value)}>
+                            <option value="name">A-Z</option>
+                            <option value="startDate">Start Date</option>
+
+
+                        </SelectUser>
+                        <BtnBooking onClick={HandleNewEmployee}> + New Employee </BtnBooking>
                     </ButtonContainer>
                 </FilterTable>
             </div>
-            <Table data={users} cols={cols} />
+            <Table data={filterUsers} cols={cols} />
         </div>
 
     )
