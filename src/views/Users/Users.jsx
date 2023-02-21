@@ -12,6 +12,7 @@ import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
 import { SelectUser } from "../Users/UsersStyled";
 import { BtnBooking } from "../Bookings/BookingsStyled";
 import { Link } from "react-router-dom";
+import Pagination from "../../components/Pagination/Pagination";
 
 const Users = () => {
     
@@ -52,6 +53,7 @@ const Users = () => {
     const handleSearchTerm = (value) => {
         setSearchTerm(value)
     }
+
     const cols = [
         { property: ['avatar'], label: 'User', display: (row) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
         {
@@ -75,6 +77,12 @@ const Users = () => {
     const HandleNewEmployee = () => {
         navigate("/Users/newUser")
     }
+    const [currentPage, setCurrentPage] = useState(1);
+    const usersPerPage = 5;
+    const indexOfLastItem = currentPage * usersPerPage; 
+    const indexOfFirstItem = indexOfLastItem - usersPerPage;
+
+    const nPages = Math.ceil(filterUsers.length / usersPerPage);
     return (
         <div>
             <div>
@@ -85,18 +93,22 @@ const Users = () => {
                         <SearchBarContainer>
                             <SearchBar onChange={handleSearchTerm} />
                         </SearchBarContainer>
-
                         <SelectUser defaultValue={orderBy} onChange={e => handleOrder(e.target.value)}>
                             <option value="name">A-Z</option>
                             <option value="startDate">Start Date</option>
-
-
                         </SelectUser>
                         <BtnBooking onClick={HandleNewEmployee}> + New Employee </BtnBooking>
                     </ButtonContainer>
                 </FilterTable>
             </div>
             <Table data={filterUsers} cols={cols} />
+            <Pagination nPages={nPages}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            dataDisplayed={"users"}
+            totalItems={filterUsers.length}
+            indexOfFirstItem={indexOfFirstItem}
+            indexOfLastItem={indexOfLastItem}/>
         </div>
 
     )
