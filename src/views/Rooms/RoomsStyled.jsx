@@ -24,6 +24,7 @@ const BookedRoom = styled.button`
     width: 110px;
 `;
 const Dto = styled.span`
+display: flex;
 color: red;
 font-weight: bold;
 `

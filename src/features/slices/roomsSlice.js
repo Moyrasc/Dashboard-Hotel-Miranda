@@ -103,7 +103,7 @@ export const roomsSlice = createSlice({
             })
     }
 })
-export const selectAlltRooms = (state) => state.rooms.rooms;
+export const selectAllRooms = (state) => state.rooms.rooms;
 export const selectRoom = (state) => state.rooms.room;
 
 export default roomsSlice.reducer
