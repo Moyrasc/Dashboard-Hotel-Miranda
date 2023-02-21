@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
 
 const Users = () => {
-    
+
     const users = useSelector(selectAlltUsers)
     const dispatch = useDispatch()
     const [usersState, setUsersState] = useState([])
@@ -23,14 +23,15 @@ const Users = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
     const navigate = useNavigate()
+    const [currentPage, setCurrentPage] = useState(1);
+    const usersPerPage = 5;
+    const indexOfLastItem = currentPage * usersPerPage;
+    const indexOfFirstItem = indexOfLastItem - usersPerPage;
+
     useEffect(() => {
         dispatch(fetchAllUsers())
     }, [dispatch])
-    const filterUsers = useMemo(() => {
-        if (filter === '') return usersState
-        const filteredsUsers = usersState.filter(user => user.status === filter)
-        return filteredsUsers
-    }, [filter, usersState])
+
     useEffect(() => {
         const orderFilterUsers = users.filter(user => user.name.toLowerCase().includes(searchTerm.toLowerCase()))
         orderFilterUsers.sort((a, b) => {
@@ -44,6 +45,18 @@ const Users = () => {
         setUsersState(orderFilterUsers)
     }, [users, orderBy, searchTerm])
 
+    const filterUsers = useMemo(() => {
+        if (filter === '') return usersState
+        const filteredsUsers = usersState.filter(user => user.status === filter)
+        return filteredsUsers
+    }, [filter, usersState])
+
+    const userPagination = useMemo(() => {
+        return filterUsers.slice(indexOfFirstItem, indexOfLastItem)
+    }, [filterUsers, indexOfFirstItem, indexOfLastItem])
+
+    const nPages = Math.ceil(filterUsers.length / usersPerPage);
+
     const handleFilter = (filter) => {
         setFilter(filter)
     }
@@ -53,7 +66,9 @@ const Users = () => {
     const handleSearchTerm = (value) => {
         setSearchTerm(value)
     }
-
+        const handleNewEmployee = () => {
+        navigate("/Users/newUser")
+    }
     const cols = [
         { property: ['avatar'], label: 'User', display: (row) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
         {
@@ -74,15 +89,8 @@ const Users = () => {
                     <InactiveEmployeed>{row.status}</InactiveEmployeed>
         },
     ];
-    const HandleNewEmployee = () => {
-        navigate("/Users/newUser")
-    }
-    const [currentPage, setCurrentPage] = useState(1);
-    const usersPerPage = 5;
-    const indexOfLastItem = currentPage * usersPerPage; 
-    const indexOfFirstItem = indexOfLastItem - usersPerPage;
 
-    const nPages = Math.ceil(filterUsers.length / usersPerPage);
+
     return (
         <div>
             <div>
@@ -97,18 +105,18 @@ const Users = () => {
                             <option value="name">A-Z</option>
                             <option value="startDate">Start Date</option>
                         </SelectUser>
-                        <BtnBooking onClick={HandleNewEmployee}> + New Employee </BtnBooking>
+                        <BtnBooking onClick={handleNewEmployee}> + New Employee </BtnBooking>
                     </ButtonContainer>
                 </FilterTable>
             </div>
-            <Table data={filterUsers} cols={cols} />
+            <Table data={userPagination} cols={cols} />
             <Pagination nPages={nPages}
-            currentPage={currentPage}
-            setCurrentPage={setCurrentPage}
-            dataDisplayed={"users"}
-            totalItems={filterUsers.length}
-            indexOfFirstItem={indexOfFirstItem}
-            indexOfLastItem={indexOfLastItem}/>
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                dataDisplayed={"users"}
+                totalItems={filterUsers.length}
+                indexOfFirstItem={indexOfFirstItem}
+                indexOfLastItem={indexOfLastItem} />
         </div>
 
     )
