@@ -9,6 +9,7 @@ import { SelectUser } from "../Users/UsersStyled";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { useNavigate } from "react-router";
 import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
+import { Link, NavLink } from "react-router-dom";
 
 const Bookings = () => {
     const bookings = useSelector(selectAllBooking)
@@ -54,7 +55,8 @@ const Bookings = () => {
     setSearchTerm(value)
   }
     const cols = [
-        { property: ['photo'], label: 'Room', display: (row) => (<img src={row.photo} alt="guest" />) },
+        { property: ['photo'], label: 'Room', display: (row) => (<Link to={`/bookings/${row.id}`}>
+            <img src={row.photo} alt="guest" /></Link>) },
         {
             property: ['guest', 'id'], label: 'Guest', display: (row) => (
                 <Guest>
@@ -88,11 +90,11 @@ const Bookings = () => {
                         <SearchBarContainer>
                         <SearchBar onChange={handleSearchTerm}/>
                         </SearchBarContainer>
-                        <SelectUser  defaultValue={orderBy} onChange={handleOrder}>
-                            <option value="guest">Guest</option>
+                        <SelectUser  defaultValue={orderBy} onChange={e=> handleOrder(e.target.value)}>
+                            <option value="id">Guest</option>
                             <option value="orderDate">Order Date</option>
-                            <option value="checkIn">Check In</option>
-                            <option value="checkOut">Check Out</option>
+                            <option value="checkin">Check In</option>
+                            <option value="checkout">Check Out</option>
                         </SelectUser>
                         <BtnBooking onClick={handleNewBooking}> + New Booking </BtnBooking>
                     </ButtonContainer>
