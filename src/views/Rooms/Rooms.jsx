@@ -58,6 +58,9 @@ const Rooms = () => {
     const handleOrder = (value) => {
         setOrderBy(value)
     }
+        const handleNewRoom = () => {
+        navigate("/Rooms/newroom")
+    }
     const PriceOffer = (price, perce) => {
         let percePrice = price * perce / 100
         let dto = price - percePrice
@@ -83,9 +86,7 @@ const Rooms = () => {
                     : <BookedRoom>{row.status}</BookedRoom>
         }
     ];
-    const handleNewRoom = () => {
-        navigate("/Rooms/newroom")
-    }
+
     return (
 
         <div>
