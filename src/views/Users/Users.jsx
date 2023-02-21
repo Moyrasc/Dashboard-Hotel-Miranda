@@ -24,7 +24,7 @@ const Users = () => {
     const [filter, setFilter] = useState('')
     const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
-    const usersPerPage = 5;
+    const usersPerPage = 10;
     const indexOfLastItem = currentPage * usersPerPage;
     const indexOfFirstItem = indexOfLastItem - usersPerPage;
 

@@ -10,6 +10,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { useNavigate } from "react-router";
 import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
 import { Link } from "react-router-dom";
+import Pagination from "../../components/Pagination/Pagination";
 
 const Bookings = () => {
     const bookings = useSelector(selectAllBooking)
@@ -19,15 +20,15 @@ const Bookings = () => {
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
     const navigate = useNavigate()
+    const [currentPage, setCurrentPage] = useState(1);
+    const bookingsPerPage = 10;
+    const indexOfLastItem = currentPage * bookingsPerPage;
+    const indexOfFirstItem = indexOfLastItem - bookingsPerPage;
     //si añado fetchAllBooking al array el eslint se queja indicando que es una dependencia innecesaria
     useEffect(() => {
         dispatch(fetchAllBookings())
     }, [dispatch])
-    const filterBooks = useMemo(() => {
-        if (filter === '') return bookingsState
-        const filteredBooks = bookingsState.filter(booking => booking.state === filter)
-        return filteredBooks
-    }, [filter, bookingsState])
+
     useEffect(() => {
         const orderFilterBookings = bookings.filter(booking => booking.guest.toLowerCase().includes(searchTerm.toLowerCase()))
         orderFilterBookings.sort((a, b) => {
@@ -40,6 +41,18 @@ const Bookings = () => {
         })
         setBookingsState(orderFilterBookings)
     }, [bookings, orderBy, searchTerm])
+    
+    const filterBooks = useMemo(() => {
+        if (filter === '') return bookingsState
+        const filteredBooks = bookingsState.filter(booking => booking.state === filter)
+        return filteredBooks
+    }, [filter, bookingsState])
+
+     const bookingsPagination = useMemo(() => {
+        return filterBooks.slice(indexOfFirstItem, indexOfLastItem)
+    }, [filterBooks, indexOfFirstItem, indexOfLastItem])
+
+    const nPages = Math.ceil(filterBooks.length / bookingsPerPage);
 
     const handleFilter = (filter) => {
         setFilter(filter)
@@ -102,7 +115,14 @@ const Bookings = () => {
                     </ButtonContainer>
                 </FilterTable>
             </div>
-            <Table data={filterBooks} cols={cols} />
+            <Table data={bookingsPagination} cols={cols} />
+            <Pagination nPages={nPages}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                dataDisplayed={"bookings"}
+                totalItems={filterBooks.length}
+                indexOfFirstItem={indexOfFirstItem}
+                indexOfLastItem={indexOfLastItem} />
         </div>
     );
 };
