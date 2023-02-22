@@ -20,7 +20,6 @@ margin-right:5px;
 `
 const UserContainer = styled.div`
 display: flex;
-
 justify-content: center;
 align-items: center;
 height:100vh;
@@ -68,10 +67,10 @@ button{
 
 `
 const SelectUser = styled.select`
-    margin: 10px 0;
+    margin: 0px 10px;
     display: block;
     font-family: var(--font-poppins);
-    font-size: 1.1rem;
+    font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #C5C5C5;
     padding-left: 10px;

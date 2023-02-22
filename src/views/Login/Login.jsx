@@ -13,24 +13,33 @@ const User = {
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [ ,setUser] = useUser()
+    const {dispatch} = useUser()
     const [error, setError] = useState(false)
     const navigate = useNavigate()
 
-
-const handleSubmit = (e) =>{
-    e.preventDefault()
-    if(email !== User.email){
-        setError(true)
-        return
-    }
-    if(password !== User.password){
-        setError(true)
-        return
-    }
-    setError('')
-    setUser({email, password})
-    navigate('/')
+// const handleSubmit = (e) =>{
+//     e.preventDefault()
+//     if(email !== User.email){
+//         setError(true)
+//         return
+//     }
+//     if(password !== User.password){
+//         setError(true)
+//         return
+//     }
+//     setError('')
+//     setUser({email, password})
+//     navigate('/')
+//     }
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        if(email === User.email && password === User.password){
+            dispatch({type: 'login', value:{username:"",email:'admin@admin.com'}})
+            setError('')
+            navigate('/dashboard')
+        }else {
+            setError(true)
+        }
     }
     return (
         

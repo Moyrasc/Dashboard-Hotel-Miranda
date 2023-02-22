@@ -1,12 +1,76 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Table from "../../components/Table/Table";
-import bookings from "../../Data/bookings.json";
-import { FilterButton, FilterTable } from "../../components/Table/TableStyled";
-import { CheckIn, CheckOut, Guest, Notes, Progress } from "./BookingsStyled";
+import { ButtonContainer, FilterTable } from "../../components/Table/TableStyled";
+import { BtnBooking, CheckIn, CheckOut, Guest, Notes, Progress } from "./BookingsStyled";
+import { fetchAllBookings, selectAllBooking } from "../../features/slices/bookingsSlice";
+import { useSelector, useDispatch } from "react-redux";
+import Switch from "../../components/Switch/Switch";
+import { SelectUser } from "../Users/UsersStyled";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import { useNavigate } from "react-router";
+import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
+import { Link } from "react-router-dom";
+import Pagination from "../../components/Pagination/Pagination";
 
 const Bookings = () => {
+    const bookings = useSelector(selectAllBooking)
+    const dispatch = useDispatch()
+    const [bookingsState, setBookingsState] = useState([])
+    const [orderBy, setOrderBy] = useState('id')
+    const [searchTerm, setSearchTerm] = useState('')
+    const [filter, setFilter] = useState('')
+    const navigate = useNavigate()
+    const [currentPage, setCurrentPage] = useState(1);
+    const bookingsPerPage = 10;
+    const indexOfLastItem = currentPage * bookingsPerPage;
+    const indexOfFirstItem = indexOfLastItem - bookingsPerPage;
+    //si añado fetchAllBooking al array el eslint se queja indicando que es una dependencia innecesaria
+    useEffect(() => {
+        dispatch(fetchAllBookings())
+    }, [dispatch])
+
+    useEffect(() => {
+        const orderFilterBookings = bookings.filter(booking => booking.guest.toLowerCase().includes(searchTerm.toLowerCase()))
+        orderFilterBookings.sort((a, b) => {
+            if (a[orderBy] > b[orderBy]) {
+                return 1;
+            } else if (a[orderBy] < b[orderBy]) {
+                return -1;
+            }
+            return 0;
+        })
+        setBookingsState(orderFilterBookings)
+    }, [bookings, orderBy, searchTerm])
+    
+    const filterBooks = useMemo(() => {
+        if (filter === '') return bookingsState
+        const filteredBooks = bookingsState.filter(booking => booking.state === filter)
+        return filteredBooks
+    }, [filter, bookingsState])
+
+     const bookingsPagination = useMemo(() => {
+        return filterBooks.slice(indexOfFirstItem, indexOfLastItem)
+    }, [filterBooks, indexOfFirstItem, indexOfLastItem])
+
+    const nPages = Math.ceil(filterBooks.length / bookingsPerPage);
+
+    const handleFilter = (filter) => {
+        setFilter(filter)
+    }
+    const handleOrder = (value) => {
+        setOrderBy(value)
+    }
+    const handleNewBooking = () => {
+        navigate("/Bookings/newBooking")
+    }
+    const handleSearchTerm = (value) => {
+        setSearchTerm(value)
+    }
     const cols = [
-        { property: ['photo'], label: 'Room', display: (row) => (<img src={row.photo} alt="guest" />) },
+        {
+            property: ['photo'], label: 'Room', display: (row) => (<Link to={`/bookings/${row.id}`}>
+                <img src={row.photo} alt="guest" /></Link>)
+        },
         {
             property: ['guest', 'id'], label: 'Guest', display: (row) => (
                 <Guest>
@@ -24,23 +88,41 @@ const Bookings = () => {
 
         },
         { property: 'typeRoom', label: 'Room Type' },
-        { property: ['state'], label: 'Status' , display:(row) =>
-        row.state === 'check in' ? <CheckIn>{row.state}</CheckIn> :
-        row.state === 'check out' ? <CheckOut>{row.state}</CheckOut> :
-            <Progress>{row.state}</Progress>},
+        {
+            property: ['state'], label: 'Status', display: (row) =>
+                row.state === 'checkin' ? <CheckIn>{row.state}</CheckIn> :
+                    row.state === 'checkout' ? <CheckOut>{row.state}</CheckOut> :
+                        <Progress>{row.state}</Progress>
+        },
     ];
     return (
-
         <div>
             <div>
                 <FilterTable>
-                    <FilterButton >All Bookings</FilterButton>
-                    <FilterButton>Checking In</FilterButton>
-                    <FilterButton >Checking Out</FilterButton>
-                    <FilterButton >In Progress</FilterButton>
+                    <Switch items={[{ label: 'All Bookings', value: '' }, { label: 'Checking In', value: 'checkin' },
+                    { label: 'Checking Out', value: 'checkout' }, { label: 'In Progress', value: 'inprogress' }]} handleSwitcher={handleFilter} />
+                    <ButtonContainer>
+                        <SearchBarContainer>
+                            <SearchBar onChange={handleSearchTerm} />
+                        </SearchBarContainer>
+                        <SelectUser defaultValue={orderBy} onChange={e => handleOrder(e.target.value)}>
+                            <option value="id">Guest</option>
+                            <option value="orderDate">Order Date</option>
+                            <option value="checkin">Check In</option>
+                            <option value="checkout">Check Out</option>
+                        </SelectUser>
+                        <BtnBooking onClick={handleNewBooking}> + New Booking </BtnBooking>
+                    </ButtonContainer>
                 </FilterTable>
             </div>
-            <Table data={bookings} cols={cols} />
+            <Table data={bookingsPagination} cols={cols} />
+            <Pagination nPages={nPages}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                dataDisplayed={"bookings"}
+                totalItems={filterBooks.length}
+                indexOfFirstItem={indexOfFirstItem}
+                indexOfLastItem={indexOfLastItem} />
         </div>
     );
 };

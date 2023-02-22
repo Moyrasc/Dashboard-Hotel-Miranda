@@ -53,6 +53,16 @@ flex-direction: column;
     margin-bottom: 0px;
 }
 `;
+const BtnBooking =styled.button`
+  background-color: #135846;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  width: 160px;
+  height: 42px;
+  padding: 0rem 1rem;
+  cursor: pointer;
+`
 
 export {
     Progress,
@@ -60,4 +70,5 @@ export {
     CheckIn,
     Notes,
     Guest,
+    BtnBooking
 }
