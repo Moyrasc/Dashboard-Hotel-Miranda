@@ -34,13 +34,13 @@ const Contacts = () => {
     })
     setContactsState(orderFilterContacts)
   }, [contacts, orderBy])
-  console.time('filter array');
+
   const filterContacts = useMemo(() => {
     if (filter === '') return contactsState
     const filteredsContacts = contactsState.filter(contact => contact.customer === filter)
     return filteredsContacts
   }, [filter, contactsState])
-console.timeEnd('filter array');
+
   const contactsPagination = useMemo(() => {
     return filterContacts.slice(indexOfFirstItem, indexOfLastItem)
   }, [filterContacts, indexOfFirstItem, indexOfLastItem])
