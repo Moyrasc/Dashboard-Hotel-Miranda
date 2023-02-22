@@ -1,10 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-// import { Outlet } from "react-router";
 import Table from "../../components/Table/Table";
-import contacts from "../../Data/contacts.json";
 import { ActionContainer, Archive, Public } from "./ContactsStyled";
-import { FilterTable, ButtonContainer, SelectOrder } from "../../components/Table/TableStyled";
-import { IoIosArrowDown } from 'react-icons/io'
+import { FilterTable} from "../../components/Table/TableStyled";
 import Switch from "../../components/Switch/Switch";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllContacts, selectAlltContacts } from "../../features/slices/contactsSlice";
@@ -24,6 +21,7 @@ const Contacts = () => {
   useEffect(() => {
     dispatch(fetchAllContacts())
   }, [dispatch])
+
   useEffect(() => {
     const orderFilterContacts = contacts.filter(contact => contact.customer.toLowerCase())
     orderFilterContacts.sort((a, b) => {
@@ -36,12 +34,13 @@ const Contacts = () => {
     })
     setContactsState(orderFilterContacts)
   }, [contacts, orderBy])
+  console.time('filter array');
   const filterContacts = useMemo(() => {
     if (filter === '') return contactsState
     const filteredsContacts = contactsState.filter(contact => contact.customer === filter)
     return filteredsContacts
   }, [filter, contactsState])
-
+console.timeEnd('filter array');
   const contactsPagination = useMemo(() => {
     return filterContacts.slice(indexOfFirstItem, indexOfLastItem)
   }, [filterContacts, indexOfFirstItem, indexOfLastItem])
