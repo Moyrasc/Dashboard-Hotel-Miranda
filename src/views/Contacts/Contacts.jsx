@@ -4,11 +4,13 @@ import { ActionContainer, Archive, Public } from "./ContactsStyled";
 import { FilterTable} from "../../components/Table/TableStyled";
 import Switch from "../../components/Switch/Switch";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllContacts, selectAlltContacts } from "../../features/slices/contactsSlice";
+import { fetchAllContacts, selectAllContacts } from "../../features/slices/contactsSlice";
 import Pagination from "../../components/Pagination/Pagination";
+import ContactsSwiper from "./ContactsSwiper";
+
 
 const Contacts = () => {
-  const contacts = useSelector(selectAlltContacts)
+  const contacts = useSelector(selectAllContacts)
   const dispatch = useDispatch()
   const [contactsState, setContactsState] = useState([])
   const [filter, setFilter] = useState('')
@@ -64,6 +66,7 @@ const Contacts = () => {
   return (
 
     <div>
+      <ContactsSwiper contacts={contacts}/>
       <FilterTable>
         <Switch items={[{ label: 'All Customer Reviews', value: '' }, { label: 'Published', value: 'actionPublish' },
         { label: 'Archived', value: 'actionArchived' }]} handleSwitcher={handleFilter} />

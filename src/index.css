@@ -14,3 +14,25 @@ code {
 li {
   list-style: none;
 }
+.swiper {
+  width: 950px;
+  height: 100%;
+  display: flex;
+}
+.swiper-slide {
+  text-align: left;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 4px #00000005;
+  border-radius: 10px;
+  height: 250px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
+}
+.swiper-wrapper {
+  height: 100%;
+  display: flex;
+}

@@ -3,9 +3,11 @@ import { DashboardContainer, IconsDashboard, KpiContainer, KpiNumbers, KpiParagr
 import { MdOutlineBed } from 'react-icons/md'
 import {BsBoxArrowRight,BsBoxArrowLeft} from 'react-icons/bs'
 import {FaRegCalendarCheck} from 'react-icons/fa'
+// import ContactsSwiper from "../Contacts/ContactsSwiper";
 const DashBoard = () => {
 
     return (
+        <div>
         <DashboardContainer>
             <KpiContainer>
                 <div className="iconBed">
@@ -52,6 +54,8 @@ const DashBoard = () => {
                 </div>
             </KpiContainer>
         </DashboardContainer>
+                    {/* <ContactsSwiper/> */}
+        </div>
     )
 }
 

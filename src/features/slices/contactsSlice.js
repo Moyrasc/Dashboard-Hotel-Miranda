@@ -103,7 +103,7 @@ export const contactsSlice = createSlice({
             })
     }
 })
-export const selectAlltContacts = (state) => state.contacts.contacts;
+export const selectAllContacts = (state) => state.contacts.contacts;
 export const selectContact = (state) => state.contacts.contactt;
 
 export default contactsSlice.reducer
