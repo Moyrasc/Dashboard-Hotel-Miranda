@@ -26,19 +26,20 @@ align-content: center;
 justify-content: center;
 flex-wrap: wrap;
 border-radius: 20px;
-padding-top: 30px;
+padding-top: 10px;
   .reviews {
     &__comment{
-        padding: 8px;
+        padding: 4px 8px 8px 8px;
     }
     &__title {
       font-size: 16px;
-      line-height: 20px;
+      line-height: 10px;
       margin-left: 30px;
     }
     &__info{
         display: flex;
         flex-direction: row;
+        padding: 0rem 1rem;
     }
     &__customer-img{
         display: flex;
@@ -46,9 +47,13 @@ padding-top: 30px;
         margin-right: 8px;
     }
     &__customer {
+      display: flex;
+      flex-direction: column;
         p{
             margin: 0;
-            font-size: 16px;
+            font-size: 14px;
+            padding-top: 0.5rem;
+            margin-left: 0.8rem;
             
             
         }

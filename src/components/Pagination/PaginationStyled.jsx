@@ -23,10 +23,10 @@ const Text = styled.p`
   font-family: var(--font-poppins);
   font-size: 16px;
 `;
-const LiNext = styled.li`
+const Next = styled.li`
 `;
 
-const LiNextBtn = styled.button`
+const NextBtn = styled.button`
   display: block;
   color: #135846;
   border: 1px solid #135846;
@@ -49,9 +49,9 @@ const LiNextBtn = styled.button`
   }
 `;
 
-const LiPageNumber = styled.li``;
+const PageNumber = styled.li``;
 
-const LiPageBtn = styled.button`
+const PageBtn = styled.button`
   ${(props) => {
     switch (props.$type) {
       case "currentPage":
@@ -86,10 +86,10 @@ export {
   Container,
   Nav,
   Ul,
-  LiNextBtn,
-  LiNext,
-  LiPageBtn,
-  LiPageNumber,
+  NextBtn,
+  Next,
+  PageBtn,
+  PageNumber,
   Text,
 
 }

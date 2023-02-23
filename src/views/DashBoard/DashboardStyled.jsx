@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const DashboardContainer = styled.div`
 display: flex;
+
+
 `;
 const IconsDashboard = styled.div`
 background-color: #FFEDEC;
@@ -46,12 +48,28 @@ const KpiParagraph = styled.p`
     color: #787878;
     margin-top: 0;
 `
-
+const ContainerSwiper = styled.div`
+    background-color:#ffffff;
+    /* display: flex;
+    flex-direction: column; */
+    height: 350px;
+    width: 90%;
+    margin:10rem auto 0 1rem;
+    border-radius: 10px;
+div {
+    display: flex;
+    .titleReviews{
+        font-weight: bolder;
+        margin-left: 2rem;
+    }
+}
+`
 
 export{
     DashboardContainer,
     IconsDashboard,
     KpiContainer,
     KpiNumbers,
-    KpiParagraph
+    KpiParagraph,
+    ContainerSwiper
 }

@@ -6,25 +6,25 @@
         "email": "sstratton0@un.org",
         "phone": "3774774406",
         "subject": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "comment": "Duis bibendum. Morbi non quam nec dui luctus rutrum.  platea dictumst.",
+        "comment": "Duis bibendum. Morbi non quam nec dui luctus rutrum platea dictumst accumsan tortor quis turpis.",
         "actionPublish": "Publish",
         "actionArchived": "Archive"
     },
     {
         "id": 2,
         "date": "11/20/2022",
-        "customer": "Shir Hambrook",
+        "customer": "Shir brook",
         "email": "shambrook1@ed.gov",
         "phone": "7575452894",
         "subject": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-        "comment": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
+        "comment": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae.",
         "actionPublish": "Publish",
         "actionArchived": "Archive"
     },
     {
         "id": 3,
         "date": "7/1/2022",
-        "customer": "Valene Greathead",
+        "customer": "Valene Great",
         "email": "vgreathead2@flavors.me",
         "phone": "1073875461",
         "subject": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
@@ -50,7 +50,7 @@
         "email": "pubee4@google.cn",
         "phone": "2042158474",
         "subject": "Fusce consequat. Nulla nisl. Nunc nisl.",
-        "comment": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie",
+        "comment": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu.",
         "actionPublish": "Publish",
         "actionArchived": "Archive"
     },
@@ -72,7 +72,7 @@
         "email": "jmyall6@businessweek.com",
         "phone": "8595415860",
         "subject": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-        "comment": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget.",
+        "comment": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.Donec diam neque.",
         "actionPublish": "Publish",
         "actionArchived": "Archive"
     },
@@ -83,7 +83,7 @@
         "email": "zitzchaky7@ebay.com",
         "phone": "5881658452",
         "subject": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-        "comment": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+        "comment":"Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "actionPublish": "Publish",
         "actionArchived": "Archive"
     },
