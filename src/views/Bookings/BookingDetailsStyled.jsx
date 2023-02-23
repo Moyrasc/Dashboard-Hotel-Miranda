@@ -116,7 +116,8 @@ const SwiperContainerBooking = styled.div`
   overflow: hidden;
   align-items: stretch;
   justify-content: stretch;
-  h2 {
+
+      h2 {
     font-size: 2rem;
     font-weight: 500;
     color: #050505;
@@ -129,6 +130,30 @@ const SwiperContainerBooking = styled.div`
     margin: 0;
     margin: 1rem 0rem;
   }
+  .swiper-button-prev {
+    left: 0.5rem;
+  }
+  .swiper-button-next {
+    left: 45rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    background-color: #c5c5c5;
+    border-radius: 1.2rem;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    :after {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    :hover {
+      border: 1px solid #ffffff;
+    }
+  }
+  
+
 
 
 `;

@@ -30,7 +30,6 @@ li {
   display: flex !important;
   flex-direction: column;
   justify-content: space-around;
-
   align-items: center;
 }
 .swiper-wrapper {
@@ -49,11 +48,4 @@ li {
   border-radius: 0 1.2rem 1.2rem 0;
   height: 100%;
   width: 100% !important;
-
-  img {
-    border-radius: 0 1.2rem 0 0;
-    height: 60rem;
-    width: 100%;
-    object-fit: cover;
-  }
 }
