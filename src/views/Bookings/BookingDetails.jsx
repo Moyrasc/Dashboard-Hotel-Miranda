@@ -101,7 +101,7 @@ const BookingDetails = () => {
         </ContainerBD>
         <ContainerBD style={{ padding: 0 }}>
           <SwiperContainerBooking>
-            <TagStatus className="tag">
+            <TagStatus state={booking.state}className="tag">
               {booking.state}
             </TagStatus>
             <BookingSwiper />

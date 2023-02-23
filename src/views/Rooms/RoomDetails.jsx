@@ -4,6 +4,7 @@ import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataCont
 import BookingSwiper from "../Bookings/BookingSwiper";
 import { fetchRoom, selectRoom } from "../../features/slices/roomsSlice"
 import { useParams } from "react-router";
+import { TagStatusRoom } from "./RoomsStyled";
 
 
 const RoomDetails = () => {
@@ -90,9 +91,9 @@ const RoomDetails = () => {
             </ContainerBD>
             <ContainerBD style={{ padding: 0 }}>
                 <SwiperContainerBooking>
-                    <TagStatus className="tag">
+                    <TagStatusRoom className="tag" status={room.status}>
                         {room.status}
-                    </TagStatus>
+                    </TagStatusRoom>
                     <BookingSwiper />
                     <div className="roomData">
                         <h2>{room.typeRoom}</h2>

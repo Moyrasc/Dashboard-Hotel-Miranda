@@ -167,7 +167,7 @@ const TagStatus = styled.div`
   padding: 1rem 7rem;
   transform: rotate(45deg);
   z-index: 2;
-  background: #5AD07A;
+  background: ${props => props.state === 'checkin' ? '#5AD07A' : props.status === 'Checkout' ? '#E23428' : '#E7D327'};
   text-transform: capitalize;
 `;
 
