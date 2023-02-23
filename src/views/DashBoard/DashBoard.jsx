@@ -1,11 +1,20 @@
-import React from "react";
-import { DashboardContainer, IconsDashboard, KpiContainer, KpiNumbers, KpiParagraph } from "./DashboardStyled";
+import React, { useEffect } from "react";
+import { ContainerSwiper, DashboardContainer, IconsDashboard, KpiContainer, KpiNumbers, KpiParagraph } from "./DashboardStyled";
 import { MdOutlineBed } from 'react-icons/md'
 import {BsBoxArrowRight,BsBoxArrowLeft} from 'react-icons/bs'
 import {FaRegCalendarCheck} from 'react-icons/fa'
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllContacts, selectAllContacts } from "../../features/slices/contactsSlice";
+import ContactsSwiper from "../Contacts/ContactsSwiper";
 const DashBoard = () => {
+const dispatch = useDispatch();
+const contacts = useSelector(selectAllContacts);
 
+useEffect(()=>{
+    dispatch(fetchAllContacts())
+},[dispatch])
     return (
+        <div>
         <DashboardContainer>
             <KpiContainer>
                 <div className="iconBed">
@@ -52,6 +61,14 @@ const DashBoard = () => {
                 </div>
             </KpiContainer>
         </DashboardContainer>
+        <ContainerSwiper>
+            <div>
+            <p className="titleReviews">Latest Review by Customers</p>
+            </div>
+             <ContactsSwiper contacts={contacts}/>
+        </ContainerSwiper>
+                   
+        </div>
     )
 }
 

@@ -28,8 +28,23 @@ display: flex;
 color: red;
 font-weight: bold;
 `
+const TagStatusRoom = styled.div`
+  position: absolute;
+  right: -6rem;
+  top: 2rem;
+  font-family: var(--font-poppins);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 1rem 7rem;
+  transform: rotate(45deg);
+  z-index: 2;
+  background: ${props => props.status === 'Avalaible' ? '#5AD07A' :  '#E23428' };
+  text-transform: capitalize;
+`;
 export{
     AvalaibleRoom,
     BookedRoom,
-    Dto
+    Dto,
+    TagStatusRoom
 }

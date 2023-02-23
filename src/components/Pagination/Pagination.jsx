@@ -4,10 +4,10 @@ import {
   Nav,
   Ul,
   Text,
-  LiPageNumber,
-  LiPageBtn,
-  LiNext,
-  LiNextBtn,
+  PageNumber,
+  PageBtn,
+  Next,
+  NextBtn,
 } from "./PaginationStyled";
 
 const Pagination = ({
@@ -36,28 +36,28 @@ const Pagination = ({
       </Text>
       <Nav>
         <Ul>
-          <LiNext>
-            <LiNextBtn onClick={prevPage} >
+          <Next>
+            <NextBtn onClick={prevPage} >
               <span>Prev</span>
-            </LiNextBtn>
-          </LiNext>
+            </NextBtn>
+          </Next>
 
           {pageNumbers.map((number) => (
-            <LiPageNumber key={number}>
-              <LiPageBtn
+            <PageNumber key={number}>
+              <PageBtn
                 $type={
                   currentPage === number ? "currentPage" : "notCurrentPage"
                 }
                 onClick={() => setCurrentPage(number)}>
                 {number}
-              </LiPageBtn>
-            </LiPageNumber>
+              </PageBtn>
+            </PageNumber>
           ))}
-          <LiNext>
-            <LiNextBtn onClick={nextPage}>
+          <Next>
+            <NextBtn onClick={nextPage}>
               <span>Next</span>
-            </LiNextBtn>
-          </LiNext>
+            </NextBtn>
+          </Next>
         </Ul>
       </Nav>
     </Container >

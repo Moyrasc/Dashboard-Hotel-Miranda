@@ -11,16 +11,17 @@ import { FiLogOut } from 'react-icons/fi'
 import { useLocation, useNavigate } from "react-router";
 import { useUser } from "../../Context/userContext";
 import { RiArrowLeftRightFill } from 'react-icons/ri'
+import { NavLink } from "react-router-dom";
 
 
 const Header = () => {
   const location = useLocation()
-  const {dispatch} = useUser()
+  const { dispatch } = useUser()
   const navigate = useNavigate()
 
   const handleLogOut = (e) => {
     e.preventDefault()
-    dispatch({type:'logout'})
+    dispatch({ type: 'logout' })
     navigate('/login')
   }
   const NavigateDashboard = () => {
@@ -35,11 +36,16 @@ const Header = () => {
       </HeaderTitle>
       <IconContainer>
         <Icon>
-          <AiOutlineBell className="icon" />
+          <NavLink to={"Bookings"}>
+            <AiOutlineBell className="icon" />
+          </NavLink>
           <span>3</span>
         </Icon>
         <Icon>
-          <AiOutlineMail className="icon" />
+          <NavLink to={"Contacts"}>
+            <AiOutlineMail className="icon" />
+          </NavLink>
+
           <span>7</span>
         </Icon>
         <Icon>

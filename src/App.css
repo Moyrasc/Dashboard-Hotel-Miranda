@@ -2,12 +2,15 @@
 
 :root {
   --font-poppins: "Poppins", "sans-serif";
+  display: flex;
 }
-
+#root {
+  display: flex;
+}
 body {
   display: flex;
-  overflow-x: hidden;
   max-width: 100vw;
+  overflow-x: hidden;
 }
 .App {
   text-align: center;

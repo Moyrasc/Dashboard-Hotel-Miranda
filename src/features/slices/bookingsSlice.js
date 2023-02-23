@@ -11,7 +11,7 @@ export const fetchAllBookings = createAsyncThunk(
 export const fetchBooking = createAsyncThunk(
     "booking/fetchBooking",
     async (id) => {
-        const singleBooking = bookings.find((element) => element.id === id)
+        const singleBooking = bookings.find((element) => element.id === Number(id))
         const booking = await delay(singleBooking)
         return booking
     }

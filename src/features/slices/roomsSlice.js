@@ -11,7 +11,7 @@ export const fetchAllRooms = createAsyncThunk(
 export const fetchRoom = createAsyncThunk(
     "room/fetchRoom",
     async (id) => {
-        const singleRoom = rooms.find((element) => element.id === id)
+        const singleRoom = rooms.find((element) => element.id === Number(id))
         const room = await delay(singleRoom)
         return room
     }

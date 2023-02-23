@@ -19,7 +19,7 @@ const Rooms = () => {
     const [filter, setFilter] = useState('')
     const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
-    const roomsPerPage = 5;
+    const roomsPerPage = 10;
     const indexOfLastItem = currentPage * roomsPerPage;
     const indexOfFirstItem = indexOfLastItem - roomsPerPage;
 
@@ -71,7 +71,7 @@ const Rooms = () => {
         {
             property: ['name'], label: 'Room', display: (row) => (
                 <div>
-                    <p>{row.name}</p>
+                    <Link style={{textDecoration:"none", color: "black"}}to={`/rooms/${row.id}`}><p>{row.name}</p></Link>
 
                 </div>)
         },

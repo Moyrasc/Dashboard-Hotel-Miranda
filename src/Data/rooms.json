@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
         "photo": [
@@ -25,7 +25,7 @@
     },
     {
         "id": 2,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
         "photo": [
@@ -49,7 +49,7 @@
     },
     {
         "id": 3,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
         "photo": [
@@ -73,7 +73,7 @@
     },
     {
         "id": 4,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
         "photo": [
@@ -97,7 +97,7 @@
     },
     {
         "id": 5,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
         "photo": [
@@ -121,7 +121,7 @@
     },
     {
         "id": 6,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "photo": [
@@ -145,7 +145,7 @@
     },
     {
         "id": 7,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
         "photo": [
@@ -169,7 +169,7 @@
     },
     {
         "id": 8,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
         "photo": [
@@ -193,7 +193,7 @@
     },
     {
         "id": 9,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
         "photo": [
@@ -217,7 +217,7 @@
     },
     {
         "id": 10,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
         "photo": [
@@ -241,7 +241,7 @@
     },
     {
         "id": 11,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "photo": [
@@ -265,7 +265,7 @@
     },
     {
         "id": 12,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
         "photo": [
@@ -289,7 +289,7 @@
     },
     {
         "id": 13,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
         "photo": [
@@ -313,7 +313,7 @@
     },
     {
         "id": 14,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "photo": [
@@ -337,7 +337,7 @@
     },
     {
         "id": 15,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
         "photo": [
@@ -361,7 +361,7 @@
     },
     {
         "id": 16,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
         "photo": [
@@ -385,7 +385,7 @@
     },
     {
         "id": 17,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
         "photo": [
@@ -409,7 +409,7 @@
     },
     {
         "id": 18,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
         "photo": [
@@ -433,7 +433,7 @@
     },
     {
         "id": 19,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
         "photo": [
@@ -457,7 +457,7 @@
     },
     {
         "id": 20,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
         "photo": [
@@ -481,7 +481,7 @@
     },
     {
         "id": 21,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
         "photo": [
@@ -505,7 +505,7 @@
     },
     {
         "id": 22,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
         "photo": [
@@ -530,7 +530,7 @@
     },
     {
         "id": 23,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "photo": [
@@ -554,7 +554,7 @@
     },
     {
         "id": 24,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
         "photo": [
@@ -578,7 +578,7 @@
     },
     {
         "id": 25,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
         "photo": [
@@ -602,7 +602,7 @@
     },
     {
         "id": 26,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
         "photo": [
@@ -626,7 +626,7 @@
     },
     {
         "id": 27,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "In congue. Etiam justo. Etiam pretium iaculis justo.",
         "photo": [
@@ -650,7 +650,7 @@
     },
     {
         "id": 28,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
         "photo": [
@@ -674,7 +674,7 @@
     },
     {
         "id": 29,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
         "photo": [
@@ -698,7 +698,7 @@
     },
     {
         "id": 30,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
         "photo": [
@@ -722,7 +722,7 @@
     },
     {
         "id": 31,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
         "photo": [
@@ -746,7 +746,7 @@
     },
     {
         "id": 32,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
         "photo": [
@@ -770,7 +770,7 @@
     },
     {
         "id": 33,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
         "photo": [
@@ -794,7 +794,7 @@
     },
     {
         "id": 34,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "photo": [
@@ -818,7 +818,7 @@
     },
     {
         "id": 35,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
         "photo": [
@@ -842,7 +842,7 @@
     },
     {
         "id": 36,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Superior",
         "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
         "photo": [
@@ -866,7 +866,7 @@
     },
     {
         "id": 37,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Single Bed",
         "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "photo": [
@@ -890,7 +890,7 @@
     },
     {
         "id": 38,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
         "photo": [
@@ -914,7 +914,7 @@
     },
     {
         "id": 39,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Double Bed",
         "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "photo": [
@@ -939,7 +939,7 @@
     },
     {
         "id": 40,
-        "name": "Deluxe A-91234",
+        "name": "Deluxe A-91",
         "typeRoom": "Suite",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
         "photo": [
