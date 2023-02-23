@@ -69,6 +69,28 @@ padding-top: 10px;
     height:60px;
     border-radius: 8px;
   }
+  .swiper-button-prev {
+    left: 0.5rem;
+  }
+  .swiper-button-next {
+    right: 1rem;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 50%;
+    background-color: #135846;
+    border-radius: 1.2rem;
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    :after {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    :hover {
+      border: 1px solid #ffffff;
+    }
+  }
 
 `
 const PublishIcon = styled.span`

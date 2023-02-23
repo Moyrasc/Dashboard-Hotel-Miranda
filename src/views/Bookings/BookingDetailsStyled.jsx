@@ -137,7 +137,7 @@ const SwiperContainerBooking = styled.div`
   }
   .swiper-button-prev,
   .swiper-button-next {
-    top: 50%;
+    top: 55%;
     background-color: #c5c5c5;
     border-radius: 1.2rem;
     color: white;
