@@ -77,7 +77,7 @@ const Separation = styled.div`
 `;
 const Special = styled.p`
   font-family: var(--font-poppins);
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #363636;
   margin: 0;
@@ -97,7 +97,7 @@ const Amenities = styled.p`
     font-weight: 500;
     color: #135846;
     border-radius: 1.2rem;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     text-align: center;
     vertical-align: middle;
     svg {
@@ -123,7 +123,7 @@ const SwiperContainerBooking = styled.div`
     margin: 0;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #d4d4d4;
     margin: 0;
