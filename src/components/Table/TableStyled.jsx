@@ -48,7 +48,7 @@ color: #135846;
 
 const ButtonContainer = styled.div`
 display: flex;
-width: 48%;
+width: 59%;
 margin-top: 7px;
 justify-content: end;
 

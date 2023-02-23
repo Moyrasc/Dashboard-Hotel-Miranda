@@ -71,7 +71,7 @@ const Rooms = () => {
         {
             property: ['name'], label: 'Room', display: (row) => (
                 <div>
-                    <p>{row.name}</p>
+                    <Link style={{textDecoration:"none", color: "black"}}to={`/rooms/${row.id}`}><p>{row.name}</p></Link>
 
                 </div>)
         },

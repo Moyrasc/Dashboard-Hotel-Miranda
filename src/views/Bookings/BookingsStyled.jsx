@@ -10,6 +10,7 @@ const CheckIn = styled.button`
     padding: 10px 15px;
     border: none;
     width: 110px;
+    text-transform: uppercase;
 `;
 
  const CheckOut = styled.button`
@@ -22,6 +23,7 @@ const CheckIn = styled.button`
     padding: 10px 15px;
     border: none;
     width: 110px;
+    text-transform: uppercase;
     
     
 `;
@@ -34,6 +36,7 @@ const Progress = styled.button`
     border-radius: 12px;
     padding: 10px 15px;
     border: none;
+    text-transform: uppercase;
 
 `;
 const Notes = styled.button`
