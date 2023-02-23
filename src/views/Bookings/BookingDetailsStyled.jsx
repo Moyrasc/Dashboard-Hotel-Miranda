@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ContainerBookingDetails = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 16px auto;
   border-radius: 12px;
   width: 96%;
@@ -25,7 +25,6 @@ const InfoGuest = styled.div`
     min-width: 5rem;
     height: 5rem;
     min-height: 5rem;
-    /* object-fit: cover; */
   }
 `;
 const NameGuest = styled.p`

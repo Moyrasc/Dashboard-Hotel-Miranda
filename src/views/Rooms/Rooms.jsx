@@ -19,7 +19,7 @@ const Rooms = () => {
     const [filter, setFilter] = useState('')
     const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
-    const roomsPerPage = 5;
+    const roomsPerPage = 10;
     const indexOfLastItem = currentPage * roomsPerPage;
     const indexOfFirstItem = indexOfLastItem - roomsPerPage;
 

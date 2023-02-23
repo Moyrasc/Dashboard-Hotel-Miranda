@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataContainer, Id, InfoGuest, NameGuest, Separation, Special, SwiperContainerBooking, TagStatus, Title } from "./BookingDetailsStyled";
@@ -10,7 +10,7 @@ const BookingDetails = () => {
     const dispatch = useDispatch();
     const {bookingId} = useParams();
     const booking = useSelector(selectBooking)
-console.log(bookingId)
+
 
     useEffect(()=>{
         dispatch(fetchBooking(bookingId))
@@ -19,7 +19,7 @@ console.log(bookingId)
  
     return(
 
-        <ContainerBookingDetails style={{ flexDirection: "row" }}>
+        <ContainerBookingDetails >
         <ContainerBD>
           <InfoGuest>
             <img src="https://xsgames.co/randomusers/avatar.php?g=male" alt="avatar"
@@ -48,7 +48,7 @@ console.log(bookingId)
             <DataCB>
               <Title>Price</Title>
               <Data>
-                {booking.price}
+                ${booking.price}
                 <span> /night</span>
               </Data>
             </DataCB>
