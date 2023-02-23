@@ -37,3 +37,23 @@ li {
   height: 100%;
   display: flex;
 }
+.mySwiperBooking {
+  height: 100%;
+}
+.slider-container-booking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  border-radius: 0 1.2rem 1.2rem 0;
+  height: 100%;
+  width: 100% !important;
+
+  img {
+    border-radius: 0 1.2rem 0 0;
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}

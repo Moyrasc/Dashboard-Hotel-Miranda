@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const CheckIn = styled.button`
     color: #5AD07A;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 14px;
     background: #E8FFEE;

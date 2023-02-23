@@ -7,7 +7,7 @@
         "checkin": "12/30/2022",
         "checkout": "1/21/2023",
         "roomId": 45,
-        "price": 48381,
+        "price": 483,
         "specialRequest": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
         "amenities": [
             "Tv",
@@ -25,7 +25,7 @@
         "checkin": "1/6/2023",
         "checkout": "2/1/2023",
         "roomId": 28,
-        "price": 18487,
+        "price": 184,
         "specialRequest": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "amenities": [
             "Mascotas",
@@ -44,7 +44,7 @@
         "checkin": "11/30/2022",
         "checkout": "5/18/2022",
         "roomId": 31,
-        "price": 49701,
+        "price": 497,
         "specialRequest": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
         "amenities": [
             "Bañera",
@@ -64,7 +64,7 @@
         "checkin": "4/29/2022",
         "checkout": "3/21/2022",
         "roomId": 16,
-        "price": 20201,
+        "price": 202,
         "specialRequest": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
         "amenities": [
             "Vistas al mar",
@@ -83,7 +83,7 @@
         "checkin": "1/26/2023",
         "checkout": "11/14/2022",
         "roomId": 35,
-        "price": 41381,
+        "price": 413,
         "specialRequest": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
         "amenities": [
             "Balcón",
@@ -105,7 +105,7 @@
         "checkin": "5/3/2022",
         "checkout": "9/5/2022",
         "roomId": 16,
-        "price": 48528,
+        "price": 485,
         "specialRequest": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
         "amenities": [
             "Tv",
@@ -127,7 +127,7 @@
         "checkin": "1/19/2023",
         "checkout": "12/14/2022",
         "roomId": 36,
-        "price": 26443,
+        "price": 264,
         "specialRequest": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
         "amenities": [
             "Mascotas",
@@ -150,7 +150,7 @@
         "checkin": "5/3/2022",
         "checkout": "11/17/2022",
         "roomId": 7,
-        "price": 44959,
+        "price": 449,
         "specialRequest": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
         "amenities": [
             "Bañera",
@@ -172,7 +172,7 @@
         "checkin": "10/27/2022",
         "checkout": "10/11/2022",
         "roomId": 3,
-        "price": 17656,
+        "price": 176,
         "specialRequest": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
         "amenities": [
             "Tv",
@@ -193,7 +193,7 @@
         "checkin": "12/26/2022",
         "checkout": "8/23/2022",
         "roomId": 4,
-        "price": 23700,
+        "price": 237,
         "specialRequest": "Fusce consequat. Nulla nisl. Nunc nisl.",
         "amenities": [
             "Tv",
@@ -213,7 +213,7 @@
         "checkin": "3/28/2022",
         "checkout": "7/8/2022",
         "roomId": 31,
-        "price": 31618,
+        "price": 316,
         "specialRequest": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
         "amenities": [
             "Mascotas",
@@ -232,7 +232,7 @@
         "checkin": "12/15/2022",
         "checkout": "7/23/2022",
         "roomId": 43,
-        "price": 64234,
+        "price": 642,
         "specialRequest": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
         "amenities": [
             "AC",
@@ -251,7 +251,7 @@
         "checkin": "5/16/2022",
         "checkout": "11/10/2022",
         "roomId": 7,
-        "price": 90179,
+        "price": 901,
         "specialRequest": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
         "amenities": [
             "Mascotas",
@@ -271,7 +271,7 @@
         "checkin": "6/20/2022",
         "checkout": "8/10/2022",
         "roomId": 1,
-        "price": 11354,
+        "price": 113,
         "specialRequest": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
         "amenities": [
             "Minibar",
@@ -289,7 +289,7 @@
         "checkin": "3/25/2022",
         "checkout": "9/25/2022",
         "roomId": 35,
-        "price": 90528,
+        "price": 905,
         "specialRequest": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
         "amenities": [
             "AC",
@@ -310,7 +310,7 @@
         "checkin": "1/1/2023",
         "checkout": "8/29/2022",
         "roomId": 4,
-        "price": 58108,
+        "price": 581,
         "specialRequest": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
         "amenities": [
             "AC",
@@ -332,7 +332,7 @@
         "checkin": "8/16/2022",
         "checkout": "2/22/2022",
         "roomId": 25,
-        "price": 37598,
+        "price": 375,
         "specialRequest": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "amenities": [
             "Tv",
@@ -355,7 +355,7 @@
         "checkin": "5/6/2022",
         "checkout": "1/26/2023",
         "roomId": 34,
-        "price": 31858,
+        "price": 318,
         "specialRequest": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
         "amenities": [
             "Balcón",
@@ -377,7 +377,7 @@
         "checkin": "9/9/2022",
         "checkout": "3/24/2022",
         "roomId": 19,
-        "price": 39962,
+        "price": 399,
         "specialRequest": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
         "amenities": [
             "Tv",
@@ -396,7 +396,7 @@
         "checkin": "1/7/2023",
         "checkout": "4/8/2022",
         "roomId": 7,
-        "price": 55944,
+        "price": 559,
         "specialRequest": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
         "amenities": [
             "AC",
@@ -418,7 +418,7 @@
         "checkin": "8/6/2022",
         "checkout": "3/20/2022",
         "roomId": 5,
-        "price": 23933,
+        "price": 239,
         "specialRequest": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "amenities": [
             "Minibar",
@@ -440,7 +440,7 @@
         "checkin": "6/27/2022",
         "checkout": "3/24/2022",
         "roomId": 42,
-        "price": 11658,
+        "price": 116,
         "specialRequest": "Fusce consequat. Nulla nisl. Nunc nisl.",
         "amenities": [
             "Minibar",
@@ -458,7 +458,7 @@
         "checkin": "9/2/2022",
         "checkout": "6/7/2022",
         "roomId": 43,
-        "price": 33291,
+        "price": 332,
         "specialRequest": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
         "amenities": [
             "Bañera",
@@ -480,7 +480,7 @@
         "checkin": "2/12/2023",
         "checkout": "10/25/2022",
         "roomId": 50,
-        "price": 90076,
+        "price": 900,
         "specialRequest": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "amenities": [
             "Bañera",
@@ -503,7 +503,7 @@
         "checkin": "12/21/2022",
         "checkout": "5/10/2022",
         "roomId": 37,
-        "price": 55792,
+        "price": 557,
         "specialRequest": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "amenities": [
             "Minibar",
@@ -522,7 +522,7 @@
         "checkin": "2/3/2023",
         "checkout": "11/17/2022",
         "roomId": 9,
-        "price": 55458,
+        "price": 554,
         "specialRequest": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
         "amenities": [
             "Tv",
@@ -544,7 +544,7 @@
         "checkin": "1/14/2023",
         "checkout": "8/10/2022",
         "roomId": 46,
-        "price": 54695,
+        "price": 546,
         "specialRequest": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
         "amenities": [
             "Vistas al mar",
@@ -562,7 +562,7 @@
         "checkin": "2/22/2022",
         "checkout": "11/23/2022",
         "roomId": 30,
-        "price": 19302,
+        "price": 193,
         "specialRequest": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
         "amenities": [
             "Minibar",
@@ -582,7 +582,7 @@
         "checkin": "2/27/2022",
         "checkout": "3/4/2022",
         "roomId": 36,
-        "price": 26111,
+        "price": 261,
         "specialRequest": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
         "amenities": [
             "Tv",
@@ -605,7 +605,7 @@
         "checkin": "3/21/2022",
         "checkout": "6/2/2022",
         "roomId": 20,
-        "price": 48907,
+        "price": 489,
         "specialRequest": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
         "amenities": [
             "Bañera",
@@ -627,7 +627,7 @@
         "checkin": "3/29/2022",
         "checkout": "10/10/2022",
         "roomId": 6,
-        "price": 18671,
+        "price": 186,
         "specialRequest": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
         "amenities": [
             "Mascotas",
@@ -646,7 +646,7 @@
         "checkin": "10/17/2022",
         "checkout": "11/1/2022",
         "roomId": 21,
-        "price": 55620,
+        "price": 556,
         "specialRequest": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
         "amenities": [
             "Mascotas",
@@ -667,7 +667,7 @@
         "checkin": "10/9/2022",
         "checkout": "4/9/2022",
         "roomId": 11,
-        "price": 31690,
+        "price": 316,
         "specialRequest": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
         "amenities": [
             "Bañera",
@@ -688,7 +688,7 @@
         "checkin": "2/13/2023",
         "checkout": "7/31/2022",
         "roomId": 23,
-        "price": 68330,
+        "price": 683,
         "specialRequest": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
         "amenities": [
             "Bañera",
@@ -710,7 +710,7 @@
         "checkin": "7/15/2022",
         "checkout": "11/12/2022",
         "roomId": 18,
-        "price": 18702,
+        "price": 187,
         "specialRequest": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
         "amenities": [
             "Minibar",
@@ -729,7 +729,7 @@
         "checkin": "10/25/2022",
         "checkout": "9/25/2022",
         "roomId": 4,
-        "price": 13417,
+        "price": 134,
         "specialRequest": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
         "amenities": [
             "Mascotas",
@@ -752,7 +752,7 @@
         "checkin": "11/9/2022",
         "checkout": "12/27/2022",
         "roomId": 8,
-        "price": 50993,
+        "price": 509,
         "specialRequest": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
         "amenities": [
             "Balcón",
@@ -775,7 +775,7 @@
         "checkin": "4/22/2022",
         "checkout": "7/25/2022",
         "roomId": 14,
-        "price": 38152,
+        "price": 381,
         "specialRequest": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
         "amenities": [
             "Vistas al mar",
@@ -796,7 +796,7 @@
         "checkin": "2/17/2022",
         "checkout": "5/10/2022",
         "roomId": 41,
-        "price": 19441,
+        "price": 194,
         "specialRequest": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
         "amenities": [
             "Minibar",
@@ -816,7 +816,7 @@
         "checkin": "9/10/2022",
         "checkout": "1/20/2023",
         "roomId": 27,
-        "price": 68184,
+        "price": 681,
         "specialRequest": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
         "amenities": [
             "Tv",
