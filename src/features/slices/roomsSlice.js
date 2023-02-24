@@ -20,7 +20,9 @@ export const fetchRoom = createAsyncThunk(
 export const newRoom = createAsyncThunk(
     "rooms/newRoom",
     async (room) => {
+        console.log(room)
         return await delay(room)
+
     }
 )
 export const editRoom = createAsyncThunk(
@@ -76,7 +78,8 @@ export const roomsSlice = createSlice({
             })
             .addCase(newRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.room = action.payload
+                // state.room = action.payload
+                state.rooms.push(action.payload)
             })
             .addCase(newRoom.rejected, (state) => {
                 state.status = 'error'
