@@ -7,7 +7,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Switch from "../../components/Switch/Switch";
 import { SelectUser } from "../Users/UsersStyled";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import { useNavigate } from "react-router";
 import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
 import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
@@ -19,12 +18,11 @@ const Bookings = () => {
     const [orderBy, setOrderBy] = useState('id')
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
-    const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
     const bookingsPerPage = 10;
     const indexOfLastItem = currentPage * bookingsPerPage;
     const indexOfFirstItem = indexOfLastItem - bookingsPerPage;
-    //si añado fetchAllBooking al array el eslint se queja indicando que es una dependencia innecesaria
+
     useEffect(() => {
         dispatch(fetchAllBookings())
     }, [dispatch])
@@ -59,9 +57,6 @@ const Bookings = () => {
     }
     const handleOrder = (value) => {
         setOrderBy(value)
-    }
-    const handleNewBooking = () => {
-        navigate("/Bookings/newBooking")
     }
     const handleSearchTerm = (value) => {
         setSearchTerm(value)
@@ -111,7 +106,7 @@ const Bookings = () => {
                             <option value="checkin">Check In</option>
                             <option value="checkout">Check Out</option>
                         </SelectUser>
-                        <BtnBooking onClick={handleNewBooking}> + New Booking </BtnBooking>
+                        <BtnBooking><Link to={"/Bookings/newBooking"}>+ New Booking </Link> </BtnBooking> 
                     </ButtonContainer>
                 </FilterTable>
             </div>
