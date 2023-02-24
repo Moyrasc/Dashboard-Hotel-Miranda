@@ -19,8 +19,8 @@ export const fetchBooking = createAsyncThunk(
 )
 export const newBooking = createAsyncThunk(
     "bookings/newBooking",
-    async () => {
-        return await delay(newBooking)
+    async (room) => {
+        return await delay(room)
     }
 )
 export const editBooking = createAsyncThunk(
