@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
 import Table from "../../components/Table/Table";
 import { ButtonContainer, FilterTable } from "../../components/Table/TableStyled";
 import { AvalaibleRoom, BookedRoom, Dto } from "./RoomsStyled";
@@ -17,7 +16,6 @@ const Rooms = () => {
     const [roomsState, setRoomsState] = useState([])
     const [orderBy, setOrderBy] = useState('id')
     const [filter, setFilter] = useState('')
-    const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
     const roomsPerPage = 10;
     const indexOfLastItem = currentPage * roomsPerPage;
@@ -58,10 +56,7 @@ const Rooms = () => {
     const handleOrder = (value) => {
         setOrderBy(value)
     }
-        const handleNewRoom = () => {
-        navigate("/Rooms/newroom")
-    }
-    const PriceOffer = (price, perce) => {
+    const priceOffer = (price, perce) => {
         let percePrice = price * perce / 100
         let dto = price - percePrice
         return dto
@@ -78,7 +73,7 @@ const Rooms = () => {
         { property: 'typeRoom', label: 'Type' },
         { property: 'roomFloor', label: 'Floor' },
         { property: 'amenities', label: 'Facilities' },
-        { property: ['discount'], label: "Offer", display: (row) => (<p> <Dto>{row.discount}% </Dto> ${PriceOffer(row.price, row.discount).toFixed(2)} </p>) },
+        { property: ['discount'], label: "Offer", display: (row) => (<p> <Dto>{row.discount}% </Dto> ${priceOffer(row.price, row.discount).toFixed(2)} </p>) },
         { property: ['price'], label: 'Price', display: (row) => (<p><strong>${row.price}</strong>/night</p>) },
         {
             property: ['status'], label: 'Status', display: (row) =>
@@ -101,7 +96,7 @@ const Rooms = () => {
                         <option value="price">Price</option>
                         <option value="status">Status</option>
                     </SelectUser>
-                    <BtnBooking onClick={handleNewRoom}> + New Room</BtnBooking>
+                    <BtnBooking><Link to={"/Rooms/newroom"}>+ New Room</Link> </BtnBooking>
                 </ButtonContainer>
             </FilterTable>
             <Table data={roomsPagination} cols={cols} />
