@@ -42,9 +42,17 @@ const TagStatusRoom = styled.div`
   background: ${props => props.status === 'Avalaible' ? '#5AD07A' :  '#E23428' };
   text-transform: capitalize;
 `;
+
+const ContainerNewRoom = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 50px 0px;
+`
 export{
     AvalaibleRoom,
     BookedRoom,
     Dto,
-    TagStatusRoom
+    TagStatusRoom,
+    ContainerNewRoom
 }

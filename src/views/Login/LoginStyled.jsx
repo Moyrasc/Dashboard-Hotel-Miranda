@@ -35,6 +35,10 @@ const LoginCard = styled.div`
 const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
+    .info{
+        border-radius: 10px;
+    }
+    
 `;
 
 const Input = styled.input`
