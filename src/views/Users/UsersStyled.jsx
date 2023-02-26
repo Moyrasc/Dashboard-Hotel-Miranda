@@ -63,6 +63,7 @@ button{
     font-family: var(--font-poppins);
     font-weight: 600;
     color: #EBF1EF;
+    cursor: pointer;
          
 }
 
