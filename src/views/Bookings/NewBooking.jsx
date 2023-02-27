@@ -95,7 +95,7 @@ const NewBooking = () => {
                 </div>
             </FormContainer>
             <FormContainer style={{marginLeft: "1rem"}}>
-            <FilePond files={files} allowFileEncode={true} allowReorder={true} allowMultiple={true} onupdatefiles={setFiles} name='files' server={"/bookings/newBooking"} imagePreviewHeight={400} imageCropAspectRatio={"1:1"} imageResizeTargetWidth={50} imageResizeTargetHeight={50} imageResizeMode={"cover"} labelIdle='Upload your images.' />
+            <FilePond files={files} allowFileEncode={true} allowReorder={true} allowMultiple={true} onupdatefiles={setFiles} name='files' server={"/bookings/newBooking"} imagePreviewHeight={100} imageResizeTargetWidth={100} imageCropAspectRatio={"1:1"}  imageResizeMode={"cover"} labelIdle='Upload your images.' />
             </FormContainer>
         </ContainerNewRoom>
     )
