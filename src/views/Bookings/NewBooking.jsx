@@ -17,6 +17,60 @@ registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview, F
 
 const NewBooking = () => {
     const [files, setFiles] = useState([])
+    const [newBookingForm, setNewBookingForm] = useState({
+            id: '',
+            guest: '',
+            checkIn: "12/30/2022",
+            checkOut: "1/10/2023",
+            type: '',
+            price: 145,
+            specialRequest: "",
+            description:"",
+            facilities:"",
+            photos: []
+    })
+    const handleGuestChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            guest:e.target.value
+        })
+    }
+    const handleCheckInChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            checkIn:e.target.value
+        })
+    }
+    const handleCheckOutChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            checkOut:e.target.value
+        })
+    }
+    const handleTypeChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            type:e.target.value
+        })
+    }
+    const handlePriceChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            price:e.target.value
+        })
+    }
+    const handleSpecialRequestChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            specialRequest:e.target.value
+        })
+    }
+    const handleDescriptionChange = (e) => {
+        setNewBookingForm({
+            ...newBookingForm,
+            description:e.target.value
+        })
+    }
     const dispatch = useDispatch()
     const convertToBase64 = (file) => {
         return new Promise((resolve, reject) => {
@@ -31,18 +85,7 @@ const NewBooking = () => {
         })
     }
     const handleButton = async () => {
-        const newBookingForm = {
-            id: '1',
-            guest: 'Rahel Broune',
-            checkIn: "12/30/2022",
-            checkOut: "1/10/2023",
-            type: 'Double bed',
-            price: 145,
-            specialRequest: "",
-            description:"",
-            facilities:"",
-            photos: []
-    }
+
         files.map(async file => {
             const fileConvert = await convertToBase64(file.file)
             newBookingForm.photos.push({img: fileConvert})
@@ -56,29 +99,29 @@ const NewBooking = () => {
             <FormContainer>
                 <InputContainer>
                     <label>Guest</label>
-                        <Input type="text"/>
+                        <Input type="text" value={newBookingForm.guest} onChange={handleGuestChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Check In</label>
-                        <Input type="date"/>
+                        <Input type="date" value={newBookingForm.checkIn} onChange={handleCheckInChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Check Out</label>
-                        <Input type="date"/>
+                        <Input type="date" value={newBookingForm.checkOut} onChange={handleCheckOutChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Type Room</label>
-                        <Input type="text" />
+                        <Input type="text" value={newBookingForm.type} onChange={handleTypeChange}/>
                     <label >Price</label>
-                        <Input type="number" />
+                        <Input type="number" value={newBookingForm.price} onChange={handlePriceChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Special Request</label>
-                        <textarea name="textarea" rows="5" cols="30" className="info" style={{marginBottom: "0.5rem"}}/>
+                        <textarea name="textarea" rows="5" cols="30" className="info" style={{marginBottom: "0.5rem"}} defaultValue={newBookingForm.specialRequest} onChange={handleSpecialRequestChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Description</label>
-                        <textarea name="textarea" rows="5" cols="30" className="info"/>
+                        <textarea name="textarea" rows="5" cols="30" className="info" defaultValue={newBookingForm.description} onChange={handleDescriptionChange}/>
                 </InputContainer>
                 
                 
