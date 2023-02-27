@@ -36,6 +36,7 @@ width: 500px;
 margin-top: 1rem;
 padding: 2rem 2rem 0 2rem;
 box-shadow: 0px 3px 10px #00000005;
+
 img{
     justify-content: center;
     width: 70px;
@@ -62,6 +63,7 @@ button{
     font-family: var(--font-poppins);
     font-weight: 600;
     color: #EBF1EF;
+    cursor: pointer;
          
 }
 

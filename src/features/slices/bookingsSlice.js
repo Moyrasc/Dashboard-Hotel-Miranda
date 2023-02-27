@@ -19,16 +19,16 @@ export const fetchBooking = createAsyncThunk(
 )
 export const newBooking = createAsyncThunk(
     "bookings/newBooking",
-    async () => {
-        return await delay(newBooking)
+    async (booking) => {
+        return await delay(booking)
     }
 )
 export const editBooking = createAsyncThunk(
     "booking/editBooking",
-    async (id) => {
-        const upgradeBooking = bookings.find((element) => element.id === id)
-        const booking = await delay(upgradeBooking)
-        return booking
+    async (booking) => {
+        const upgradeBooking = bookings.find((element) => element.id === booking.id)
+        const updatedBooking = await delay(upgradeBooking)
+        return updatedBooking
     }
 )
 export const deleteBooking = createAsyncThunk(

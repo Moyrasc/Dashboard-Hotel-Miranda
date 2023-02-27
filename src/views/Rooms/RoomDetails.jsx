@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataContainer, Id, InfoGuest, NameGuest, Separation, Special, SwiperContainerBooking,Title } from "../Bookings/BookingDetailsStyled"
+import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataContainer, Id, InfoGuest, NameGuest, Separation, Special, SwiperContainerBooking, Title } from "../Bookings/BookingDetailsStyled"
 import BookingSwiper from "../Bookings/BookingSwiper";
 import { fetchRoom, selectRoom } from "../../features/slices/roomsSlice"
 import { useParams } from "react-router";

@@ -58,8 +58,8 @@ const Contacts = () => {
     { property: 'comment', label: 'Comment' },
     {
       property: ['actionPublish', 'actionArchived'], label: 'Action', display: (row) => <ActionContainer>
-        <Public>{row.actionPublish}</Public>
-        <Archive>{row.actionArchived}</Archive>
+        <Public>Publish</Public>
+        <Archive>Archive</Archive>
       </ActionContainer>
     },
   ];

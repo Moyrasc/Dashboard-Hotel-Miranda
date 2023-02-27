@@ -4,7 +4,6 @@ import Switch from "../../components/Switch/Switch";
 import { MdLocalPhone } from 'react-icons/md'
 import { FilterTable, ButtonContainer } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
-import { useNavigate } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllUsers, selectAlltUsers } from "../../features/slices/usersSlice";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -22,7 +21,6 @@ const Users = () => {
     const [orderBy, setOrderBy] = useState('id')
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
-    const navigate = useNavigate()
     const [currentPage, setCurrentPage] = useState(1);
     const usersPerPage = 10;
     const indexOfLastItem = currentPage * usersPerPage;
@@ -66,9 +64,6 @@ const Users = () => {
     const handleSearchTerm = (value) => {
         setSearchTerm(value)
     }
-        const handleNewEmployee = () => {
-        navigate("/Users/newUser")
-    }
     const cols = [
         { property: ['avatar'], label: 'User', display: (row) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
         {
@@ -105,7 +100,7 @@ const Users = () => {
                             <option value="name">A-Z</option>
                             <option value="startDate">Start Date</option>
                         </SelectUser>
-                        <BtnBooking onClick={handleNewEmployee}> + New Employee </BtnBooking>
+                        <BtnBooking><Link to={"/Users/newUser"}>+ New Employee</Link>  </BtnBooking>
                     </ButtonContainer>
                 </FilterTable>
             </div>

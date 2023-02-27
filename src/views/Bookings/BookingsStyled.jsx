@@ -58,13 +58,16 @@ flex-direction: column;
 `;
 const BtnBooking =styled.button`
   background-color: #135846;
-  color: #ffffff;
   border: none;
   border-radius: 5px;
   width: 160px;
   height: 42px;
   padding: 0rem 1rem;
   cursor: pointer;
+  a{
+    text-decoration: none;
+    color: #ffffff;
+  }
 `
 
 export {

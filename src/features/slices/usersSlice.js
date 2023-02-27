@@ -19,16 +19,16 @@ export const fetchUser = createAsyncThunk(
 )
 export const newUser = createAsyncThunk(
     "users/newUser",
-    async () => {
-        return await delay(newUser)
+    async (user) => {
+        return await delay(user)
     }
 )
 export const editUser = createAsyncThunk(
     "user/editUser",
-    async (id) => {
-        const upgradeUser = users.find((element) => element.id === id)
-        const user = await delay(upgradeUser)
-        return user
+    async (user) => {
+        const upgradeUser = users.find((element) => element.id === user.id)
+        const updatedUser = await delay(upgradeUser)
+        return updatedUser
     }
 )
 export const deleteUser = createAsyncThunk(

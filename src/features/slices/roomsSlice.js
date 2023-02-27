@@ -19,16 +19,18 @@ export const fetchRoom = createAsyncThunk(
 )
 export const newRoom = createAsyncThunk(
     "rooms/newRoom",
-    async () => {
-        return await delay(newRoom)
+    async (room) => {
+        console.log(room)
+        return await delay(room)
+
     }
 )
 export const editRoom = createAsyncThunk(
     "room/editRoom",
-    async (id) => {
-        const upgradeRoom = rooms.find((element) => element.id === id)
-        const room = await delay(upgradeRoom)
-        return room
+    async (room) => {
+        const upgradeRoom = rooms.find((element) => element.id === room.id)
+        const updatedRoom = await delay(upgradeRoom)
+        return updatedRoom
     }
 )
 export const deleteRoom = createAsyncThunk(
@@ -76,7 +78,8 @@ export const roomsSlice = createSlice({
             })
             .addCase(newRoom.fulfilled, (state, action) => {
                 state.status = 'fulfilled'
-                state.room = action.payload
+                // state.room = action.payload
+                state.rooms.push(action.payload)
             })
             .addCase(newRoom.rejected, (state) => {
                 state.status = 'error'

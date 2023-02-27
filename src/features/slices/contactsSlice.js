@@ -19,16 +19,16 @@ export const fetchContact = createAsyncThunk(
 )
 export const newContact = createAsyncThunk(
     "contacts/newContact",
-    async () => {
-        return await delay(newContact)
+    async (contact) => {
+        return await delay(contact)
     }
 )
 export const editContact = createAsyncThunk(
     "contact/editContact",
-    async (id) => {
-        const upgradeContact = contacts.find((element) => element.id === id)
-        const contact = await delay(upgradeContact)
-        return contact
+    async (contact) => {
+        const upgradeContact = contacts.find((element) => element.id === contact.id)
+        const updatedContact = await delay(upgradeContact)
+        return updatedContact
     }
 )
 export const deleteContact = createAsyncThunk(
