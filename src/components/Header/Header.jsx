@@ -49,7 +49,7 @@ const Header = () => {
           <span>7</span>
         </Icon>
         <Icon>
-          <FiLogOut className="icon logout" onClick={handleLogOut} />
+          <FiLogOut className="icon logout" data-cy="logout" onClick={handleLogOut} />
         </Icon>
       </IconContainer>
     </HeaderContainer>

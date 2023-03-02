@@ -55,15 +55,15 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <InputContainer>
                         <label>E-mail</label>
-                            <Input type="text" className='input-user' value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="admin@admin.com"></Input>    
+                            <Input type="text" className='input-user' data-cy="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="admin@admin.com"></Input>    
                         </InputContainer>
                         <InputContainer>
                         <label>Password</label>
-                            <Input type="password" className='input-pass' value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="12345"></Input>       
+                            <Input type="password" className='input-pass' data-cy="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder="12345"></Input>       
                         </InputContainer>
                         {error && <Error><ErrorMsg>Invalid data</ErrorMsg></Error>}
                         <ButtonContainer>
-                            <Button>Login</Button>
+                            <Button data-cy="login">Login</Button>
                         </ButtonContainer>
                         
                     </form>
