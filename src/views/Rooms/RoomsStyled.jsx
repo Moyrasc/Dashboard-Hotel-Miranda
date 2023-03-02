@@ -28,8 +28,9 @@ display: flex;
 color: red;
 font-weight: bold;
 `
-const TagStatusRoom = styled.div`
+const TagStatusRoom = styled.button`
   position: absolute;
+  border: none;
   right: -6rem;
   top: 2rem;
   font-family: var(--font-poppins);
