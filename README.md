@@ -1,6 +1,6 @@
 # Dashboard Hotel Miranda
 
-                        ** En desarrollo **
+                                                    ** En desarrollo **
 
 <img src="src\assets\imgsReadme\login.png" alt="login"/>
 <img src="src\assets\imgsReadme\newBooking.png" alt="booking"/>
