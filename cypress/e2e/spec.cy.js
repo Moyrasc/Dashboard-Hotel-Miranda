@@ -40,3 +40,44 @@ describe('Login', () => {
   })
 })
 
+//Routes
+
+describe('Routes', () => {
+  it('Rooms Page', () => {
+    cy.visit('http://localhost:3000/Dashboard-Hotel-Miranda/login')
+    cy.get('[data-cy="email"]').type('admin@admin.com')
+    cy.get('[data-cy="password"]').type('12345')
+    cy.get('[data-cy="login"]').click()
+    cy.url().should('contain', '/')
+    cy.get('[data-cy="rooms"]').click()
+    // cy.url().should('contain', '/rooms')
+  })
+
+  it('Bookings Page', () => {
+    cy.visit('http://localhost:3000/Dashboard-Hotel-Miranda/login')
+    cy.get('[data-cy="email"]').type('admin@admin.com')
+    cy.get('[data-cy="password"]').type('12345')
+    cy.get('[data-cy="login"]').click()
+    cy.url().should('contain', '/')
+    cy.get('[data-cy="bookings"]').click()
+    // cy.url().should('contain', '/bookings')
+  })
+  it('Contacts Page', () => {
+    cy.visit('http://localhost:3000/Dashboard-Hotel-Miranda/login')
+    cy.get('[data-cy="email"]').type('admin@admin.com')
+    cy.get('[data-cy="password"]').type('12345')
+    cy.get('[data-cy="login"]').click()
+    cy.url().should('contain', '/')
+    cy.get('[data-cy="contacts"]').click()
+    // cy.url().should('contain', '/contacts')
+  })
+  it('Users Page', () => {
+    cy.visit('http://localhost:3000/Dashboard-Hotel-Miranda/login')
+    cy.get('[data-cy="email"]').type('admin@admin.com')
+    cy.get('[data-cy="password"]').type('12345')
+    cy.get('[data-cy="login"]').click()
+    cy.url().should('contain', '/')
+    cy.get('[data-cy="users"]').click()
+    // cy.url().should('contain', '/users')
+  })
+})
