@@ -2,10 +2,9 @@
 
                         ** En desarrollo **
 
-
-![Login](src\assets\imgsReadme\login.png)
-![Booking](src\assets\imgsReadme\newBooking.png)
-![Contacts](src\assets\imgsReadme\contacts.png)
+<img src="src\assets\imgsReadme\login.png" alt="login"/>
+<img src="src\assets\imgsReadme\newBooking.png" alt="booking"/>
+<img src="src\assets\imgsReadme\contacts.png" alt="contacts"/>
 
 CRM para gestionar web del Hotel: Habitaciones, reservas, ofertas...
 
