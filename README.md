@@ -1,17 +1,21 @@
 # Dashboard Hotel Miranda
 
-** En desarrollo **
+                        ** En desarrollo **
+
+
+![Login](src\assets\imgsReadme\login.png)
+![Booking](src\assets\imgsReadme\newBooking.png)
+![Contacts](src\assets\imgsReadme\contacts.png)
 
 CRM para gestionar web del Hotel: Habitaciones, reservas, ofertas...
 
-# Tecnologías
+## Tecnologías
 
-<a href="https://reactjs.org/">
-    <img src="https://img.shields.io/badge/-REACT-000?style=for-the-badge&logo=react&logoColor=">
-</a>
-<a href="https://es.redux.js.org/">
-    <img src="https://img.shields.io/badge/-REDUX-000?style=for-the-badge&logo=redux&logoColor=">
-</a>
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white)
+![React Testing](https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red)
+![Cypress.io](https://img.shields.io/badge/Cypress-17202C.svg?style=for-the-badge&logo=Cypress&logoColor=white)
 
 ## Scripts
 
