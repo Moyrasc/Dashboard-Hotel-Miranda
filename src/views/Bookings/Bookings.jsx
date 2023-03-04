@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Table from "../../components/Table/Table";
 import { ButtonContainer, FilterTable } from "../../components/Table/TableStyled";
-import { BtnBooking, CheckIn, CheckOut, Guest, Notes, Progress } from "./BookingsStyled";
+import { BtnBooking, CheckIn, CheckOut, Guest, ModalBox, Notes, Progress } from "./BookingsStyled";
 import { fetchAllBookings, selectAllBooking } from "../../features/slices/bookingsSlice";
 import { useSelector, useDispatch } from "react-redux";
 import Switch from "../../components/Switch/Switch";
@@ -10,6 +10,8 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
 import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
+import {RxCrossCircled} from 'react-icons/rx'
+
 
 const Bookings = () => {
     const bookings = useSelector(selectAllBooking)
@@ -22,6 +24,8 @@ const Bookings = () => {
     const bookingsPerPage = 10;
     const indexOfLastItem = currentPage * bookingsPerPage;
     const indexOfFirstItem = indexOfLastItem - bookingsPerPage;
+    const [modalData, setModalData ] = useState({});
+    const [onModal, setOnModal] = useState(false)
 
     useEffect(() => {
         dispatch(fetchAllBookings())
@@ -46,7 +50,7 @@ const Bookings = () => {
         return filteredBooks
     }, [filter, bookingsState])
 
-     const bookingsPagination = useMemo(() => {
+    const bookingsPagination = useMemo(() => {
         return filterBooks.slice(indexOfFirstItem, indexOfLastItem)
     }, [filterBooks, indexOfFirstItem, indexOfLastItem])
 
@@ -61,6 +65,10 @@ const Bookings = () => {
     const handleSearchTerm = (value) => {
         setSearchTerm(value)
     }
+    const handleModal = (booking) => {
+        setModalData(booking);
+        setOnModal(true);
+    }
     const cols = [
         {
             property: ['photo'], label: 'Room', display: (row) => (<Link to={`/bookings/${row.id}`}>
@@ -71,7 +79,6 @@ const Bookings = () => {
                 <Guest>
                     <p className="idColor"> {row.id}</p>
                     <p>{row.guest}</p>
-
                 </Guest>)
         },
         { property: 'orderDate', label: 'Order Date' },
@@ -79,8 +86,7 @@ const Bookings = () => {
         { property: 'checkout', label: 'Check Out' },
         {
             property: 'specialRequest', label: 'Special Request', display: (row) => (
-                <Notes> View Notes </Notes>)
-
+            <Notes onClick={() => handleModal({...row})}> View Notes </Notes>)
         },
         { property: 'typeRoom', label: 'Room Type' },
         {
@@ -111,6 +117,13 @@ const Bookings = () => {
                 </FilterTable>
             </div>
             <Table data={bookingsPagination} cols={cols} />
+            {onModal&& <ModalBox>
+                <div onClick={() => setOnModal(false)}>
+                    <RxCrossCircled className="btn-close"/>
+                </div>
+                <h3><span>{modalData.guest}</span> sent the following note:</h3>
+                <p>{modalData.specialRequest}</p>
+                </ModalBox>}
             <Pagination nPages={nPages}
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
