@@ -69,6 +69,31 @@ const BtnBooking =styled.button`
     color: #ffffff;
   }
 `
+const ModalBox = styled.div`
+    border-radius: 10px;
+    border: 1px solid #135846;
+    padding: 1% 3% 1% 3%;
+    font-family: 'Poppins', sans-serif;;
+    color: #212121;
+    background: rgb(238 249 242 / 90%);
+    position: fixed;
+    margin: 0 20% 0 5%;
+    top: 35%;
+    h3 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        span {
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+    p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+`;
 
 export {
     Progress,
@@ -76,5 +101,6 @@ export {
     CheckIn,
     Notes,
     Guest,
-    BtnBooking
+    BtnBooking,
+    ModalBox
 }
