@@ -9,7 +9,6 @@ const SearchBar = ({onChange}) => {
     return (
         
             <Input type="search" placeholder="Search..." onChange={(e)=> onChange(e.target.value)}/>
-       
     )
 }
 

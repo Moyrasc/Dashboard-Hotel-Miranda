@@ -2,18 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import contacts from '../../Data/contacts.json'
 import { RootState } from "../../store/store";
+import { Contact } from "../../Interfaces/ContactInter";
 
-export interface Contact {
-    id: number;
-    date: string;
-    customer: string;
-    email: string;
-    phone: string;
-    subject: string;
-    comment: string;
-    actionPublish: string;
-    actionArchived: string;
-}
 interface ContactsState {
     contacts: Contact[];
     contact: Contact | null;

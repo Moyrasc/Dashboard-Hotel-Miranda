@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
 import { SwitchContainer } from './SwitchStyled'
 
-const Switch = (props) => {
+
+interface Item {
+    label: string
+    value: string
+}
+interface Props {
+    items: Item[]
+    handleSwitcher: (item: string) => void
+}
+const Switch = (props: Props) => {
     const [active, setActive] = useState(props.items[0].label)
 
-    const handleClick = (item) => {
+    const handleClick = (item: Item) => {
         setActive(item.label)
         props.handleSwitcher(item.value)
     }

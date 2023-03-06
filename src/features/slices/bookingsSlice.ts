@@ -2,23 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import bookings from '../../Data/bookings.json'
 import { RootState } from "../../store/store";
+import {Booking} from '../../Interfaces/BookingInter'
 
-export interface Booking {
-    id: number;
-    guest: string;
-    orderDate: string;
-    checkin: string;
-    checkout: string;
-    roomId: number;
-    price: number;
-    specialRequest: string;
-    amenities: string[];
-    typeRoom: string;
-    description: string;
-    photo: string;
-    state: string
-
-}
 interface BookingsState {
     bookings: Booking[];
     booking: Booking | null;

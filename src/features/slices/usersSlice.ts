@@ -2,17 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import users from '../../Data/users.json'
 import { RootState } from "../../store/store";
+import { User } from "../../Interfaces/UserInter";
 
-export interface User {
-    id: number;
-    name: string;
-    email: string;
-    phone: string;
-    job: string;
-    avatar: string;
-    description: string;
-    startDate: string;
-}
 interface UserState{
     users: User[];
     user: User | null;

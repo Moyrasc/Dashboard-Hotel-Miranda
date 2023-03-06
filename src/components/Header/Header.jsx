@@ -16,7 +16,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation()
-  const { dispatch } = useUser()
+  const {dispatch}  = useUser()
   const navigate = useNavigate()
 
   const handleLogOut = (e) => {
