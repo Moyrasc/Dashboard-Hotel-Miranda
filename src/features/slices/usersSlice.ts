@@ -1,54 +1,69 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import users from '../../Data/users.json'
+import { RootState } from "../../store/store";
+
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    job: string;
+    avatar: string;
+    description: string;
+    startDate: string;
+}
+interface UserState{
+    users: User[];
+    user: User | null;
+    status: 'loading' | 'error' | 'fulfilled' | null
+}
+
+const initialState: UserState = { users: [], user: null, status: null}
 
 export const fetchAllUsers = createAsyncThunk(
     "users/fetchUsers",
     async () => {
-        return await delay(users)
+        return await delay(users) as User []
     }
 )
+
 export const fetchUser = createAsyncThunk(
     "user/fetchUser",
-    async (id) => {
+    async (id: number) => {
         const singleUser = users.find((element) => element.id === id)
         const user = await delay(singleUser)
-        return user
+        return user as User
     }
 
 )
 export const newUser = createAsyncThunk(
     "users/newUser",
-    async (user) => {
-        return await delay(user)
+    async (user: User) => {
+        return await delay(user) as User
     }
 )
 export const editUser = createAsyncThunk(
     "user/editUser",
-    async (user) => {
+    async (user: User) => {
         const upgradeUser = users.find((element) => element.id === user.id)
         const updatedUser = await delay(upgradeUser)
-        return updatedUser
+        return updatedUser as User
     }
 )
 export const deleteUser = createAsyncThunk(
     "user/deleteUser",
-    async (id) => {
+    async (id: number) => {
         const delUser = users.find((element) => element.id === id)
         const user = await delay(delUser)
-        return user
+        return user as User
     }
 
 )
-const initialState = {
-    users: [],
-    user: {},
-    status: 'loading'
-
-}
 export const usersSlice = createSlice({
     name: 'users',
     initialState,
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchAllUsers.pending, (state) => {
@@ -103,7 +118,7 @@ export const usersSlice = createSlice({
             })
     }
 })
-export const selectAlltUsers = (state) => state.users.users;
-export const selectUser = (state) => state.users.user;
+export const selectAlltUsers = (state: RootState): User[] => state.users.users;
+export const selectUser = (state: RootState): User | null => state.users.user;
 
 export default usersSlice.reducer
