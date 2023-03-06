@@ -1,14 +1,21 @@
+
 import { createContext, useContext, useEffect, useReducer} from "react";
 
+interface User {
+    logged: Boolean;
+    email: string;
+    username: string
+}
 const KEY_LOCALSTORAGE = 'userMiranda'
-export const UserContext = createContext(null);
+export const UserContext = createContext({});
 
 export const useUser = () => {
     return useContext(UserContext);
 };
-const initialState = JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE))|| {logged: false, email: "", username: ""}
+const local = localStorage.getItem(KEY_LOCALSTORAGE)
+const initialState = local ? JSON.parse(local) : {logged: false, email:'', username:''}
 
-const reducer = (state,action)=> {
+const reducer = (state: User,action)=> {
     switch(action.type){
         case 'login':
             return { logged: true, email: action.value.email, username: action.value.username}
