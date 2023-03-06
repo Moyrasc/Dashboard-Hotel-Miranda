@@ -53,15 +53,16 @@ margin-top: 7px;
 justify-content: end;
 
 `
-const StyledTable = styled.table`
+const StyledTable = styled.table<{ colsWidth: number }>`
     border-collapse: collapse;
     width: 96%;
     background-color: #ffffff;
     border-radius: 20px;
     td {
-      border-bottom: 1px solid #EBEBEB;
+        width: ${props => props.colsWidth }%;
+        border-bottom: 1px solid #EBEBEB;
         color: #393939;
-        font-family: 'Poppins', sans-serif;;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
         text-align: left;
         padding: 10px 15px;

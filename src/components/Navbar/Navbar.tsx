@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from '../../assets/icons/logo2.png'
-import photoProfile from '../../assets/icons/fotoPerfil.jpeg'
+import photoProfile from '../../assets/icons/fotoPerfil.jpg'
 import { ImgContainer, NavbarContainer, NavList, TextContainer, UserContainer } from "./NavbarStyled";
 import { TbLayoutDashboard } from "react-icons/tb";
 import { GiHouseKeys } from "react-icons/gi";

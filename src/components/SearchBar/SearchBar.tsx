@@ -1,10 +1,10 @@
 import React from "react";
 import { Input } from "../../views/Login/LoginStyled";
 
-
-
-
-const SearchBar = ({onChange}) => {
+interface Props {
+    onChange: (value: string) => void
+}
+const SearchBar = ({onChange}: Props) => {
 
     return (
         

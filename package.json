@@ -66,6 +66,7 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.2",
+    "@types/styled-components": "^5.1.26",
     "cypress": "^12.7.0",
     "gh-pages": "^5.0.0"
   }

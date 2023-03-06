@@ -2,9 +2,9 @@ import React from "react";
 import { StyledTable } from "./TableStyled";
 
 const Table = ({ data, cols }) => {
-const tableRow = (row) => (
+const tableRow = (row: any) => (
         <tr key={row.id}>
-            {cols.map((item, index)=> (
+            {cols.map((item: any, index: number)=> (
                 <td key={index}>
                     {item.display ? item.display(row) : row[item.property]}
                 </td>
@@ -12,11 +12,11 @@ const tableRow = (row) => (
         </tr>
     );
 const colsWidth = 100 / cols.length;
-  return (
+return (
     <StyledTable colsWidth={colsWidth}>
     <thead>
                 <tr>
-                    {cols.map((item, index) => (
+                    {cols.map((item: any, index: number) => (
                         <th key={index}>
                             {item.label}
                         </th>
@@ -28,7 +28,7 @@ const colsWidth = 100 / cols.length;
                 {data.map(tableRow)}
             </tbody>
     </StyledTable>
-  );
+);
 };
 
 export default Table;

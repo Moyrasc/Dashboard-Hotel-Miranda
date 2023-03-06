@@ -19,11 +19,11 @@ const Pagination = ({
   indexOfLastItem,
   indexOfFirstItem,
 }) => {
-  const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
-  const nextPage = () => {
+  const pageNumbers: number[] = [...Array(nPages + 1).keys()].slice(1);
+  const nextPage = (): void => {
     if (currentPage !== nPages) setCurrentPage(currentPage + 1);
   };
-  const prevPage = () => {
+  const prevPage = (): void => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
 
@@ -45,7 +45,7 @@ const Pagination = ({
           {pageNumbers.map((number) => (
             <PageNumber key={number}>
               <PageBtn
-                $type={
+                currentPage={
                   currentPage === number ? "currentPage" : "notCurrentPage"
                 }
                 onClick={() => setCurrentPage(number)}>

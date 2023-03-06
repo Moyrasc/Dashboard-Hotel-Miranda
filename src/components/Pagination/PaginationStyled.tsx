@@ -51,9 +51,9 @@ const NextBtn = styled.button`
 
 const PageNumber = styled.li``;
 
-const PageBtn = styled.button`
+const PageBtn = styled.button<{ currentPage: string }>`
   ${(props) => {
-    switch (props.$type) {
+    switch (props.currentPage) {
       case "currentPage":
         return css`
           background-color: #135846;
