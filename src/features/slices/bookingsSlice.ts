@@ -1,54 +1,74 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import bookings from '../../Data/bookings.json'
+import { RootState } from "../../store/store";
+
+export interface Booking {
+    id: number;
+    guest: string;
+    orderDate: string;
+    checkin: string;
+    checkout: string;
+    roomId: number;
+    price: number;
+    specialRequest: string;
+    amenities: string[];
+    typeRoom: string;
+    description: string;
+    photo: string;
+    state: string
+
+}
+interface BookingsState {
+    bookings: Booking[];
+    booking: Booking | null;
+    status: 'loading' | 'error' | 'fulfilled' | null
+}
+const initialState: BookingsState = { bookings:[],booking: null, status: null }
 
 export const fetchAllBookings = createAsyncThunk(
     "bookings/fetchBookings",
     async () => {
-        return await delay(bookings)
+        return await delay(bookings) as Booking[]
     }
 )
 export const fetchBooking = createAsyncThunk(
     "booking/fetchBooking",
-    async (id) => {
+    async (id: number) => {
         const singleBooking = bookings.find((element) => element.id === Number(id))
         const booking = await delay(singleBooking)
-        return booking
+        return booking as Booking
     }
 
 )
 export const newBooking = createAsyncThunk(
     "bookings/newBooking",
-    async (booking) => {
-        return await delay(booking)
+    async (booking: Booking) => {
+        return await delay(booking) as Booking
     }
 )
 export const editBooking = createAsyncThunk(
     "booking/editBooking",
-    async (booking) => {
+    async (booking: Booking) => {
         const upgradeBooking = bookings.find((element) => element.id === booking.id)
         const updatedBooking = await delay(upgradeBooking)
-        return updatedBooking
+        return updatedBooking as Booking
     }
 )
 export const deleteBooking = createAsyncThunk(
     "booking/deleteBooking",
-    async (id) => {
+    async (id: number) => {
         const delBooking = bookings.find((element) => element.id === id)
         const booking = await delay(delBooking)
-        return booking
+        return booking as Booking
     }
 
 )
-const initialState = {
-    bookings: [],
-    booking: {},
-    status: 'loading'
 
-}
 export const bookingsSlice = createSlice({
     name: 'bookings',
     initialState,
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchAllBookings.pending, (state) => {
@@ -103,7 +123,7 @@ export const bookingsSlice = createSlice({
             })
     }
 })
-export const selectAllBooking = (state) => state.bookings.bookings;
-export const selectBooking = (state) => state.bookings.booking;
+export const selectAllBooking = (state: RootState): Booking[] => state.bookings.bookings;
+export const selectBooking = (state: RootState): Booking | null => state.bookings.booking;
 
 export default bookingsSlice.reducer
