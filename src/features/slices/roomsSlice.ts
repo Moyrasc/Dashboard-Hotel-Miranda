@@ -1,56 +1,73 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import delay from '../delay'
 import rooms from '../../Data/rooms.json'
+import { RootState } from "../../store/store";
 
+export interface Room {
+    id: number,
+    name: string;
+    typeRoom: string;
+    description: string;
+    photo: string[];
+    number: number;
+    offers: boolean;
+    price: number;
+    discount: number;
+    cancellation: string;
+    amenities: string;
+    status: string;
+    roomFloor: string
+}
+interface RoomState {
+    rooms: Room[];
+    room: Room | null;
+    status: 'loading' | 'error' | 'fulfilled' | null
+}
+const initialState: RoomState = {rooms:[], room: null, status: null}
 export const fetchAllRooms = createAsyncThunk(
     "rooms/fetchRooms",
     async () => {
-        return await delay(rooms)
+        return await delay(rooms) as Room[]
     }
 )
 export const fetchRoom = createAsyncThunk(
     "room/fetchRoom",
-    async (id) => {
+    async (id: number) => {
         const singleRoom = rooms.find((element) => element.id === Number(id))
         const room = await delay(singleRoom)
-        return room
+        return room as Room
     }
 
 )
 export const newRoom = createAsyncThunk(
     "rooms/newRoom",
-    async (room) => {
+    async (room: Room) => {
         console.log(room)
-        return await delay(room)
+        return await delay(room) as Room
 
     }
 )
 export const editRoom = createAsyncThunk(
     "room/editRoom",
-    async (room) => {
+    async (room: Room) => {
         const upgradeRoom = rooms.find((element) => element.id === room.id)
         const updatedRoom = await delay(upgradeRoom)
-        return updatedRoom
+        return updatedRoom as Room
     }
 )
 export const deleteRoom = createAsyncThunk(
     "room/deleteRoom",
-    async (id) => {
+    async (id: number) => {
         const delRoom = rooms.find((element) => element.id === id)
         const room = await delay(delRoom)
-        return room
+        return room as Room
     }
 
 )
-const initialState = {
-    rooms: [],
-    room: {},
-    status: 'loading'
-
-}
 export const roomsSlice = createSlice({
     name: 'rooms',
     initialState,
+    reducers: {},
     extraReducers: (builder) => {
         builder
             .addCase(fetchAllRooms.pending, (state) => {
@@ -106,7 +123,7 @@ export const roomsSlice = createSlice({
             })
     }
 })
-export const selectAllRooms = (state) => state.rooms.rooms;
-export const selectRoom = (state) => state.rooms.room;
+export const selectAllRooms = (state: RootState): Room[] => state.rooms.rooms;
+export const selectRoom = (state: RootState): Room | null => state.rooms.room;
 
 export default roomsSlice.reducer
