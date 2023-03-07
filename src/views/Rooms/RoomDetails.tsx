@@ -1,25 +1,25 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataContainer, Id, InfoGuest, NameGuest, Separation, Special, SwiperContainerBooking, Title } from "../Bookings/BookingDetailsStyled"
 import BookingSwiper from "../Bookings/BookingSwiper";
 import { fetchRoom, selectRoom } from "../../features/slices/roomsSlice"
 import { useParams } from "react-router";
 import { TagStatusRoom } from "./RoomsStyled";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
 
 const RoomDetails = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const { roomId } = useParams();
-    const room = useSelector(selectRoom)
+    const room = useAppSelector(selectRoom)
         
-    const PriceOffer = (price, perce) => {
+    const priceOffer = (price: any, perce: any) => {
         let percePrice = price * perce / 100
         let dto = price - percePrice
         return dto
     }
 
     useEffect(() => {
-        dispatch(fetchRoom(roomId))
+        dispatch(fetchRoom(Number(roomId)))
 
     }, [dispatch, roomId])
 
@@ -30,36 +30,36 @@ const RoomDetails = () => {
                     <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/228377622.jpg?k=5bae0ab3d9fe3e50892c7ec31140c40066f095db85d8588025a030be0b11b20c&o=" alt="room"
                     />
                     <div>
-                        <NameGuest>{room.name}</NameGuest>
+                        <NameGuest>{room?.name}</NameGuest>
                         <Id>ID 1234124512551</Id>
                     </div>
                 </InfoGuest>
                 <DataContainer>
                     <DataCB>
                         <Title>Floor</Title>
-                        <Data>{room.roomFloor}</Data>
+                        <Data>{room?.roomFloor}</Data>
                     </DataCB>
                     <DataCB>
                         <Title>Room Number</Title>
-                        <Data>{room.number}</Data>
+                        <Data>{room?.number}</Data>
                     </DataCB>
                 </DataContainer>
                 <Separation />
                 <DataContainer>
                     <DataCB>
                         <Title>Offer</Title>
-                        <Data style={{color: "red"}}>{room.discount}% :<small style={{color: "black"}}> ${PriceOffer(room.price, room.discount).toFixed(0)}</small></Data>
+                        <Data style={{color: "red"}}>{room?.discount}% :<small style={{color: "black"}}> ${priceOffer(room?.price, room?.discount).toFixed(0)}</small></Data>
                         
                     </DataCB>
                     <DataCB>
                         <Title>Price</Title>
                         <Data>
-                            ${room.price}
+                            ${room?.price}
                             <span> /night</span>
                         </Data>
                     </DataCB>
                 </DataContainer>
-                <Special>{room.cancellation}</Special>
+                <Special>{room?.cancellation}</Special>
 
                 <DataContainer>
                     <DataCB style={{ width: "100%" }}>
@@ -91,12 +91,12 @@ const RoomDetails = () => {
             </ContainerBD>
             <ContainerBD style={{ padding: 0 }}>
                 <SwiperContainerBooking>
-                    <TagStatusRoom className="tag" status={room.status}>
-                        {room.status}
+                    <TagStatusRoom className="tag" status={room?.status}>
+                        {room?.status}
                     </TagStatusRoom>
                     <BookingSwiper />
                     <div className="roomData">
-                        <h2>{room.typeRoom}</h2>
+                        <h2>{room?.typeRoom}</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

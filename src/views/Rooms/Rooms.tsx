@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import Table from "../../components/Table/Table";
 import { ButtonContainer, FilterTable } from "../../components/Table/TableStyled";
 import { AvalaibleRoom, BookedRoom, Dto } from "./RoomsStyled";
@@ -9,11 +8,13 @@ import { SelectUser } from "../Users/UsersStyled";
 import { BtnBooking } from "../Bookings/BookingsStyled";
 import Pagination from "../../components/Pagination/Pagination";
 import { fetchAllRooms, selectAllRooms } from "../../features/slices/roomsSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { Room } from "../../Interfaces/RoomInter";
 
 const Rooms = () => {
-    const rooms = useSelector(selectAllRooms)
-    const dispatch = useDispatch()
-    const [roomsState, setRoomsState] = useState([])
+    const rooms = useAppSelector(selectAllRooms)
+    const dispatch = useAppDispatch()
+    const [roomsState, setRoomsState] = useState<Room[]>([])
     const [orderBy, setOrderBy] = useState('id')
     const [filter, setFilter] = useState('')
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,7 +36,7 @@ const Rooms = () => {
             }
             return 0;
         })
-        setRoomsState(orderFilterRooms)
+        setRoomsState(orderFilterRooms as [])
     }, [rooms, orderBy])
 
     const filterRooms = useMemo(() => {
@@ -56,7 +57,7 @@ const Rooms = () => {
     const handleOrder = (value) => {
         setOrderBy(value)
     }
-    const priceOffer = (price, perce) => {
+    const priceOffer = (price: number, perce: number) => {
         let percePrice = price * perce / 100
         let dto = price - percePrice
         return dto

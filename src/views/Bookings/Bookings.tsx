@@ -3,7 +3,6 @@ import Table from "../../components/Table/Table";
 import { ButtonContainer, FilterTable } from "../../components/Table/TableStyled";
 import { BtnBooking, CheckIn, CheckOut, Guest, ModalBox, Notes, Progress } from "./BookingsStyled";
 import { fetchAllBookings, selectAllBooking } from "../../features/slices/bookingsSlice";
-import { useSelector, useDispatch } from "react-redux";
 import Switch from "../../components/Switch/Switch";
 import { SelectUser } from "../Users/UsersStyled";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -11,12 +10,14 @@ import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
 import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
 import {RxCrossCircled} from 'react-icons/rx'
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { Booking } from "../../Interfaces/BookingInter";
 
 
 const Bookings = () => {
-    const bookings = useSelector(selectAllBooking)
-    const dispatch = useDispatch()
-    const [bookingsState, setBookingsState] = useState([])
+    const bookings = useAppSelector(selectAllBooking)
+    const dispatch = useAppDispatch()
+    const [bookingsState, setBookingsState] = useState<Booking[]>([])
     const [orderBy, setOrderBy] = useState('id')
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
@@ -24,7 +25,7 @@ const Bookings = () => {
     const bookingsPerPage = 10;
     const indexOfLastItem = currentPage * bookingsPerPage;
     const indexOfFirstItem = indexOfLastItem - bookingsPerPage;
-    const [modalData, setModalData ] = useState({});
+    const [modalData, setModalData ] = useState<any>({});
     const [onModal, setOnModal] = useState(false)
 
     useEffect(() => {
@@ -41,7 +42,7 @@ const Bookings = () => {
             }
             return 0;
         })
-        setBookingsState(orderFilterBookings)
+        setBookingsState(orderFilterBookings as [])
     }, [bookings, orderBy, searchTerm])
     
     const filterBooks = useMemo(() => {
@@ -56,26 +57,26 @@ const Bookings = () => {
 
     const nPages = Math.ceil(filterBooks.length / bookingsPerPage);
 
-    const handleFilter = (filter) => {
+    const handleFilter = (filter: string): void => {
         setFilter(filter)
     }
-    const handleOrder = (value) => {
+    const handleOrder = (value: string): void => {
         setOrderBy(value)
     }
-    const handleSearchTerm = (value) => {
+    const handleSearchTerm = (value: string): void => {
         setSearchTerm(value)
     }
-    const handleModal = (booking) => {
+    const handleModal = (booking: string): void => {
         setModalData(booking);
         setOnModal(true);
     }
     const cols = [
         {
-            property: ['photo'], label: 'Room', display: (row) => (<Link to={`/bookings/${row.id}`}>
+            property: ['photo'], label: 'Room', display: (row: any) => (<Link to={`/bookings/${row.id}`}>
                 <img src={row.photo} alt="guest" /></Link>)
         },
         {
-            property: ['guest', 'id'], label: 'Guest', display: (row) => (
+            property: ['guest', 'id'], label: 'Guest', display: (row: any) => (
                 <Guest>
                     <p className="idColor"> {row.id}</p>
                     <p>{row.guest}</p>
@@ -90,7 +91,7 @@ const Bookings = () => {
         },
         { property: 'typeRoom', label: 'Room Type' },
         {
-            property: ['state'], label: 'Status', display: (row) =>
+            property: ['state'], label: 'Status', display: (row: any) =>
                 row.state === 'checkin' ? <CheckIn>{row.state}</CheckIn> :
                     row.state === 'checkout' ? <CheckOut>{row.state}</CheckOut> :
                         <Progress>{row.state}</Progress>

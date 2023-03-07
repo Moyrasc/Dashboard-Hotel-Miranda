@@ -4,13 +4,13 @@ export interface Booking {
     orderDate: string;
     checkin: string;
     checkout: string;
-    roomId: number;
+    roomId?: number;
     price: number;
     specialRequest: string;
-    amenities: string[];
+    amenities?: string[];
     typeRoom: string;
     description: string;
-    photo: string;
+    photo: {};
     state: string
 
 }

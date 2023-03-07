@@ -3,16 +3,16 @@ import Table from "../../components/Table/Table";
 import { ActionContainer, Archive, Public } from "./ContactsStyled";
 import { FilterTable} from "../../components/Table/TableStyled";
 import Switch from "../../components/Switch/Switch";
-import { useDispatch, useSelector } from "react-redux";
 import { fetchAllContacts, selectAllContacts } from "../../features/slices/contactsSlice";
 import Pagination from "../../components/Pagination/Pagination";
 import ContactsSwiper from "./ContactsSwiper";
-
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { Contact } from "../../Interfaces/ContactInter";
 
 const Contacts = () => {
-  const contacts = useSelector(selectAllContacts)
-  const dispatch = useDispatch()
-  const [contactsState, setContactsState] = useState([])
+  const contacts = useAppSelector(selectAllContacts)
+  const dispatch = useAppDispatch()
+  const [contactsState, setContactsState] = useState<Contact[]>([])
   const [filter, setFilter] = useState('')
   const [orderBy,] = useState('id')
   const [currentPage, setCurrentPage] = useState(1);
@@ -34,7 +34,7 @@ const Contacts = () => {
       }
       return 0;
     })
-    setContactsState(orderFilterContacts)
+    setContactsState(orderFilterContacts as []) 
   }, [contacts, orderBy])
 
   const filterContacts = useMemo(() => {
@@ -46,7 +46,7 @@ const Contacts = () => {
   const contactsPagination = useMemo(() => {
     return filterContacts.slice(indexOfFirstItem, indexOfLastItem)
   }, [filterContacts, indexOfFirstItem, indexOfLastItem])
-  const handleFilter = (filter) => {
+  const handleFilter = (filter: string): void => {
     setFilter(filter)
   }
   const nPages = Math.ceil(filterContacts.length / roomsPerPage);
@@ -57,7 +57,7 @@ const Contacts = () => {
     { property: 'customer', label: 'Customer' },
     { property: 'comment', label: 'Comment' },
     {
-      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (row) => <ActionContainer>
+      property: ['actionPublish', 'actionArchived'], label: 'Action', display: (row: any) => <ActionContainer>
         <Public>Publish</Public>
         <Archive>Archive</Archive>
       </ActionContainer>

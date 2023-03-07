@@ -156,7 +156,7 @@ const SwiperContainerBooking = styled.div`
 
 
 `;
-const TagStatus = styled.div`
+const TagStatus = styled.div<{ state?: string ,status?: string }>`
   position: absolute;
   right: -6rem;
   top: 2rem;

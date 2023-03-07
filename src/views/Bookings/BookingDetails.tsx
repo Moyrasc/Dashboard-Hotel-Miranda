@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { Amenities, ContainerBD, ContainerBookingDetails, Data, DataCB, DataContainer, Id, InfoGuest, NameGuest, Separation, Special, SwiperContainerBooking, TagStatus, Title } from "./BookingDetailsStyled";
 import BookingSwiper from "./BookingSwiper";
 import { fetchBooking, selectBooking } from "../../features/slices/bookingsSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
 
 const BookingDetails = () => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {bookingId} = useParams();
-    const booking = useSelector(selectBooking)
+    const booking = useAppSelector((selectBooking))
 
 
     useEffect(()=>{
-        dispatch(fetchBooking(bookingId))
+        dispatch(fetchBooking(Number(bookingId)))
 
     },[dispatch,bookingId])
- 
+
     return(
 
         <ContainerBookingDetails >
@@ -25,35 +25,35 @@ const BookingDetails = () => {
             <img src="https://xsgames.co/randomusers/avatar.php?g=male" alt="avatar"
             />
             <div>
-              <NameGuest>{booking.guest}</NameGuest>
+              <NameGuest>{booking?.guest}</NameGuest>
               <Id>ID 1234124512551</Id>
             </div>
           </InfoGuest>
           <DataContainer>
             <DataCB>
               <Title>Check In</Title>
-              <Data>{booking.checkin}</Data>
+              <Data>{booking?.checkin}</Data>
             </DataCB>
             <DataCB>
               <Title>Check Out</Title>
-              <Data>{booking.checkout}</Data>
+              <Data>{booking?.checkout}</Data>
             </DataCB>
           </DataContainer>
           <Separation />
           <DataContainer>
             <DataCB>
               <Title>Room info</Title>
-              <Data>{booking.typeRoom}</Data>
+              <Data>{booking?.typeRoom}</Data>
             </DataCB>
             <DataCB>
               <Title>Price</Title>
               <Data>
-                ${booking.price}
+                ${booking?.price}
                 <span> /night</span>
               </Data>
             </DataCB>
           </DataContainer>
-            <Special>{booking.specialRequest}</Special>
+            <Special>{booking?.specialRequest}</Special>
 
           <DataContainer>
             <DataCB style={{ width: "100%" }}>
@@ -101,12 +101,12 @@ const BookingDetails = () => {
         </ContainerBD>
         <ContainerBD style={{ padding: 0 }}>
           <SwiperContainerBooking>
-            <TagStatus state={booking.state}className="tag">
-              {booking.state}
+            <TagStatus state={booking?.state}className="tag">
+              {booking?.state}
             </TagStatus>
             <BookingSwiper />
             <div className="roomData">
-              <h2>{booking.typeRoom}</h2>
+              <h2>{booking?.typeRoom}</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
