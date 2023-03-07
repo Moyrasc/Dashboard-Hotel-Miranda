@@ -9,14 +9,14 @@ import {
 import { AiOutlineBell, AiOutlineMail } from "react-icons/ai";
 import { FiLogOut } from 'react-icons/fi'
 import { useLocation, useNavigate } from "react-router";
-import { useUser } from "../../Context/userContext";
 import { RiArrowLeftRightFill } from 'react-icons/ri'
 import { NavLink } from "react-router-dom";
+import { useAppDispatch } from "../../hooks/hooks";
 
 
 const Header = () => {
   const location = useLocation()
-  const {dispatch}  = useUser()
+  const dispatch  = useAppDispatch()
   const navigate = useNavigate()
 
   const handleLogOut = (e) => {

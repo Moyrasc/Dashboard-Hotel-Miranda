@@ -19,14 +19,15 @@ import Contacts from './views/Contacts/Contacts';
 import ContactDetails from './views/Contacts/ContactDetails';
 import ProtectedRoute from './components/ProtectedRoute';
 import Profile from './views/Profile/Profile';
+import { useUser } from './Context/userContext';
 
 function App() {
+const user = useUser()
   return (
     <>
-
       <Routes>
         <Route path='/login' element={<Login />} />
-        <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute  user={user}/>}>
           <Route path='/*' element={<DashBoard />} />
           <Route path='/Bookings' element={<Bookings />} />
           <Route path='/bookings/newbooking' element={<NewBooking />} />
