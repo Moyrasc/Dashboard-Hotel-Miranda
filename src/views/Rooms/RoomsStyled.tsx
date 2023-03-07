@@ -28,7 +28,7 @@ display: flex;
 color: red;
 font-weight: bold;
 `
-const TagStatusRoom = styled.button`
+const TagStatusRoom = styled.button<{ status: string }>`
   position: absolute;
   border: none;
   right: -6rem;

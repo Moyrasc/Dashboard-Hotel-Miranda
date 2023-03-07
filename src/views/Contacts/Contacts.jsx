@@ -14,7 +14,7 @@ const Contacts = () => {
   const dispatch = useDispatch()
   const [contactsState, setContactsState] = useState([])
   const [filter, setFilter] = useState('')
-  const [orderBy, setOrderBy] = useState('id')
+  const [orderBy,] = useState('id')
   const [currentPage, setCurrentPage] = useState(1);
   const roomsPerPage = 5;
   const indexOfLastItem = currentPage * roomsPerPage;
