@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { LoginContainer,LoginCard, InputContainer, Input, Button, ButtonContainer } from "./LoginStyled";
 import logo from '../../assets/icons/logo2.png'
-import { useUser } from "../../Context/userContext";
 import { useNavigate } from "react-router";
 import { ErrorMsg } from "../../components/Error/ErrorStyled";
 import Error from "../../components/Error/Error";
+import { useAppDispatch } from "../../hooks/hooks";
 
 const User = {
     email : "admin@admin.com",
@@ -13,8 +13,8 @@ const User = {
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const {dispatch} = useUser()
-    const [error, setError] = useState(false)
+    const dispatch = useAppDispatch()
+    const [error, setError] = useState<boolean | string>()
     const navigate = useNavigate()
 
 // const handleSubmit = (e) =>{
