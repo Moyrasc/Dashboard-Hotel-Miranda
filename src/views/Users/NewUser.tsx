@@ -29,7 +29,7 @@ const NewUser = () => {
                 <label>Start Date</label>
                 <Input type="date"/>
                 <label>Job Description</label>
-                <textarea name="textarea" rows="5" cols="30" placeholder="Write job description here..."/>
+                <textarea name="textarea" placeholder="Write job description here..."/>
                 </InputContainer>
                 <div className="btn-save">
                     <button>Save User</button>

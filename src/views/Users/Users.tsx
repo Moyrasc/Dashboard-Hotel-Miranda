@@ -4,20 +4,21 @@ import Switch from "../../components/Switch/Switch";
 import { MdLocalPhone } from 'react-icons/md'
 import { FilterTable, ButtonContainer } from "../../components/Table/TableStyled";
 import { ActiveEmployeed, IconPhone, InactiveEmployeed } from "./UsersStyled";
-import { useDispatch, useSelector } from "react-redux";
 import { fetchAllUsers, selectAlltUsers } from "../../features/slices/usersSlice";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { SearchBarContainer } from "../../components/SearchBar/SearchBarStyled";
-import { SelectUser } from "../Users/UsersStyled";
+import { SelectUser } from "./UsersStyled";
 import { BtnBooking } from "../Bookings/BookingsStyled";
 import { Link } from "react-router-dom";
 import Pagination from "../../components/Pagination/Pagination";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { User } from "../../Interfaces/UserInter";
 
 const Users = () => {
 
-    const users = useSelector(selectAlltUsers)
-    const dispatch = useDispatch()
-    const [usersState, setUsersState] = useState([])
+    const users = useAppSelector(selectAlltUsers)
+    const dispatch = useAppDispatch()
+    const [usersState, setUsersState] = useState<User[]>([])
     const [orderBy, setOrderBy] = useState('id')
     const [searchTerm, setSearchTerm] = useState('')
     const [filter, setFilter] = useState('')
@@ -40,7 +41,7 @@ const Users = () => {
             }
             return 0;
         })
-        setUsersState(orderFilterUsers)
+        setUsersState(orderFilterUsers as [])
     }, [users, orderBy, searchTerm])
 
     const filterUsers = useMemo(() => {
@@ -55,17 +56,17 @@ const Users = () => {
 
     const nPages = Math.ceil(filterUsers.length / usersPerPage);
 
-    const handleFilter = (filter) => {
+    const handleFilter = (filter: string) => {
         setFilter(filter)
     }
-    const handleOrder = (value) => {
+    const handleOrder = (value: string) => {
         setOrderBy(value)
     }
-    const handleSearchTerm = (value) => {
+    const handleSearchTerm = (value: string) => {
         setSearchTerm(value)
     }
     const cols = [
-        { property: ['avatar'], label: 'User', display: (row) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
+        { property: ['avatar'], label: 'User', display: (row: any) => (<Link to={`/users/${row.id}`}><img src={row.avatar} alt="room" /></Link>) },
         {
             property: ['name', 'id'], label: ' Full Name', display: (row) => (
                 <>
@@ -75,11 +76,11 @@ const Users = () => {
         },
         { property: 'description', label: 'Job Desk' },
         {
-            property: ['phone'], label: 'Contact', display: (row) => (<p><IconPhone>
+            property: ['phone'], label: 'Contact', display: (row: any) => (<p><IconPhone>
                 <MdLocalPhone className="phone" /></IconPhone>{row.phone}</p>)
         },
         {
-            property: ['status'], label: 'Status', display: (row) =>
+            property: ['status'], label: 'Status', display: (row: any) =>
                 row.status === 'active' ? <ActiveEmployeed>{row.status}</ActiveEmployeed> :
                     <InactiveEmployeed>{row.status}</InactiveEmployeed>
         },

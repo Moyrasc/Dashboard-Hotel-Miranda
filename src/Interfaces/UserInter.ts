@@ -7,4 +7,5 @@ export interface User {
     avatar: string;
     description: string;
     startDate: string;
+    status?: string
 }
