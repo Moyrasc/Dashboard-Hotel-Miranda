@@ -3,11 +3,12 @@ import { ContainerSwiper, DashboardContainer, IconsDashboard, KpiContainer, KpiN
 import { MdOutlineBed } from 'react-icons/md'
 import {BsBoxArrowRight,BsBoxArrowLeft} from 'react-icons/bs'
 import {FaRegCalendarCheck} from 'react-icons/fa'
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { fetchAllContacts, selectAllContacts } from "../../features/slices/contactsSlice";
 import ContactsSwiper from "../Contacts/ContactsSwiper";
+import { useAppDispatch } from "../../hooks/hooks";
 const DashBoard = () => {
-const dispatch = useDispatch();
+const dispatch = useAppDispatch();
 const contacts = useSelector(selectAllContacts);
 
 useEffect(()=>{
