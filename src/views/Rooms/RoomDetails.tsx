@@ -6,7 +6,6 @@ import { useParams } from "react-router";
 import { TagStatusRoom } from "./RoomsStyled";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 
-
 const RoomDetails = () => {
     const dispatch = useAppDispatch();
     const { roomId } = useParams();
@@ -17,12 +16,9 @@ const RoomDetails = () => {
         let dto = price - percePrice
         return dto
     }
-
     useEffect(() => {
         dispatch(fetchRoom(Number(roomId)))
-
     }, [dispatch, roomId])
-
     return (
         <ContainerBookingDetails>
             <ContainerBD>
@@ -41,7 +37,7 @@ const RoomDetails = () => {
                     </DataCB>
                     <DataCB>
                         <Title>Room Number</Title>
-                        <Data>{room?.number}</Data>
+                        <Data>{room?.roomNumber}</Data>
                     </DataCB>
                 </DataContainer>
                 <Separation />

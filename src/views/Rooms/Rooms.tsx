@@ -51,10 +51,10 @@ const Rooms = () => {
 
     const nPages = Math.ceil(filterRooms.length / roomsPerPage);
 
-    const handleFilter = (filter) => {
+    const handleFilter = (filter: string) => {
         setFilter(filter)
     }
-    const handleOrder = (value) => {
+    const handleOrder = (value: string) => {
         setOrderBy(value)
     }
     const priceOffer = (price: number, perce: number) => {

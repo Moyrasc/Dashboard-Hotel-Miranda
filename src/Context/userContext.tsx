@@ -1,6 +1,5 @@
 
 import { createContext, useContext, useEffect, useReducer} from "react";
-// import { AnyAction } from "@reduxjs/toolkit";
 import { User } from "../Interfaces/UserAuth";
 // type Action = {type: 'login'} | {type: 'edit username'} | {type: 'edit email'} | {type: 'logout'};
 
@@ -10,6 +9,7 @@ export const UserContext = createContext({});
 export const useUser = () => {
     return useContext(UserContext);
 };
+
 const local = localStorage.getItem(KEY_LOCALSTORAGE)
 const initialState = local ? JSON.parse(local) : {logged: false, email:'', username:''}
 

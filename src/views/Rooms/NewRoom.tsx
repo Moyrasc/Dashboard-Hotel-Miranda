@@ -6,80 +6,82 @@ import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orien
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import "filepond/dist/filepond.min.css";
-import { useDispatch } from "react-redux";
 import { newRoom } from "../../features/slices/roomsSlice";
 import { FormContainer } from "../Users/UsersStyled";
 import { Input, InputContainer } from "../Login/LoginStyled";
 import { ContainerNewRoom } from "./RoomsStyled";
+import { useAppDispatch } from "../../hooks/hooks";
+import { Room } from "../../Interfaces/RoomInter";
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview, FilePondPluginFileEncode, FilePondPluginFileMetadata)
 
 const NewRoom = () => {
-    const [files, setFiles] = useState([])
-    const [newRoomForm, setNewRoomForm] = useState({
-        id: '',
+    const [files,] = useState<Room[]>([])
+    const [newRoomForm, setNewRoomForm] = useState<Room>({
+        id: 0,
         name: '',
-        floor: '',
+        roomFloor: '',
         roomNumber: '',
         offer: 0 ,
         price: 0,
         cancellation:'',
         description:'',
-        type: '',
-        facilities:'',
-        photos: []
+        typeRoom: '',
+        amenities:'',
+        photo: {},
+        status:''
     })
-    const handleNameChange = (e) => {
+    const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
             name:e.target.value
         })
     }
-    const handleFloorChange = (e) => {
+    const handleFloorChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
-            floor:e.target.value
+            roomFloor:e.target.value
         })
     }
-    const handleRoomNumberChange = (e) => {
+    const handleRoomNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
             roomNumber:e.target.value
         })
     }
-    const handleTypeChange = (e) => {
+    const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
-            type:e.target.value
+            typeRoom:e.target.value
         })
     }
-    const handleOfferChange = (e) => {
+    const handleOfferChange = (e: any) => {
         setNewRoomForm({
             ...newRoomForm,
             offer:e.target.value
         })
     }
-    const handlePriceChange = (e) => {
+    const handlePriceChange = (e: any) => {
         setNewRoomForm({
             ...newRoomForm,
             price:e.target.value
         })
     }
-    const handleCancellationChange = (e) => {
+    const handleCancellationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
             cancellation:e.target.value
         })
     }
-    const handleDescriptionChange = (e) => {
+    const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewRoomForm({
             ...newRoomForm,
             description:e.target.value
         })
     }
-    const dispatch = useDispatch()
-    const convertToBase64 = (file) => {
-        return new Promise((resolve, reject) => {
+    const dispatch = useAppDispatch()
+    const convertToBase64 = (file: any) => {
+        return new Promise<null |string |ArrayBuffer>((resolve, reject) => {
             const fileReader = new FileReader()
             fileReader.readAsDataURL(file)
             fileReader.onload = () => {
@@ -92,31 +94,30 @@ const NewRoom = () => {
     }
     
     const handleButton = async () => {
-        
         files.map(async file => {
-            const fileConvert = await convertToBase64(file.file)
-            newRoomForm.photos.push({img: fileConvert})
+            const fileConvert = await convertToBase64(file.photo);
+            (typeof fileConvert === 'string') && setNewRoomForm({...newRoomForm, photo: {img: fileConvert}})
+            
             
         })
         dispatch(newRoom(newRoomForm))
         console.log(files)
         setNewRoomForm({
-            id: '',
-            name: '',
-            floor: '',
-            roomNumber: '',
-            offer: 0 ,
-            price: 0,
-            cancellation:'',
-            description:'',
-            type: '',
-            facilities:'',
-            photos: []
+        id: 0,
+        name: '',
+        roomFloor: '',
+        roomNumber: '',
+        offer: 0 ,
+        price: 0,
+        cancellation:'',
+        description:'',
+        typeRoom: '',
+        amenities:'',
+        photo: {},
+        status:''
         })
-
         
     }
-
     return (
         <ContainerNewRoom>
             <FormContainer>
@@ -126,7 +127,7 @@ const NewRoom = () => {
                 </InputContainer>
                 <InputContainer>
                     <label>Room Floor</label>
-                        <Input type="text" value={newRoomForm.floor} onChange={handleFloorChange}/>
+                        <Input type="text" value={newRoomForm.roomFloor} onChange={handleFloorChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Room Number</label>
@@ -134,7 +135,7 @@ const NewRoom = () => {
                 </InputContainer>
                 <InputContainer>
                     <label>Room Type</label>
-                        <Input type="text" value={newRoomForm.type} onChange={handleTypeChange}/>
+                        <Input type="text" value={newRoomForm.typeRoom} onChange={handleTypeChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Offer</label>
@@ -144,11 +145,11 @@ const NewRoom = () => {
                 </InputContainer>
                 <InputContainer>
                     <label>Cancellation</label>
-                        <textarea name="textarea" rows="5" cols="30" className="info" style={{marginBottom: "0.5rem"}} defaultValue={newRoomForm.cancellation} onChange={handleCancellationChange}/>
+                        <textarea name="textarea" className="info" style={{marginBottom: "0.5rem"}} defaultValue={newRoomForm.cancellation} onChange={()=>handleCancellationChange}/>
                 </InputContainer>
                 <InputContainer>
                     <label>Description</label>
-                        <textarea name="textarea" rows="5" cols="30" className="info" defaultValue={newRoomForm.description} onChange={handleDescriptionChange}/>
+                        <textarea name="textarea"  className="info" defaultValue={newRoomForm.description} onChange={()=>handleDescriptionChange}/>
                 </InputContainer>
                 <div className="btn-save">
                     
@@ -156,7 +157,7 @@ const NewRoom = () => {
                 </div>
             </FormContainer>
             <FormContainer style={{marginLeft: "1rem"}}>
-            <FilePond files={files} allowFileEncode={true} allowReorder={true} allowMultiple={true} onupdatefiles={setFiles} name='files' server={"/rooms/newRoom"} imagePreviewHeight={100} imageCropAspectRatio={"1:1"} imageResizeTargetWidth={100} imageResizeMode={"cover"} labelIdle='Upload your images.' />
+            {/* <FilePond files={files} allowFileEncode={true} allowReorder={true} allowMultiple={true} onupdatefiles={setFiles} name='files' server={"/rooms/newRoom"} imagePreviewHeight={100} imageCropAspectRatio={"1:1"} imageResizeTargetWidth={100} imageResizeMode={"cover"} labelIdle='Upload your images.' /> */}
             </FormContainer>
         </ContainerNewRoom>
     )

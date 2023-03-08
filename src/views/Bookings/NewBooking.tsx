@@ -16,7 +16,7 @@ registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview, F
 
 
 const NewBooking = () => {
-    const [files, setFiles] = useState<Booking[]>([])
+    const [files,] = useState<Booking[]>([])
     const [newBookingForm, setNewBookingForm] = useState<Booking>({
             id: 0,
             guest: '',
@@ -32,28 +32,28 @@ const NewBooking = () => {
             photo: {},
             state: ""
     })
-    const handleGuestChange = (e: Event) => {
+    const handleGuestChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewBookingForm({
             ...newBookingForm,
-            guest:(e.target as HTMLInputElement).value
+            guest: e.target.value
         })
     }
-    const handleCheckInChange = (e: Event ) => {
+    const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement> ) => {
         setNewBookingForm({
             ...newBookingForm,
-            checkin:(e.target as HTMLInputElement).value
+            checkin: e.target.value
         })
     }
-    const handleCheckOutChange = (e: Event) => {
+    const handleCheckOutChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewBookingForm({
             ...newBookingForm,
-            checkout:(e.target as HTMLInputElement).value
+            checkout: e.target.value
         })
     }
-    const handleTypeChange = (e: Event) => {
+    const handleTypeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewBookingForm({
             ...newBookingForm,
-            typeRoom:(e.target as HTMLInputElement).value
+            typeRoom: e.target.value
         })
     }
     const handlePriceChange = (e: any) => {
@@ -62,16 +62,16 @@ const NewBooking = () => {
             price:e.target.value
         })
     }
-    const handleSpecialRequestChange = (e: Event) => {
+    const handleSpecialRequestChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewBookingForm({
             ...newBookingForm,
-            specialRequest:(e.target as HTMLInputElement).value
+            specialRequest: e.target.value
         })
     }
-    const handleDescriptionChange = (e: Event) => {
+    const handleDescriptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewBookingForm({
             ...newBookingForm,
-            description:(e.target as HTMLInputElement).value
+            description:e.target.value
         })
     }
     const dispatch = useAppDispatch()
@@ -126,10 +126,6 @@ const NewBooking = () => {
                     <label>Description</label>
                         <textarea name="textarea"  className="info" defaultValue={newBookingForm.description} onChange={() =>handleDescriptionChange}/>
                 </InputContainer>
-                {/* <FilePond files={files} allowFileEncode={true} allowReorder={true} allowMultiple={true} onupdatefiles={(files)=>files.forEach((file)=>dispatch(newRoom(file.file)))} name="files" 
-                labelIdle='Upload your images.'/> */}
-                {/* <FilePond files={files} allowReorder={true} allowMultiple={true} onupdatefiles={(files)=>files.forEach((file)=>dispatch(newRoom(file.file.getFileEncodeBase64String())))} name='filepond' server={"/rooms/newRoom"} allowFileMetadata={true}
-                labelIdle='Upload your images.'/> */}
                 <div className="btn-save">
                     <button onClick={handleButton}>Enviar</button>
                 </div>

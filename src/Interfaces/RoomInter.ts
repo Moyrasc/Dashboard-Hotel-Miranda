@@ -3,11 +3,11 @@ export interface Room {
     name: string;
     typeRoom: string;
     description: string;
-    photo: string[];
-    number: number;
-    offers: boolean;
+    photo: {};
+    roomNumber: string;
+    offer: number;
     price: number;
-    discount: number;
+    discount?: number;
     cancellation: string;
     amenities: string;
     status: string;

@@ -16,22 +16,7 @@ const Login = () => {
     const dispatch = useAppDispatch()
     const [error, setError] = useState<boolean | string>()
     const navigate = useNavigate()
-
-// const handleSubmit = (e) =>{
-//     e.preventDefault()
-//     if(email !== User.email){
-//         setError(true)
-//         return
-//     }
-//     if(password !== User.password){
-//         setError(true)
-//         return
-//     }
-//     setError('')
-//     setUser({email, password})
-//     navigate('/')
-//     }
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e: React.FormEvent) =>{
         e.preventDefault()
         if(email === User.email && password === User.password){
             dispatch({type: 'login', value:{username:"",email:'admin@admin.com'}})
@@ -64,8 +49,7 @@ const Login = () => {
                         {error && <Error><ErrorMsg>Invalid data</ErrorMsg></Error>}
                         <ButtonContainer>
                             <Button data-cy="login">Login</Button>
-                        </ButtonContainer>
-                        
+                        </ButtonContainer>                        
                     </form>
                 </LoginCard>
             </LoginContainer>

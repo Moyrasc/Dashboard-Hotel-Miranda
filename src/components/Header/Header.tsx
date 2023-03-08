@@ -19,7 +19,7 @@ const Header = () => {
   const dispatch  = useAppDispatch()
   const navigate = useNavigate()
 
-  const handleLogOut = (e) => {
+  const handleLogOut = (e: React.FormEvent) => {
     e.preventDefault()
     dispatch({ type: 'logout' })
     navigate('/login')
