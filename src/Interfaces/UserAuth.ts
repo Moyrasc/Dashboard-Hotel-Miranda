@@ -1,5 +1,5 @@
 export interface User {
-    logged: Boolean | undefined;
-    email: string | null;
-    username: string | null;
+    logged: Boolean;
+    email: string;
+    username: string;
 }

@@ -4,21 +4,22 @@ import logo from '../../assets/icons/logo2.png'
 import { useNavigate } from "react-router";
 import { ErrorMsg } from "../../components/Error/ErrorStyled";
 import Error from "../../components/Error/Error";
-import { useAppDispatch } from "../../hooks/hooks";
+import { useUser } from "../../Context/userContext";
 
-const User = {
+const HARDUSER = {
     email : "admin@admin.com",
     password: "12345"
 }
+
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const dispatch = useAppDispatch()
     const [error, setError] = useState<boolean | string>()
     const navigate = useNavigate()
+    const {dispatch} = useUser()
     const handleSubmit = (e: React.FormEvent) =>{
         e.preventDefault()
-        if(email === User.email && password === User.password){
+        if(email === HARDUSER.email && password === HARDUSER.password){
             dispatch({type: 'login', value:{username:"",email:'admin@admin.com'}})
             setError('')
             navigate('/dashboard')

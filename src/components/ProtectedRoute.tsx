@@ -5,7 +5,11 @@ import Navbar from "./Navbar/Navbar"
 import { Layout, MainContainerOn } from "./LayoutStyled";
 import { User } from "../Interfaces/UserAuth";
 
-const ProtectedRoute = (user: User) => {
+interface Props {
+    user: User;
+}
+
+const ProtectedRoute:React.FC<Props> = ({user}) => {
     if (user.logged === false) {
         return <Navigate to='/login' replace />
     }

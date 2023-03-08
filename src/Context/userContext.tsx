@@ -4,7 +4,7 @@ import { User } from "../Interfaces/UserAuth";
 // type Action = {type: 'login'} | {type: 'edit username'} | {type: 'edit email'} | {type: 'logout'};
 
 const KEY_LOCALSTORAGE = 'userMiranda'
-export const UserContext = createContext({});
+
 
 export const useUser = () => {
     return useContext(UserContext);
@@ -12,6 +12,7 @@ export const useUser = () => {
 
 const local = localStorage.getItem(KEY_LOCALSTORAGE)
 const initialState = local ? JSON.parse(local) : {logged: false, email:'', username:''}
+export const UserContext = createContext(initialState);
 
 const reducer = (state: User,action: any)=> {
     switch(action.type){
